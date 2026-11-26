@@ -278,20 +278,6 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-        <activity-alias
-            android:label="@string/miyu_profile_app_label"
-            android:icon="@mipmap/ic_launcher"
-            android:name="com.metrolist.music.ProfileLauncher"
-            android:targetActivity="com.metrolist.music.ui.screens.MiyuProfileActivity"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.intent.action.MAIN" />
-                <category
-                    android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
         <activity
             android:theme="@style/Theme.Metrolist"
             android:label="@string/miyu_profile_title"
@@ -306,6 +292,20 @@
                     android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity-alias
+            android:label="@string/miyu_profile_app_label"
+            android:icon="@mipmap/ic_launcher"
+            android:name="com.metrolist.music.ProfileLauncher"
+            android:targetActivity="com.metrolist.music.ui.screens.MiyuProfileActivity"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
         <activity-alias
             android:label="@string/app_name"
             android:icon="@mipmap/ic_launcher_cair"

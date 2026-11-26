@@ -231,6 +231,29 @@ def cek_manifest(m):
         not any('isFeatureSplit' in attrs_of(e) or 'splitTypes' in attrs_of(e) for e in elems),
         "tidak ada isFeatureSplit/splitTypes")
     cek("tidak ada <uses-split>", not [e for e in elems if S(e[2]) == 'uses-split'])
+    # URUTAN alias: PackageManager memproses <application> secara BERURUTAN.
+    # <activity-alias> hanya sah jika targetActivity-nya sudah dideklarasikan
+    # sebagai <activity> SEBELUMNYA. Kalau tidak:
+    #   INSTALL_PARSE_FAILED_MANIFEST_MALFORMED
+    #   "<activity-alias> target activity X not found in manifest"
+    declared_act = {}
+    alias_bad = []
+    for e in elems:
+        tag = S(e[2])
+        a = attrs_of(e)
+        if tag == 'activity':
+            nm = a.get('android:name', (None, ''))[1]
+            if nm: declared_act[nm] = True
+        elif tag == 'activity-alias':
+            tgt = a.get('android:targetActivity', (None, None))[1]
+            nm = a.get('android:name', (None, ''))[1]
+            if not tgt:
+                alias_bad.append(f"{nm}: tanpa android:targetActivity")
+            elif tgt not in declared_act:
+                alias_bad.append(f"{nm}: target {tgt} BELUM dideklarasikan sebelum alias")
+    cek("setiap activity-alias punya target yang sudah terdaftar lebih dulu",
+        not alias_bad, f"{len(declared_act)} activity; " + ("; ".join(alias_bad[:3]) if alias_bad else "semua alias valid"))
+
     # komponen
     for tag in ('activity', 'activity-alias', 'service', 'receiver', 'provider'):
         info[tag] = [attrs_of(e).get('android:name', (None, ''))[1] for e in elems if S(e[2]) == tag]
