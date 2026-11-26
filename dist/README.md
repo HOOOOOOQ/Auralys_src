@@ -1,45 +1,68 @@
-# Miyu — build 4.3.6 (459)
+# Miyu — build 4.3.7 (460)
 
 Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
 | | |
 |---|---|
-| File | `miyu-4.3.6-signed.apk` — 45.541.470 byte |
-| SHA-256 | `f5b304ef98308c097d1104a6638d3fbf9ad581250d547c2b6af6cf946ebe7e50` |
-| Package | `app.miyu.my.id` (tidak berubah → bisa update di atas versi lama) |
-| Versi | 4.3.6 (459) — sama seperti aslinya |
-| Sertifikat | **AOSP testkey publik**, SHA-256 `a4:0d:a8:0a:59:d1:70:ca:a9:50:cf:15:c1:8c:45:4d:47:a3:9b:26:98:9d:8b:64:0e:cd:74:5b:a7:1b:f5:dc` |
-| Skema signing | v2 (v1/v3 tidak aktif) |
+| File | `miyu-4.3.7-signed.apk` — 37.447.774 byte (36,7 MB) |
+| SHA-256 | `eb1ef334702783afc0c02aaba83aaf74d6a07877aabd1141db3989f74cbb25f4` |
+| Package | `app.miyu.my.id` (tidak berubah) |
+| Versi | 4.3.7 (460) — sebelumnya 4.3.6 (459) |
+| Sertifikat | **keystore Miyu sendiri**, SHA-256 `c3:4e:c1:bd:9e:7c:5f:12:a7:51:f0:6d:56:da:6f:a8:a6:83:46:d4:70:d8:5a:a7:d6:a4:4d:02:a1:5a:1f:98` |
+| Skema signing | v2 + v3 (v1 tidak aktif, minSdk 26) |
 | minSdk / targetSdk | 26 / 36 |
+| Entri APK | 995 (sama dengan build sebelumnya, tidak ada yang hilang) |
 
-## Kenapa sertifikatnya masih testkey?
+## ⚠️ Wajib uninstall sekali
 
-APK asli sudah ditandatangani dengan **AOSP testkey** (kunci yang publik di
-`aosp-mirror/platform_build`). Supaya pengguna versi lama bisa melakukan
-**update tanpa uninstall** (data, playlist, dan login tetap), build ini
-ditandatangani ulang memakai kunci yang sama — hanya memakai jarak jauh,
-tetap identik.
+Build ini memakai **keystore baru** (bukan testkey lagi). Android hanya mau
+meng-update aplikasi yang sertifikatnya sama, jadi:
 
-> ⚠️ Testkey itu **publik**: siapa pun bisa membuat APK lain dengan identitas
-> yang sama. Untuk rilis jangka panjang, buat keystore sendiri (lihat bawah).
+```bash
+adb uninstall app.miyu.my.id      # atau hapus manual di pengaturan
+adb install miyu-4.3.7-signed.apk
+```
 
-## Perubahan dibanding APK asli
+Data (playlist, login, setelan) **hilang** saat uninstall. Ini terjadi **sekali**
+saja — rilis-rilis berikutnya bisa `adb install -r` / update biasa karena
+kuncinya sekarang milik sendiri dan dijaga.
+
+## Perubahan di 4.3.7
+
+1. **Ukuran turun 8,1 MB** (45,5 MB → 37,4 MB) tanpa menghapus fitur.
+   Penyebabnya video banner `res/raw/dev_banner.mp4` yang disimpan **tanpa
+   kompresi** sebesar 8,27 MB → di-encode ulang ke 720p H.264 CRF 24
+   (168 KB). Tampilan di layar ponsel praktis sama; audio memang tidak ada di
+   sumbernya. Fitur/asset lain tidak disentuh.
+2. **Auto-update diperbaiki** — pemeriksa versi masih mencari nama file
+   `Auralys-*.apk`, jadi update tidak pernah terdeteksi.
+   Sekarang: regex `Miyu-(versi).apk`, User-Agent `Miyu/4.3.7`, dan sumber
+   feed pindah dari `app.miyu.my.id` (domain sudah mati / NXDOMAIN) ke
+   `https://api.github.com/repos/HOOOOOOQ/Auralys_src/releases/latest`.
+   JSON GitHub Releases memuat nama aset, jadi parser lama langsung bekerja.
+3. **Semua teks versi** diselaraskan ke 4.3.7 (460): About, Changelog, header
+   crash, dialog update, Sync, Last.fm UA, `LastSeenVersion`.
+4. **Warna dinamis (Material You) diperbaiki** — build 4.3.6 sempat menimpa
+   `mc3_palette` menjadi hitam semua; sekarang referensi
+   `@android:color/system_*` asli sudah kembali.
+5. **Keystore sendiri** — `keystore/miyu-release.jks` (RSA 4096, berlaku
+   30 tahun, sampai 2056).
+
+## Perubahan rebrand (dari 4.3.6, tetap ada)
 
 1. **Ikon aplikasi** — 5 density (`ic_launcher`, `ic_launcher_round`,
    `ic_launcher_static`) + adaptive foreground (5 density) + monokrom,
    semua memakai logo Miyu (huruf M + tombol play, gradien violet→pink).
-2. **Latar adaptif** — gradien `#4b1fc9 → #de81fc` (sebelumnya beige `#f4f0e8`),
-   warna `teal_700/teal_200` ikut diselaraskan.
-3. **Logo bernama** (wordmark "Miyu") tersedia di `brand/publish/`.
-4. **QRIS → Saweria** — `res/drawable-nodpi/qris.png` diganti QR
-   `saweria.co/ValNihEll` (QR asli, bukan gambar tempelan), dan semua teks
-   dialog "Support Miyu" diubah dari QRIS ke Saweria.
+2. **Latar adaptif** — gradien `#4b1fc9 → #de81fc`, warna
+   `teal_700/teal_200` diselaraskan.
+3. **Logo bernama** (wordmark "Miyu") di `brand/publish/`.
+4. **QRIS → Saweria** — `res/drawable-nodpi/qris.png` diganti QR asli
+   `saweria.co/ValNihEll`, teks dialog "Support Miyu" ikut diubah.
 5. **Nama file share QR** sekarang `Saweria-Miyu`.
-6. Resource baru `miyu_saweria_url`, `miyu_telegram_url`, `miyu_tiktok_url`,
-   `miyu_website_url` untuk dipakai halaman About/Support.
+6. Resource `miyu_*` untuk halaman About/Support + modul profil
+   (`MiyuProfile/`).
 
-**Fitur asli tidak dihapus** — semua berkas non-META-INF milik APK asli masih ada
-(998 → 995 entri; selisihnya hanya `META-INF/*.version`/`CERT.*` bawaan signing lama).
+**Fitur asli tidak dihapus** — 0 berkas non-META-INF hilang dibanding APK asli.
 
 ## Sosial
 
@@ -48,15 +71,22 @@ tetap identik.
 | Telegram | https://t.me/uxpall |
 | TikTok | https://www.tiktok.com/@sipallni |
 | Saweria | https://saweria.co/ValNihEll |
-| Website | https://app.miyu.my.id/ |
+| Rilis / update | https://github.com/HOOOOOOQ/Auralys_src/releases/latest |
 
-## Cara memasang
+## Rilis update supaya auto-update jalan
+
+Update checker membaca nama aset dari rilis terbaru, jadi:
+
+1. Buat rilis GitHub dengan tag `v4.3.7` di repo `HOOOOOOQ/Auralys_src`.
+2. **Unggah APK dengan nama `Miyu-4.3.7.apk`** (wajib pola `Miyu-<versi>.apk`).
+3. Versi di dalam nama file harus lebih tinggi dari versi terpasang.
+
+Cek cepat:
 
 ```bash
-adb install -r miyu-4.3.6-signed.apk     # -r = update, data dipertahankan
+curl -s https://api.github.com/repos/HOOOOOOQ/Auralys_src/releases/latest \
+  | grep -o '"name": "Miyu-[^"]*"'
 ```
-Kalau muncul `INSTALL_FAILED_UPDATE_INCOMPATIBLE`, artinya versi lama di
-perangkat ditandatangani kunci lain → harus uninstall dulu.
 
 ## Build ulang sendiri
 
@@ -65,22 +95,26 @@ export JAVA_HOME=...        # butuh JDK 17+
 APKTOOL=apktool_2.9.3.jar   # WAJIB 2.9.x (2.4.1 tidak kenal resource SDK 31+)
 
 java -jar $APKTOOL b /path/to/project -o miyu-unsigned.apk
-java -jar apksigner.jar sign --key testkey.pk8 --cert testkey.x509.pem \
-     --v2-signing-enabled true --v3-signing-enabled false \
-     --min-sdk-version 26 -o miyu-4.3.6-signed.apk miyu-unsigned.apk
+java -jar apksigner.jar sign \
+     --ks keystore/miyu-release.jks --ks-key-alias miyu \
+     --ks-pass pass:$(cat keystore/KEYSTORE-PASSWORD.txt) \
+     --key-pass pass:$(cat keystore/KEYSTORE-PASSWORD.txt) \
+     --v1-signing-enabled false --v2-signing-enabled true --v3-signing-enabled true \
+     --min-sdk-version 26 -o miyu-4.3.7-signed.apk miyu-unsigned.apk
 ```
 
 Catatan yang sudah dibereskan agar `apktool b` berhasil pada project ini:
-- hapus semua entri `APKTOOL_DUMMY_*` di `res/values/*.xml`
-  (`sed -i '/APKTOOL_DUMMY/d' res/values/*.xml`);
-- hapus `android:defaultLocale` di `res/xml/_generated_res_locale_config.xml`;
-- ganti `@android:color/Teal_700` dkk. di `res/values-v31/styles.xml`
-  (warna framework tersembunyi) bila memakai framework lama.
+- hapus semua entri `APKTOOL_DUMMY_*` di `res/values/*.xml`;
+- hapus `android:defaultLocale` di `res/xml/_generated_res_locale_config.xml`
+  (framework aapt2 di sandbox build tidak mengenal atribut itu — hanya
+  memengaruhi saran bahasa default, bukan fitur);
+- `@android:color/system_*` di `res/values-v31/styles.xml` **jangan** diganti,
+  build 2.9.3 sudah bisa meng-compile-nya (menggantinya = mematikan
+  Material You);
+- hapus `classes*.dex` di folder project sebelum build, kalau tidak apktool
+  akan **menyalin dex lama** dan semua editan smali diabaikan.
 
-Untuk keystore sendiri:
+## Kalau nanti pindah mesin / kehilangan keystore
 
-```bash
-keytool -genkeypair -keystore miyu.jks -alias miyu -keyalg RSA \
-        -keysize 4096 -validity 10000 -storetype PKCS12
-```
-Setelah pindah kunci, pengguna **harus uninstall** sekali.
+Simpan `keystore/miyu-release.jks` + password-nya (di luar repo, repo publik!).
+Kalau hilang, aplikasi tidak bisa di-update lagi — pengguna harus uninstall.

@@ -5,7 +5,7 @@ menjadi **Miyu**, plus APK hasil build ulang.
 
 | | |
 |---|---|
-| **APK siap pasang** | [`dist/miyu-4.3.6-signed.apk`](dist/miyu-4.3.6-signed.apk) (45,5 MB) |
+| **APK siap pasang** | [`dist/miyu-4.3.7-signed.apk`](dist/miyu-4.3.7-signed.apk) (36,7 MB) |
 | Detail build, hash, catatan signing | [`dist/README.md`](dist/README.md) |
 | Analisis lengkap repo & APK | [`ANALISIS.md`](ANALISIS.md) |
 | Aset logo & QR | [`brand/`](brand) |
@@ -17,8 +17,18 @@ menjadi **Miyu**, plus APK hasil build ulang.
 - Ikon adaptif (5 density), ikon legacy bulat/persegi, ikon monokrom
 - Latar adaptif violet, warna tema ikon diselaraskan
 - QRIS → **Saweria** (`saweria.co/ValNihEll`) + semua teks dialog donasi
-- Resource tautan: Telegram / TikTok / Saweria / website
+- Resource tautan: Telegram / TikTok / Saweria / rilis
 - **Tidak ada fitur yang dihapus**
+
+## Yang baru di 4.3.7 (460)
+
+- Ukuran APK turun **8,1 MB** (video banner 8,27 MB → 168 KB, fitur tetap)
+- Auto-update akhirnya berfungsi: pola file `Miyu-<versi>.apk`, feed dari
+  GitHub Releases (domain `app.miyu.my.id` sudah mati)
+- Ditandatangani **keystore sendiri** (`keystore/miyu-release.jks`,
+  RSA 4096, berlaku sampai 2056) — bukan testkey publik lagi
+- Warna dinamis Material You diperbaiki (build 4.3.6 sempat menghitamkan
+  `mc3_palette`)
 
 ## Sosial
 
@@ -45,6 +55,6 @@ python3 tools/patch_brand.py   # idempoten, aman dijalankan berulang
 Butuh JDK 17+ dan **apktool 2.9.x** (versi 2.4.1 gagal pada resource SDK 31+).
 Langkah lengkap ada di [`dist/README.md`](dist/README.md).
 
-> ⚠️ APK ini ditandatangani dengan **AOSP testkey publik** (sama seperti APK
-> asli) supaya bisa update tanpa uninstall. Untuk rilis jangka panjang,
-> buat keystore sendiri.
+> ⚠️ Build 4.3.7 pindah ke keystore sendiri, jadi **uninstall sekali** sebelum
+> memasang (sertifikat beda dengan 4.3.6). Setelah itu update normal kembali.
+> Detail + cara rilis supaya auto-update jalan: [`dist/README.md`](dist/README.md).

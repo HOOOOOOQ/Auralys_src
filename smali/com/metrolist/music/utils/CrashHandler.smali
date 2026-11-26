@@ -218,7 +218,7 @@
     invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 128
-    const-string v8, "\nApp version: 4.3.6 (459)\n"
+    const-string v8, "\nApp version: 4.3.7 (460)\n"
 
     .line 130
     invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

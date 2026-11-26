@@ -86,7 +86,7 @@
 
     .line 21
     :try_start_0
-    const-string p0, "https://app.miyu.my.id/"
+    const-string p0, "https://github.com/HOOOOOOQ/Auralys_src/releases/latest"
 
     .line 23
     check-cast v4, Landroidx/compose/ui/platform/AndroidUriHandler;

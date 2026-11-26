@@ -10,3 +10,9 @@
 
 # salinan hasil decompile yang tidak dipakai (duplikat penuh dari root)
 /Auralys_src/
+
+# keystore signing -- JANGAN commit private key / password
+/keystore/*.jks
+/keystore/*.keystore
+/keystore/KEYSTORE-PASSWORD.txt
+*.jks

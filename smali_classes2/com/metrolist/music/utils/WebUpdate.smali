@@ -48,7 +48,7 @@
     new-instance v0, Lkotlin/text/Regex;
 
     .line 10
-    const-string v1, "Auralys-(\\d+(?:\\.\\d+){1,3})\\.apk"
+    const-string v1, "Miyu-(\\d+(?:\\.\\d+){1,3})\\.apk"
 
     .line 12
     sget-object v2, Lkotlin/text/RegexOption;->IGNORE_CASE:Lkotlin/text/RegexOption;
