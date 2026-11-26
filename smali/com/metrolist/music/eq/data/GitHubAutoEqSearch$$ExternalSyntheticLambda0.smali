@@ -1,0 +1,115 @@
+.class public final synthetic Lcom/metrolist/music/eq/data/GitHubAutoEqSearch$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# instance fields
+.field public final synthetic $r8$classId:B
+
+
+# direct methods
+.method public synthetic constructor <init>(B)V
+    .locals 0
+
+    .line 1
+    iput-byte p1, p0, Lcom/metrolist/music/eq/data/GitHubAutoEqSearch$$ExternalSyntheticLambda0;->$r8$classId:B
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    iget-byte p0, p0, Lcom/metrolist/music/eq/data/GitHubAutoEqSearch$$ExternalSyntheticLambda0;->$r8$classId:B
+
+    .line 3
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    .line 5
+    const/4 v1, 0x1
+
+    .line 6
+    packed-switch p0, :pswitch_data_0
+
+    .line 9
+    check-cast p1, Lkotlinx/serialization/json/JsonBuilder;
+
+    .line 11
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 14
+    iput-boolean v1, p1, Lkotlinx/serialization/json/JsonBuilder;->ignoreUnknownKeys:Z
+
+    .line 16
+    return-object v0
+
+    .line 17
+    :pswitch_0
+    check-cast p1, Lkotlinx/serialization/json/JsonBuilder;
+
+    .line 19
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 22
+    iput-boolean v1, p1, Lkotlinx/serialization/json/JsonBuilder;->ignoreUnknownKeys:Z
+
+    .line 24
+    iput-boolean v1, p1, Lkotlinx/serialization/json/JsonBuilder;->prettyPrint:Z
+
+    .line 26
+    return-object v0
+
+    .line 27
+    :pswitch_1
+    check-cast p1, Ljava/lang/String;
+
+    .line 29
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 32
+    const-string p0, "UTF-8"
+
+    .line 34
+    invoke-static {p1, p0}, Lj$/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 37
+    move-result-object p0
+
+    .line 38
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 41
+    const-string p1, "%20"
+
+    .line 43
+    const/4 v0, 0x0
+
+    .line 44
+    const-string v1, "+"
+
+    .line 46
+    invoke-static {p0, v1, p1, v0}, Lkotlin/text/StringsKt__StringsJVMKt;->replace(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    .line 49
+    move-result-object p0
+
+    .line 50
+    return-object p0
+
+    .line 51
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

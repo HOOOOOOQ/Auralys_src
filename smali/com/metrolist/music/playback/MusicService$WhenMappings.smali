@@ -1,0 +1,161 @@
+.class public abstract synthetic Lcom/metrolist/music/playback/MusicService$WhenMappings;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/metrolist/music/playback/MusicService;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1019
+    name = "WhenMappings"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x2,
+        0x4,
+        0x0
+    }
+    xi = 0x530
+.end annotation
+
+
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    .line 1
+    invoke-static {}, Lcom/metrolist/music/playback/PlaybackRecovery$StopReason;->values()[Lcom/metrolist/music/playback/PlaybackRecovery$StopReason;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    array-length v0, v0
+
+    .line 6
+    new-array v0, v0, [I
+
+    .line 8
+    const/4 v1, 0x0
+
+    .line 9
+    const/4 v2, 0x1
+
+    .line 10
+    :try_start_0
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 12
+    :catch_0
+    const/4 v3, 0x2
+
+    .line 13
+    :try_start_1
+    aput v3, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 15
+    :catch_1
+    const/4 v4, 0x3
+
+    .line 16
+    :try_start_2
+    aput v4, v0, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 18
+    :catch_2
+    const/4 v5, 0x4
+
+    .line 19
+    :try_start_3
+    aput v5, v0, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    .line 21
+    :catch_3
+    sput-object v0, Lcom/metrolist/music/playback/MusicService$WhenMappings;->$EnumSwitchMapping$0:[I
+
+    .line 23
+    invoke-static {}, Lcom/metrolist/music/playback/PlaybackRecovery$Action;->values()[Lcom/metrolist/music/playback/PlaybackRecovery$Action;
+
+    .line 26
+    move-result-object v0
+
+    .line 27
+    array-length v0, v0
+
+    .line 28
+    new-array v0, v0, [I
+
+    .line 30
+    :try_start_4
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    .line 32
+    :catch_4
+    :try_start_5
+    aput v3, v0, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    .line 34
+    :catch_5
+    :try_start_6
+    aput v4, v0, v3
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    .line 36
+    :catch_6
+    :try_start_7
+    aput v5, v0, v4
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    .line 38
+    :catch_7
+    invoke-static {}, Lcom/metrolist/music/playback/PlaybackFailureKind;->values()[Lcom/metrolist/music/playback/PlaybackFailureKind;
+
+    .line 41
+    move-result-object v0
+
+    .line 42
+    array-length v0, v0
+
+    .line 43
+    new-array v0, v0, [I
+
+    .line 45
+    :try_start_8
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    .line 47
+    :catch_8
+    :try_start_9
+    aput v3, v0, v2
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+
+    .line 49
+    :catch_9
+    return-void
+.end method

@@ -1,0 +1,138 @@
+.class public final Lcom/google/common/base/CharMatcher$And;
+.super Lcom/google/common/base/CharMatcher;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+
+# instance fields
+.field public final first:Lcom/google/common/base/CharMatcher;
+
+.field public final second:Lcom/google/common/base/CharMatcher;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/common/base/CharMatcher;Lcom/google/common/base/CharMatcher;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lcom/google/common/base/CharMatcher$And;->first:Lcom/google/common/base/CharMatcher;
+
+    .line 6
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 9
+    iput-object p2, p0, Lcom/google/common/base/CharMatcher$And;->second:Lcom/google/common/base/CharMatcher;
+
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 1
+    check-cast p1, Ljava/lang/Character;
+
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/Character;->charValue()C
+
+    .line 6
+    move-result p1
+
+    .line 7
+    invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher$And;->matches(C)Z
+
+    .line 10
+    move-result p0
+
+    .line 11
+    return p0
+.end method
+
+.method public final matches(C)Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/common/base/CharMatcher$And;->first:Lcom/google/common/base/CharMatcher;
+
+    .line 3
+    invoke-virtual {v0, p1}, Lcom/google/common/base/CharMatcher;->matches(C)Z
+
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 9
+    iget-object p0, p0, Lcom/google/common/base/CharMatcher$And;->second:Lcom/google/common/base/CharMatcher;
+
+    .line 11
+    invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher;->matches(C)Z
+
+    .line 14
+    move-result p0
+
+    .line 15
+    if-eqz p0, :cond_0
+
+    .line 17
+    const/4 p0, 0x1
+
+    .line 18
+    return p0
+
+    .line 19
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 20
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 3
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 6
+    iget-object v1, p0, Lcom/google/common/base/CharMatcher$And;->first:Lcom/google/common/base/CharMatcher;
+
+    .line 8
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 11
+    const-string v1, ".and("
+
+    .line 13
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 16
+    iget-object p0, p0, Lcom/google/common/base/CharMatcher$And;->second:Lcom/google/common/base/CharMatcher;
+
+    .line 18
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 21
+    const-string p0, ")"
+
+    .line 23
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 26
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 29
+    move-result-object p0
+
+    .line 30
+    return-object p0
+.end method

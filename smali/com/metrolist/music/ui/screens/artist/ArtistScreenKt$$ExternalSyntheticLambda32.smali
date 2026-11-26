@@ -1,0 +1,102 @@
+.class public final synthetic Lcom/metrolist/music/ui/screens/artist/ArtistScreenKt$$ExternalSyntheticLambda32;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# instance fields
+.field public final synthetic $r8$classId:B
+
+.field public final synthetic f$0:Lcom/metrolist/music/playback/PlayerConnection;
+
+.field public final synthetic f$1:Lcom/metrolist/innertube/models/WatchEndpoint;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/metrolist/music/playback/PlayerConnection;Lcom/metrolist/innertube/models/WatchEndpoint;B)V
+    .locals 0
+
+    .line 1
+    iput-byte p3, p0, Lcom/metrolist/music/ui/screens/artist/ArtistScreenKt$$ExternalSyntheticLambda32;->$r8$classId:B
+
+    .line 3
+    iput-object p1, p0, Lcom/metrolist/music/ui/screens/artist/ArtistScreenKt$$ExternalSyntheticLambda32;->f$0:Lcom/metrolist/music/playback/PlayerConnection;
+
+    .line 5
+    iput-object p2, p0, Lcom/metrolist/music/ui/screens/artist/ArtistScreenKt$$ExternalSyntheticLambda32;->f$1:Lcom/metrolist/innertube/models/WatchEndpoint;
+
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 10
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
+
+    .line 1
+    iget-byte v0, p0, Lcom/metrolist/music/ui/screens/artist/ArtistScreenKt$$ExternalSyntheticLambda32;->$r8$classId:B
+
+    .line 3
+    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    .line 5
+    const/4 v2, 0x1
+
+    .line 6
+    const/4 v3, 0x2
+
+    .line 7
+    const/4 v4, 0x0
+
+    .line 8
+    iget-object v5, p0, Lcom/metrolist/music/ui/screens/artist/ArtistScreenKt$$ExternalSyntheticLambda32;->f$1:Lcom/metrolist/innertube/models/WatchEndpoint;
+
+    .line 10
+    iget-object p0, p0, Lcom/metrolist/music/ui/screens/artist/ArtistScreenKt$$ExternalSyntheticLambda32;->f$0:Lcom/metrolist/music/playback/PlayerConnection;
+
+    .line 12
+    packed-switch v0, :pswitch_data_0
+
+    .line 15
+    new-instance v0, Lcom/metrolist/music/playback/queues/YouTubeQueue;
+
+    .line 17
+    invoke-direct {v0, v5, v4, v3, v4}, Lcom/metrolist/music/playback/queues/YouTubeQueue;-><init>(Lcom/metrolist/innertube/models/WatchEndpoint;Lcom/metrolist/music/models/MediaMetadata;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    .line 20
+    sget-object v3, Lcom/metrolist/music/playback/PlayerConnection;->tapScope:Lkotlinx/coroutines/internal/ContextScope;
+
+    .line 22
+    invoke-virtual {p0, v0, v2, v4}, Lcom/metrolist/music/playback/PlayerConnection;->playQueue(Lcom/metrolist/music/playback/queues/Queue;ZLcom/metrolist/music/models/MediaMetadata;)V
+
+    .line 25
+    return-object v1
+
+    .line 26
+    :pswitch_0
+    new-instance v0, Lcom/metrolist/music/playback/queues/YouTubeQueue;
+
+    .line 28
+    invoke-direct {v0, v5, v4, v3, v4}, Lcom/metrolist/music/playback/queues/YouTubeQueue;-><init>(Lcom/metrolist/innertube/models/WatchEndpoint;Lcom/metrolist/music/models/MediaMetadata;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    .line 31
+    sget-object v3, Lcom/metrolist/music/playback/PlayerConnection;->tapScope:Lkotlinx/coroutines/internal/ContextScope;
+
+    .line 33
+    invoke-virtual {p0, v0, v2, v4}, Lcom/metrolist/music/playback/PlayerConnection;->playQueue(Lcom/metrolist/music/playback/queues/Queue;ZLcom/metrolist/music/models/MediaMetadata;)V
+
+    .line 36
+    return-object v1
+
+    .line 37
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

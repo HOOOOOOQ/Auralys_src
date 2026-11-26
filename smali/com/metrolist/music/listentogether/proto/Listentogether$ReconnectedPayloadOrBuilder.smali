@@ -1,0 +1,46 @@
+.class public interface abstract Lcom/metrolist/music/listentogether/proto/Listentogether$ReconnectedPayloadOrBuilder;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+# interfaces
+.implements Lcom/google/protobuf/MessageLiteOrBuilder;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/metrolist/music/listentogether/proto/Listentogether;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "ReconnectedPayloadOrBuilder"
+.end annotation
+
+
+# virtual methods
+.method public abstract synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
+.end method
+
+.method public abstract getIsHost()Z
+.end method
+
+.method public abstract getRoomCode()Ljava/lang/String;
+.end method
+
+.method public abstract getRoomCodeBytes()Lcom/google/protobuf/ByteString;
+.end method
+
+.method public abstract getState()Lcom/metrolist/music/listentogether/proto/Listentogether$RoomState;
+.end method
+
+.method public abstract getUserId()Ljava/lang/String;
+.end method
+
+.method public abstract getUserIdBytes()Lcom/google/protobuf/ByteString;
+.end method
+
+.method public abstract hasState()Z
+.end method
+
+.method public abstract synthetic isInitialized()Z
+.end method
