@@ -1,13 +1,13 @@
-# Miyu — build 4.6.0 (469)
+# Miyu — build 4.6.0 (470)
 
 Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
 | | |
 |---|---|
-| File | `Miyu-4.6.0.apk` — 38.833.988 byte (37,0 MB) |
-| SHA-256 | `04b77e89daf09744f5e30879990d76d5425b41b6b13ba24c0f1cc86458c0a2e1` |
+| File | `Miyu-4.6.0.apk` — 38.833.962 byte (37,0 MB) |
+| SHA-256 | `d14ff5bc8332f2ef0b6f6e8494a2b2b2992cd63a69b8778303d7f63b140fbf6c` |
 | Package | `app.miyu.my.id` (tidak berubah) |
-| Versi | 4.6.0 (469) |
+| Versi | 4.6.0 (470) |
 | Sertifikat | **identitas asli Miyu** (AOSP testkey) — SHA-256 `a40da80a…bf5dc` |
 | Skema signing | v1 + v2 + v3 |
 | minSdk / targetSdk | 26 / 36 |
@@ -327,7 +327,7 @@ sendiri sehingga wajib uninstall — itu kesalahan besar yang sekarang beres.)
 | `apksigner verify` | v2 ✅ v3 ✅ |
 | Cert SHA-256 vs APK lama | **identik** |
 | package name | `app.miyu.my.id` (sama) |
-| versionCode | 459 → **469** (naik) |
+| versionCode | 459 → **470** (naik) |
 | Simulasi upgrade | **bisa menimpa tanpa uninstall** |
 | aapt2 dump badging / optimize | lolos (exit 0) |
 | Diagnosis biner mandiri | 67 pemeriksaan, 0 gagal |
@@ -369,3 +369,15 @@ memproses berurutan, jadi target dianggap tidak ada.
 
 Perbaikan: blok `<activity>` dipindah ke atas alias. Atribut tidak diubah,
 fitur Profil Miyu tetap utuh. Detail: [`FIX-MANIFEST-MALFORMED.md`](FIX-MANIFEST-MALFORMED.md).
+
+## Build 470 — perbaikan crash & ikon ganda
+
+- **Crash Miyu Profile**: `TextView.setTypeface(I)V` (tidak ada di Android)
+  diganti `setTypeface(Landroid/graphics/Typeface;I)V` dengan
+  `Typeface.defaultFromStyle(I)`. Teks tebal tetap sesuai desain.
+- **Ikon ganda**: `ProfileLauncher` dinonaktifkan (`enabled="false"`, tidak
+  dihapus). Profil Miyu tetap bisa dibuka lewat app shortcut
+  (`miyu_profile` / `miyu_level`).
+- **Branding**: diaudit, sudah konsisten Miyu — tidak ada perubahan aset.
+
+Laporan lengkap: [`REPAIR-4.6.0-470.md`](REPAIR-4.6.0-470.md)
