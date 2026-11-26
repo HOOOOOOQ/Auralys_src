@@ -30,11 +30,13 @@
   "version": "2.4.0-261120",
   "sharedLibrary": false,
   "VersionInfo": {
-    "versionName": "4.3.6",
-    "versionCode": "459"
+    "versionCode": "467",
+    "versionName": "4.6.0"
   },
   "UsesFramework": {
-    "ids": [1],
+    "ids": [
+      1
+    ],
     "tag": null
   },
   "unknownFiles": {
@@ -212,5 +214,9 @@
   "sdkInfo": {
     "minSdkVersion": "26",
     "targetSdkVersion": "36"
+  },
+  "packageInfo": {
+    "forcedPackageId": "127",
+    "renameManifestPackage": null
   }
 }
