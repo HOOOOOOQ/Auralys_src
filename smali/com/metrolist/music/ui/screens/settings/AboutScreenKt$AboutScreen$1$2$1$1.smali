@@ -252,7 +252,7 @@
     sget-object v2, Lcom/metrolist/music/utils/WebUpdate;->INSTANCE:Lcom/metrolist/music/utils/WebUpdate;
 
     .line 62
-    const-string v2, "4.3.9"
+    const-string v2, "4.4.0"
 
     .line 64
     invoke-static {p1, v2}, Lcom/metrolist/music/utils/WebUpdate;->compare(Ljava/lang/String;Ljava/lang/String;)I

@@ -217,7 +217,7 @@
     iput-byte v1, p0, Lcom/metrolist/music/MainActivity$MetrolistApp$2$1;->label:B
 
     .line 58
-    const-string v1, "4.3.9"
+    const-string v1, "4.4.0"
 
     .line 60
     invoke-virtual {p1, v1, p0}, Lcom/metrolist/music/utils/WebUpdate;->newerThan(Ljava/lang/String;Lkotlin/coroutines/jvm/internal/ContinuationImpl;)Ljava/lang/Object;
