@@ -1,13 +1,22 @@
-# Miyu — build 4.6.0 (470)
+# Miyu — build 4.6.0 (471)
 
 Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
+> **UPDATE 471 — build 470 CACAT, diganti.**
+> Build 470 masih crash saat membuka Miyu Profile:
+> `NoSuchMethodError: No virtual method setTypeface(Landroid/graphics/Typeface;)V in class Landroid/graphics/Paint`
+> di `drawAvatar()`. Baris 1167 menulis `Paint.setTypeface` sebagai `)V`, padahal method itu
+> mengembalikan `Typeface`. Perbaikan di 470 (`tv()`) terbukti berhasil — crash pindah ke fungsi
+> berikutnya. Build 471 memperbaiki `drawAvatar` dan menambahkan gerbang otomatis yang memeriksa
+> signature framework saat build. **Pakai 471, bukan 470.** Detail: `REPAIR-4.6.0-471.md`.
+
+
 | | |
 |---|---|
-| File | `Miyu-4.6.0.apk` — 38.833.962 byte (37,0 MB) |
-| SHA-256 | `d14ff5bc8332f2ef0b6f6e8494a2b2b2992cd63a69b8778303d7f63b140fbf6c` |
+| File | `Miyu-4.6.0.apk` — 38.833.961 byte (37,0 MB), build **471** |
+| SHA-256 | `431ead7f43a8939e34161240b2f89775418e153a843af928de3cc08ef31ee240` |
 | Package | `app.miyu.my.id` (tidak berubah) |
-| Versi | 4.6.0 (470) |
+| Versi | 4.6.0 (471) |
 | Sertifikat | **identitas asli Miyu** (AOSP testkey) — SHA-256 `a40da80a…bf5dc` |
 | Skema signing | v1 + v2 + v3 |
 | minSdk / targetSdk | 26 / 36 |
@@ -327,10 +336,10 @@ sendiri sehingga wajib uninstall — itu kesalahan besar yang sekarang beres.)
 | `apksigner verify` | v2 ✅ v3 ✅ |
 | Cert SHA-256 vs APK lama | **identik** |
 | package name | `app.miyu.my.id` (sama) |
-| versionCode | 459 → **470** (naik) |
+| versionCode | 459 → **471** (naik) |
 | Simulasi upgrade | **bisa menimpa tanpa uninstall** |
 | aapt2 dump badging / optimize | lolos (exit 0) |
-| Diagnosis biner mandiri | 67 pemeriksaan, 0 gagal |
+| Diagnosis biner mandiri | 68 pemeriksaan, 0 gagal |
 
 ## 5. Keterbatasan yang harus saya akui
 
@@ -370,7 +379,7 @@ memproses berurutan, jadi target dianggap tidak ada.
 Perbaikan: blok `<activity>` dipindah ke atas alias. Atribut tidak diubah,
 fitur Profil Miyu tetap utuh. Detail: [`FIX-MANIFEST-MALFORMED.md`](FIX-MANIFEST-MALFORMED.md).
 
-## Build 470 — perbaikan crash & ikon ganda
+## Build 470 — perbaikan crash & ikon ganda (DIGANTI 471, lihat atas)
 
 - **Crash Miyu Profile**: `TextView.setTypeface(I)V` (tidak ada di Android)
   diganti `setTypeface(Landroid/graphics/Typeface;I)V` dengan
