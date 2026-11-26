@@ -62,6 +62,11 @@ echo "== 3b/6 gerbang: signature framework di file tulisan tangan =="
 python3 "$ROOT/tools/check_framework_calls.py" "$ROOT/smali_classes3/com/metrolist/music/ui/screens/MiyuProfileActivity.smali"
 ( cd "$ROOT" && python3 tools/check_calls_vs_tree.py \
     smali_classes3/com/metrolist/music/ui/screens/MiyuProfileActivity.smali )
+# Jalur runtime Profile: semua method yang dieksekusi saat layar dibuka,
+# termasuk drawAvatar(), diperiksa signature + move-result + register.
+( cd "$ROOT" && python3 tools/check_profile_reachable.py )
+# Linkage: setiap invoke ke kelas aplikasi harus punya definisi descriptor cocok.
+( cd "$ROOT" && python3 tools/check_linkage.py )
 
 echo "== 4/6 apktool build =="
 rm -f classes*.dex

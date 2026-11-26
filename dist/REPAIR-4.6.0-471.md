@@ -1,5 +1,11 @@
 # Laporan Perbaikan MIYU 4.6.0 — build 471
 
+
+> **KOREKSI (build 472).** Laporan ini menulis "perbaikan terbukti statis, belum runtime".
+> Yang benar dan lebih tepat: `drawAvatar` **sudah diperbaiki di 471**; build 472 tidak
+> mengubah logika apa pun, hanya menaikkan versionCode dan menambah gerbang audit.
+> Lihat `REPAIR-4.6.0-472.md` untuk audit menyeluruh 45 pemanggilan `setTypeface`.
+
 **Tanggal:** 2026-11-26
 **APK:** `dist/Miyu-4.6.0.apk`
 **SHA-256:** `431ead7f43a8939e34161240b2f89775418e153a843af928de3cc08ef31ee240`

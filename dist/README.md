@@ -1,22 +1,24 @@
-# Miyu — build 4.6.0 (471)
+# Miyu — build 4.6.0 (472)
 
 Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
-> **UPDATE 471 — build 470 CACAT, diganti.**
-> Build 470 masih crash saat membuka Miyu Profile:
-> `NoSuchMethodError: No virtual method setTypeface(Landroid/graphics/Typeface;)V in class Landroid/graphics/Paint`
-> di `drawAvatar()`. Baris 1167 menulis `Paint.setTypeface` sebagai `)V`, padahal method itu
-> mengembalikan `Typeface`. Perbaikan di 470 (`tv()`) terbukti berhasil — crash pindah ke fungsi
-> berikutnya. Build 471 memperbaiki `drawAvatar` dan menambahkan gerbang otomatis yang memeriksa
-> signature framework saat build. **Pakai 471, bukan 470.** Detail: `REPAIR-4.6.0-471.md`.
+> **UPDATE 472 — build aktif sekarang.**
+> Audit menyeluruh: 45 pemanggilan `setTypeface` di seluruh folder smali (35 `Paint`, 10 `TextView`)
+> → 0 signature salah; 35.990 invoke linkage aplikasi → 0 unresolved; 19 method yang dieksekusi
+> saat Profile dibuka → 0 masalah register/`move-result`. Build 472 **tidak mengubah logika**:
+> bytecode identik dengan 471, hanya versionCode naik agar bisa dipasang sebagai update, ditambah
+> 4 gerbang audit otomatis di `build_release.sh`. Detail: `REPAIR-4.6.0-472.md`.
+>
+> **Riwayat:** build 470 cacat (`Paint.setTypeface` ditulis `)V` di `drawAvatar`, memicu
+> `NoSuchMethodError`) — diperbaiki di 471. Perbaikan `tv()` di 470 sendiri terbukti berhasil.
 
 
 | | |
 |---|---|
-| File | `Miyu-4.6.0.apk` — 38.833.961 byte (37,0 MB), build **471** |
-| SHA-256 | `431ead7f43a8939e34161240b2f89775418e153a843af928de3cc08ef31ee240` |
+| File | `Miyu-4.6.0.apk` — 38.833.961 byte (37,0 MB), build **472** |
+| SHA-256 | `73d488c0900ab3d5eba87f997c2dbdfb10b4ca6645262431b9a8a5ed794a13b1` |
 | Package | `app.miyu.my.id` (tidak berubah) |
-| Versi | 4.6.0 (471) |
+| Versi | 4.6.0 (472) |
 | Sertifikat | **identitas asli Miyu** (AOSP testkey) — SHA-256 `a40da80a…bf5dc` |
 | Skema signing | v1 + v2 + v3 |
 | minSdk / targetSdk | 26 / 36 |
@@ -336,7 +338,7 @@ sendiri sehingga wajib uninstall — itu kesalahan besar yang sekarang beres.)
 | `apksigner verify` | v2 ✅ v3 ✅ |
 | Cert SHA-256 vs APK lama | **identik** |
 | package name | `app.miyu.my.id` (sama) |
-| versionCode | 459 → **471** (naik) |
+| versionCode | 459 → **472** (naik) |
 | Simulasi upgrade | **bisa menimpa tanpa uninstall** |
 | aapt2 dump badging / optimize | lolos (exit 0) |
 | Diagnosis biner mandiri | 68 pemeriksaan, 0 gagal |
