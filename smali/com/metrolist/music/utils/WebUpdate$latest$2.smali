@@ -116,7 +116,7 @@
     new-instance p1, Ljava/net/URL;
 
     .line 11
-    const-string v0, "https://app.miyu.my.id/"
+    const-string v0, "https://api.github.com/repos/HOOOOOOQ/Auralys_src/contents/dist"
 
     .line 13
     invoke-direct {p1, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
@@ -149,7 +149,7 @@
     const-string v0, "User-Agent"
 
     .line 37
-    const-string v1, "Auralys/4.3.6 (https://t.me/uxpall)"
+    const-string v1, "Miyu/4.3.8 (https://t.me/uxpall)"
 
     .line 39
     invoke-virtual {p1, v0, v1}, Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V

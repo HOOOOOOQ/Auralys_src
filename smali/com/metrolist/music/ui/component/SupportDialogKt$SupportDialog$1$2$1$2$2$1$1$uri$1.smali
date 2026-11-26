@@ -138,7 +138,7 @@
     move-result-object p1
 
     .line 13
-    const-string v0, "QRIS-Auralys-share"
+    const-string v0, "Saweria-Miyu-share"
 
     .line 15
     iget-object p0, p0, Lcom/metrolist/music/ui/component/SupportDialogKt$SupportDialog$1$2$1$2$2$1$1$uri$1;->$context:Landroid/content/Context;
