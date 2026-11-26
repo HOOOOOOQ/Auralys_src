@@ -1,13 +1,13 @@
-# Miyu — build 4.5.1 (465)
+# Miyu — build 4.6.0 (467)
 
 Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
 | | |
 |---|---|
-| File | `Miyu-4.5.1.apk` — 38.575.785 byte (36,7 MB) |
-| SHA-256 | `f0bee9cb467a0aae68560779c5d4abf721c33371c2e895dc50d13afff5cf1b84` |
+| File | `Miyu-4.6.0.apk` — 38.838.062 byte (36,7 MB) |
+| SHA-256 | `7d3b448daaae6014783610f90221b65b906eaf2e6445afd1967b97461e81abd9` |
 | Package | `app.miyu.my.id` (tidak berubah) |
-| Versi | 4.5.1 (465) — sebelumnya 4.3.6 (459) |
+| Versi | 4.6.0 (467) — sebelumnya 4.3.6 (459) |
 | Sertifikat | **keystore Miyu sendiri**, SHA-256 `d9:9c:7a:86:0b:c2:75:b7:4d:9f:b1:1d:9a:f2:d9:a0:af:30:e5:bf:e6:c2:f0:4c:7a:44:36:68:27:b2:ad:e1` |
 | Skema signing | v2 + v3 (v1 tidak aktif, minSdk 26) |
 | minSdk / targetSdk | 26 / 36 |
@@ -20,7 +20,7 @@ meng-update aplikasi yang sertifikatnya sama, jadi:
 
 ```bash
 adb uninstall app.miyu.my.id      # atau hapus manual di pengaturan
-adb install Miyu-4.5.1.apk
+adb install Miyu-4.6.0.apk
 ```
 
 Data (playlist, login, setelan) **hilang** saat uninstall. Ini terjadi **sekali**
@@ -28,6 +28,27 @@ saja — rilis-rilis berikutnya bisa `adb install -r` / update biasa karena
 kuncinya sekarang milik sendiri dan dijaga.
 
 
+
+## 4.6.0 — build "paling tahan banting" untuk masalah parsing paket
+
+Tiga perubahan struktural, semuanya menghilangkan sumber penolakan yang mungkin:
+
+| Perubahan | Kenapa |
+|---|---|
+| `lib/*.so` sekarang sejajar **16384** (bukan 4096) | HP Android 15+ dengan halaman memori 16 KB menolak APK yang hanya 4096-sejajar |
+| `extractNativeLibs` `false` → **`true`** | library tidak lagi perlu di-mmap langsung dari APK; cara paling aman lintas versi Android |
+| signing **v1 + v2 + v3** | beberapa OEM (terutama Android 11 ke bawah / ROM Cina) butuh JAR signature v1 |
+
+Verifikasi build ini:
+- rantai field extra ZIP: **1425 entri, 0 masalah** (aturan libziparchive)
+- `lib/*.so` % 16384 = 0 untuk **12/12**
+- `resources.arsc` % 4 = 0
+- CRC semua `.so` cocok (tidak ada data terpotong)
+- `apksigner verify`: v2 ✅ v3 ✅, dan `META-INF/MIYU.SF`+`MIYU.RSA` ada untuk v1
+
+Selain itu URL updater & tombol "buka website" tadinya menunjuk repo yang
+**tidak ada** (`HOOOOOOQ/miyu_src` → 404), sehingga cek pembaruan selalu gagal.
+Sudah diperbaiki ke `HOOOOOOQ/Auralys_src`.
 
 ## 4.5.1 — perbaikan "ada masalah saat mengurai paket"
 
@@ -102,7 +123,7 @@ Cek cepat hasilnya:
 ```bash
 python3 - <<'EOF'
 import struct
-d=open('Miyu-4.5.1.apk','rb').read(); off=0
+d=open('Miyu-4.6.0.apk','rb').read(); off=0
 while d[off:off+4]==b'PK\x03\x04':
     v,f,m,t,dt,crc,csz,usz,n,e=struct.unpack('<HHHHHIIIHH', d[off+4:off+30])
     name=d[off+30:off+30+n].decode()
@@ -180,7 +201,7 @@ baru ke `dist/` di branch `main`. Langkah rilis berikutnya:
 
 1. Naikkan versi (`apktool.yml` + semua string versi di smali).
 2. Build & sign, lalu simpan dengan nama **`dist/Miyu-<versi>.apk`**
-   (contoh `dist/Miyu-4.5.1.apk`). Huruf besar/kecil tidak masalah,
+   (contoh `dist/Miyu-4.6.0.apk`). Huruf besar/kecil tidak masalah,
    pola `Miyu-` + angka + `.apk` wajib.
 3. Commit & push ke `main`. Selesai — aplikasi akan mendeteksi sendiri.
 
@@ -227,7 +248,7 @@ java -jar apksigner.jar sign \
      --ks-pass pass:$(cat keystore/KEYSTORE-PASSWORD.txt) \
      --key-pass pass:$(cat keystore/KEYSTORE-PASSWORD.txt) \
      --v1-signing-enabled false --v2-signing-enabled true --v3-signing-enabled true \
-     --min-sdk-version 26 -o Miyu-4.5.1.apk miyu-unsigned.apk
+     --min-sdk-version 26 -o Miyu-4.6.0.apk miyu-unsigned.apk
 ```
 
 Catatan yang sudah dibereskan agar `apktool b` berhasil pada project ini:

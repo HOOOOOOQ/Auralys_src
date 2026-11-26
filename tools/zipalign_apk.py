@@ -44,7 +44,10 @@ def target_alignment(name, method):
     if name == 'resources.arsc':
         return 4
     if name.startswith('lib/') and name.endswith('.so'):
-        return 4096
+        # 16384 = kelipatan 4096 sekaligus memenuhi syarat halaman 16 KB
+        # (Android 15+ dengan kernel page-size 16 KB menolak lib yang hanya
+        # 4096-sejajar dengan pesan "problem parsing the package").
+        return 16384
     return 0
 
 
@@ -191,8 +194,8 @@ def verify(path):
         data_at = off + 30 + nl + el
         if name == 'resources.arsc' and data_at % 4:
             problems.append('arsc %%4 = %d' % (data_at % 4))
-        if name.startswith('lib/') and name.endswith('.so') and data_at % 4096:
-            problems.append('%s %%4096 = %d' % (name, data_at % 4096))
+        if name.startswith('lib/') and name.endswith('.so') and data_at % 16384:
+            problems.append('%s %%16384 = %d' % (name, data_at % 16384))
         count += 1
         off = data_at + csize
     print('  entri lokal: %d, masalah: %s' % (count, problems or 'tidak ada'))
