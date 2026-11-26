@@ -116,7 +116,7 @@
     new-instance p1, Ljava/net/URL;
 
     .line 11
-    const-string v0, "https://api.github.com/repos/HOOOOOOQ/miyu_src/contents/dist"
+    const-string v0, "https://api.github.com/repos/HOOOOOOQ/Auralys_src/contents/dist"
 
     .line 13
     invoke-direct {p1, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V

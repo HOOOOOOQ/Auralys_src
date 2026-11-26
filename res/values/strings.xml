@@ -145,7 +145,7 @@ Long-press the drag handle to reorder. The first section will be shown by defaul
     <string name="animated_artwork_desc">Shows a short silent looping video over the cover in the full player when one is available. Uses extra data and battery.</string>
     <string name="animated_artwork_not_recommended">Not recommended on this device</string>
     <string name="app_language">App language</string>
-    <string name="app_name">Miyu 4.5</string>
+    <string name="app_name">Miyu</string>
     <string name="appearance">Appearance</string>
     <string name="approve">Approve</string>
     <string name="artist_name">Artist name</string>
