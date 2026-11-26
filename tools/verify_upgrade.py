@@ -57,5 +57,8 @@ if __name__ == '__main__':
     import os
     jh = os.environ.get('JAVA_HOME')
     java = os.path.join(jh, 'bin', 'java') if jh else 'java'
-    sys.exit(0 if main(sys.argv[1], sys.argv[2], '/tmp/aapt2x/aapt2',
-                       '/tmp/postar/package/lib/apksigner.jar', java) else 1)
+    aapt2 = os.environ.get('AAPT2') or 'aapt2'
+    signer = os.environ.get('APKSIGNER_JAR') or ''
+    if not signer:
+        sys.exit("set APKSIGNER_JAR ke apksigner.jar")
+    sys.exit(0 if main(sys.argv[1], sys.argv[2], aapt2, signer, java) else 1)
