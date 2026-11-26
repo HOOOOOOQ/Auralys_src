@@ -1,4 +1,4 @@
-Auralys - notices for the part that cuts the person out of a photo (the poster maker, "Poster lagu")
+Miyu - notices for the part that cuts the person out of a photo (the poster maker, "Poster lagu")
 
 This product includes the following third-party component, used under its own licence.
 
@@ -10,7 +10,7 @@ This product includes the following third-party component, used under its own li
    The file in this app is a CONVERTED and COMPRESSED copy, not the original weights:
    - source: the ONNX conversion published as Xenova/modnet on Hugging Face (onnx/model.onnx,
      SHA-256 07c308cf0fc7e6e8b2065a12ed7fc07e1de8febb7dc7839d7b7f15dd66584df9);
-   - changes made by Auralys: the graph was rewritten into Auralys's own small program format (the same arithmetic: convolutions,
+   - changes made by Miyu: the graph was rewritten into Miyu's own small program format (the same arithmetic: convolutions,
      batch / instance normalisation, squeeze-excitation, bilinear resizing); the larger weight tensors were compressed with per-channel
      palettes (k-means, 3 to 6 bits per weight) and the biases of the compressed layers were corrected for the compression; the small
      layers are kept as 16-bit floats. The result is close to, but not identical with, the original network's output.
