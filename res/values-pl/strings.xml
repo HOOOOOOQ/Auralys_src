@@ -211,7 +211,7 @@ Przytrzymaj ikonę przeciągania aby zmienić kolejność. Domyślnie wyświetla
     <string name="crash_close">Zamknij</string>
     <string name="crash_description">Wystąpił nieoczekiwany błąd. Udostępnij raport o awarii, aby pomóc nam rozwiązać problem</string>
     <string name="crash_no_log">Brak dostępnego dziennika awarii</string>
-    <string name="crash_report_subject">Raport o awarii Auralys</string>
+    <string name="crash_report_subject">Raport o awarii Miyu</string>
     <string name="crash_share_logs">Udostępnij dzienniki</string>
     <string name="crash_share_title">Udostępnij raport o awarii</string>
     <string name="crash_title">Aplikacja uległa awarii</string>
@@ -446,7 +446,7 @@ Przytrzymaj ikonę przeciągania aby zmienić kolejność. Domyślnie wyświetla
     <string name="link_copied">Link skopiowany do schowka</string>
     <string name="list_bullet">•</string>
     <string name="listen_history">Słuchaj historii</string>
-    <string name="listen_on_metrolist">Słuchaj na Auralys</string>
+    <string name="listen_on_metrolist">Słuchaj na Miyu</string>
     <string name="listen_together">Słuchaj Razem</string>
     <string name="listen_together_auto_approval_joins">Automatycznie zatwierdzaj prośby o dołączenie</string>
     <string name="listen_together_auto_approval_suggestions">Automatycznie zatwierdzaj sugestie piosenek</string>
@@ -537,7 +537,7 @@ Przytrzymaj ikonę przeciągania aby zmienić kolejność. Domyślnie wyświetla
     <string name="media3_controls_seek_to_next_description">Przewiń do następnego elementu</string>
     <string name="media3_controls_seek_to_previous_description">Przewiń do poprzedniego elementu</string>
     <string name="media_id">ID media</string>
-    <string name="metrolist">AURALYS</string>
+    <string name="metrolist">MIYU</string>
     <string name="mime_type">Typ MIME</string>
     <string name="mini_player">Miniodtwarzacz</string>
     <string name="mini_player_background_not_available">Niedostępne gdy nowy miniodtwarzacz jest wyłączony</string>
@@ -615,7 +615,7 @@ Przytrzymaj ikonę przeciągania aby zmienić kolejność. Domyślnie wyświetla
     <string name="play_all">Odtwórz wszystkie</string>
     <string name="play_next">Odtwórz jako następny</string>
     <string name="play_next_desc">Dodaj na górę kolejki</string>
-    <string name="play_on_app">Odtwórz w Auralys</string>
+    <string name="play_on_app">Odtwórz w Miyu</string>
     <string name="play_pause">Odtwórz/Wstrzymaj</string>
     <string name="player">Odtwarzacz</string>
     <string name="player_and_audio">Odtwarzacz i audio</string>
@@ -823,7 +823,7 @@ Przytrzymaj ikonę przeciągania aby zmienić kolejność. Domyślnie wyświetla
     <string name="system_equalizer">Korektor systemowy</string>
     <string name="system_equalizer_desc">Otwórz systemowy equalizer Androida</string>
     <string name="tab">Karta</string>
-    <string name="tap_to_open">Dotknij, aby otworzyć Auralys</string>
+    <string name="tap_to_open">Dotknij, aby otworzyć Miyu</string>
     <string name="tap_to_recognize">Dotknij, aby rozpoznać</string>
     <string name="template_percent">%1$d procent.</string>
     <string name="tempo_and_pitch">Tempo i wysokość</string>

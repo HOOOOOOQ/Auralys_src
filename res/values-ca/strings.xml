@@ -169,7 +169,7 @@
     <string name="crash_close">Tancar</string>
     <string name="crash_description">"S'ha produït un error inesperat. Per favor, enviï'ns l'informe de fallida per a ajudar-nos a solucionar el problema."</string>
     <string name="crash_no_log">No hi ha registres de fallida disponibles</string>
-    <string name="crash_report_subject">Informe de Fallida de Auralys</string>
+    <string name="crash_report_subject">Informe de Fallida de Miyu</string>
     <string name="crash_share_logs">Compartir Registres</string>
     <string name="crash_share_title">"Enviar l'informe de fallida"</string>
     <string name="crash_title">"L'aplicació ha fallat"</string>
@@ -482,7 +482,7 @@
     <string name="media3_controls_seek_to_next_description">"Ves a l'element següent"</string>
     <string name="media3_controls_seek_to_previous_description">"Ves a l'element anterior"</string>
     <string name="media_id">Id. multimèdia</string>
-    <string name="metrolist">AURALYS</string>
+    <string name="metrolist">MIYU</string>
     <string name="mime_type">Tipus MIME</string>
     <string name="mini_player">Mini Reproductor</string>
     <string name="misc">Miscel·lània</string>
@@ -556,7 +556,7 @@
     <string name="play_all">Reproduir tot</string>
     <string name="play_next">Reprodueix a continuació</string>
     <string name="play_next_desc">Afegir al començament de la cua</string>
-    <string name="play_on_app">Reprodueix amb Auralys</string>
+    <string name="play_on_app">Reprodueix amb Miyu</string>
     <string name="play_pause">Reprodueix/Pausa</string>
     <string name="player">Reproductor</string>
     <string name="player_and_audio">Reproductor i àudio</string>
@@ -741,7 +741,7 @@
     <string name="system_default">Valor per defecte del sistema</string>
     <string name="system_equalizer">Equalitzador del sistema</string>
     <string name="tab">Pestanya</string>
-    <string name="tap_to_open">Toqueu per obrir el Auralys</string>
+    <string name="tap_to_open">Toqueu per obrir el Miyu</string>
     <string name="tap_to_recognize">Toca per identificar</string>
     <string name="template_percent">%1$d per cent</string>
     <string name="tempo_and_pitch">Tempo i to</string>

@@ -198,7 +198,7 @@ https://perplexity.ai/settings/api"</string>
     <string name="crash_close">إغلاق</string>
     <string name="crash_description">حدث خطأ غير متوقع يرجى مشاركة تقرير العطل لمساعدتنا في حل المشكلة.</string>
     <string name="crash_no_log">لا يوجد سجل أعطال متاح</string>
-    <string name="crash_report_subject">تقرير تعطل تطبيق Auralys</string>
+    <string name="crash_report_subject">تقرير تعطل تطبيق Miyu</string>
     <string name="crash_share_logs">مشاركة السجلات</string>
     <string name="crash_share_title">مشاركة تقرير التعطل</string>
     <string name="crash_title">تعطل التطبيق</string>
@@ -515,7 +515,7 @@ https://perplexity.ai/settings/api"</string>
     <string name="media3_controls_seek_to_next_description">تقديم إلى العنصر التالي</string>
     <string name="media3_controls_seek_to_previous_description">ترجيع إلى العنصر السابق</string>
     <string name="media_id">الرقم التعريفي للوسيط</string>
-    <string name="metrolist">AURALYS</string>
+    <string name="metrolist">MIYU</string>
     <string name="mime_type">نوع MIME</string>
     <string name="mini_player">مشغل مصغر</string>
     <string name="mini_player_background_not_available">غير متاح عند تعطيل تصميم المشغل المصغر الجديد</string>
@@ -591,7 +591,7 @@ https://perplexity.ai/settings/api"</string>
     <string name="play_all">تشغيل الكل</string>
     <string name="play_next">تشغيل التالي</string>
     <string name="play_next_desc">تشغيل التالي في قائمة الانتظار</string>
-    <string name="play_on_app">تشغيل على Auralys</string>
+    <string name="play_on_app">تشغيل على Miyu</string>
     <string name="play_pause">تشغيل\\ايقاف مؤقت</string>
     <string name="player">مشغل</string>
     <string name="player_and_audio">المشغل والصوت</string>
@@ -783,7 +783,7 @@ https://perplexity.ai/settings/api"</string>
     <string name="system_default">الإعدادات الافتراضية للنظام</string>
     <string name="system_equalizer">معادل النظام</string>
     <string name="tab">علامة تبويب</string>
-    <string name="tap_to_open">اضغط لفتح تطبيق Auralys</string>
+    <string name="tap_to_open">اضغط لفتح تطبيق Miyu</string>
     <string name="tap_to_recognize">انقر للتعرف</string>
     <string name="template_percent">%1$d في المئة.</string>
     <string name="tempo_and_pitch">سرعة الإيقاع والحدة</string>

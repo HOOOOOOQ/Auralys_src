@@ -214,7 +214,7 @@ Nyomja meg hosszan a fogót az átrendezéshez. Alapértelmezés szerint az els�
     <string name="crash_close">Bezárás</string>
     <string name="crash_description">Váratlan hiba történt. Kérjük, ossza meg az összeomlási jelentést, hogy megoldahassuk a problémát</string>
     <string name="crash_no_log">Nincs elérhető összeomlási jelentés</string>
-    <string name="crash_report_subject">Auralys összeomlási jelentés</string>
+    <string name="crash_report_subject">Miyu összeomlási jelentés</string>
     <string name="crash_share_logs">Naplók megosztása</string>
     <string name="crash_share_title">Összeomlási jelentés megosztása</string>
     <string name="crash_title">App összeomlott</string>
@@ -437,8 +437,8 @@ Nyomja meg hosszan a fogót az átrendezéshez. Alapértelmezés szerint az els�
     <string name="kick_user_desc">Személy eltávolítása a munkamenetből</string>
     <string name="kmp_upgrade_action">Frissítés KMP-re</string>
     <string name="kmp_upgrade_later">Most nem</string>
-    <string name="kmp_upgrade_title">A Auralys KMP %s elérhető</string>
-    <string name="kmp_upgrade_warning">A Auralys KMP korai hozzáférésű verzió. A funkciók hibásak, hiányosak lehetnek, vagy előzetes értesítés nélkül változhatnak.</string>
+    <string name="kmp_upgrade_title">A Miyu KMP %s elérhető</string>
+    <string name="kmp_upgrade_warning">A Miyu KMP korai hozzáférésű verzió. A funkciók hibásak, hiányosak lehetnek, vagy előzetes értesítés nélkül változhatnak.</string>
     <string name="last_song_listened">Vegye alapul a legutolsó lejátszott dalt</string>
     <string name="last_week">Múlt héten</string>
     <string name="latest_version_format">%s a legújabb</string>
@@ -456,7 +456,7 @@ Nyomja meg hosszan a fogót az átrendezéshez. Alapértelmezés szerint az els�
     <string name="link_copied">Hivatkozás vágólapra másolva</string>
     <string name="list_bullet">•</string>
     <string name="listen_history">Hallgatás előzmény</string>
-    <string name="listen_on_metrolist">Meghallgatás Auralys-en</string>
+    <string name="listen_on_metrolist">Meghallgatás Miyu-en</string>
     <string name="listen_together">Közös Hallgatás</string>
     <string name="listen_together_auto_approval_joins">Csatlakozási kérelmek automatikus elfogadása</string>
     <string name="listen_together_auto_approval_suggestions">Dal javaslatok automatikus elfogadása</string>
@@ -549,7 +549,7 @@ Nyomja meg hosszan a fogót az átrendezéshez. Alapértelmezés szerint az els�
     <string name="media3_controls_seek_to_next_description">Ugrás a következő elemre</string>
     <string name="media3_controls_seek_to_previous_description">Ugrás az előző elemre</string>
     <string name="media_id">Média id</string>
-    <string name="metrolist">AURALYS</string>
+    <string name="metrolist">MIYU</string>
     <string name="mime_type">MIME típus</string>
     <string name="mini_player">Mini-lejátszó</string>
     <string name="mini_player_background_not_available">Nem elérhető a kikapcsolt új mini-lejátszó stílus esetén</string>
@@ -627,7 +627,7 @@ Nyomja meg hosszan a fogót az átrendezéshez. Alapértelmezés szerint az els�
     <string name="play_all">Összes lejátszása</string>
     <string name="play_next">Következő</string>
     <string name="play_next_desc">A lista következő elemének lejátszása</string>
-    <string name="play_on_app">Lejátszás Auralys-en</string>
+    <string name="play_on_app">Lejátszás Miyu-en</string>
     <string name="play_pause">Lejátszás/Szünet</string>
     <string name="player">Lejátszó</string>
     <string name="player_and_audio">Lejátszó és hang</string>
@@ -832,7 +832,7 @@ Nyomja meg hosszan a fogót az átrendezéshez. Alapértelmezés szerint az els�
     <string name="system_equalizer">Rendszer hangszínszabályzója</string>
     <string name="system_equalizer_desc">Az Android beépített hangszínszabályzójának megnyitása</string>
     <string name="tab">Lap</string>
-    <string name="tap_to_open">Koppintson a Auralys megnyitásához</string>
+    <string name="tap_to_open">Koppintson a Miyu megnyitásához</string>
     <string name="tap_to_recognize">Koppintson a felismeréshez</string>
     <string name="template_percent">%1$d százalék.</string>
     <string name="tempo_and_pitch">Tempó és Hangszín</string>

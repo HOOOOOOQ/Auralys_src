@@ -2,7 +2,7 @@
 <manifest
     android:compileSdkVersion="37"
     android:compileSdkVersionCodename="17"
-    package="com.auralyst.app"
+    package="app.miyu.my.id"
     platformBuildVersionCode="37"
     platformBuildVersionName="17"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -77,10 +77,10 @@
             android:name="com.google.android.projection.gearhead" />
     </queries>
     <permission
-        android:name="com.auralyst.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="app.miyu.my.id.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
     <uses-permission
-        android:name="com.auralyst.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+        android:name="app.miyu.my.id.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
     <uses-feature
         android:name="android.hardware.camera.front"
         android:required="false" />
@@ -128,7 +128,7 @@
             android:theme="@style/Theme.Metrolist"
             android:name="com.metrolist.music.ui.screens.lockscreen.LockScreenLyricsActivity"
             android:exported="false"
-            android:taskAffinity="com.auralyst.app.lockscreen"
+            android:taskAffinity="app.miyu.my.id.lockscreen"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" />
@@ -616,7 +616,7 @@
         <provider
             android:name="androidx.core.content.FileProvider"
             android:exported="false"
-            android:authorities="com.auralyst.app.FileProvider"
+            android:authorities="app.miyu.my.id.FileProvider"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
@@ -808,7 +808,7 @@
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:exported="false"
-            android:authorities="com.auralyst.app.androidx-startup">
+            android:authorities="app.miyu.my.id.androidx-startup">
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
                 android:value="androidx.startup" />

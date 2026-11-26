@@ -218,7 +218,7 @@
     <string name="crash_close">关闭</string>
     <string name="crash_description">发生意外错误，请分享崩溃报告以帮助我们解决问题</string>
     <string name="crash_no_log">没有可用的崩溃日志</string>
-    <string name="crash_report_subject">Auralys 崩溃报告</string>
+    <string name="crash_report_subject">Miyu 崩溃报告</string>
     <string name="crash_share_logs">分享日志</string>
     <string name="crash_share_title">分享崩溃报告</string>
     <string name="crash_title">应用崩溃了</string>
@@ -444,8 +444,8 @@
     <string name="kick_user_desc">从此会话中移除该人</string>
     <string name="kmp_upgrade_action">升级到 KMP</string>
     <string name="kmp_upgrade_later">暂不升级</string>
-    <string name="kmp_upgrade_title">Auralys KMP %s 现已推出</string>
-    <string name="kmp_upgrade_warning">Auralys KMP 目前处于抢先体验阶段。功能可能存在缺陷、不完整或变更，恕不另行通知。</string>
+    <string name="kmp_upgrade_title">Miyu KMP %s 现已推出</string>
+    <string name="kmp_upgrade_warning">Miyu KMP 目前处于抢先体验阶段。功能可能存在缺陷、不完整或变更，恕不另行通知。</string>
     <string name="last_song_listened">根据最后听的那首歌</string>
     <string name="last_week">上周</string>
     <string name="latest_version_format">最新版本：%s</string>
@@ -463,7 +463,7 @@
     <string name="link_copied">链接已复制到剪贴板</string>
     <string name="list_bullet">•</string>
     <string name="listen_history">听歌历史</string>
-    <string name="listen_on_metrolist">在 Auralys 上听</string>
+    <string name="listen_on_metrolist">在 Miyu 上听</string>
     <string name="listen_together">一起听</string>
     <string name="listen_together_auto_approval_joins">自动批准加入请求</string>
     <string name="listen_together_auto_approval_suggestions">自动批准歌曲推荐</string>
@@ -557,7 +557,7 @@
     <string name="media3_controls_seek_to_next_description">跳转到下一项</string>
     <string name="media3_controls_seek_to_previous_description">跳转到上一项</string>
     <string name="media_id">媒体 ID</string>
-    <string name="metrolist">AURALYS</string>
+    <string name="metrolist">MIYU</string>
     <string name="mime_type">MIME 类型</string>
     <string name="mini_player">迷你播放器</string>
     <string name="mini_player_background_not_available">当新迷你播放器设计被禁用时不可用</string>
@@ -635,7 +635,7 @@
     <string name="play_all">播放全部</string>
     <string name="play_next">接下来播放</string>
     <string name="play_next_desc">待播列表中下一首播放</string>
-    <string name="play_on_app">在 Auralys 上播放</string>
+    <string name="play_on_app">在 Miyu 上播放</string>
     <string name="play_pause">播放/暂停</string>
     <string name="player">播放器</string>
     <string name="player_and_audio">播放器与音频</string>
@@ -845,7 +845,7 @@
     <string name="system_equalizer">系统均衡器</string>
     <string name="system_equalizer_desc">打开 Android 内置的均衡器</string>
     <string name="tab">标签页</string>
-    <string name="tap_to_open">点击打开 Auralys</string>
+    <string name="tap_to_open">点击打开 Miyu</string>
     <string name="tap_to_recognize">点击识别</string>
     <string name="template_percent">百分之 %1$d。</string>
     <string name="tempo_and_pitch">节奏和音调</string>

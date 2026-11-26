@@ -517,7 +517,7 @@
     <string name="play_all">Відтворити все</string>
     <string name="play_next">Відтворити наступним</string>
     <string name="play_next_desc">Додати на початок черги</string>
-    <string name="play_on_app">Відтворити в Auralys</string>
+    <string name="play_on_app">Відтворити в Miyu</string>
     <string name="play_pause">Відтворення/Пауза</string>
     <string name="player">Плеєр</string>
     <string name="player_and_audio">Плеєр та аудіо</string>
@@ -693,7 +693,7 @@
     <string name="system_equalizer">Системний еквалайзер</string>
     <string name="system_equalizer_desc">Відкриває вбудований еквалайзер Android</string>
     <string name="tab">Вкладка</string>
-    <string name="tap_to_open">Натисніть, щоб відкрити Auralys</string>
+    <string name="tap_to_open">Натисніть, щоб відкрити Miyu</string>
     <string name="tap_to_recognize">Торкніться, щоб розпізнати</string>
     <string name="template_percent">Відсотків: %1$d.</string>
     <string name="tempo_and_pitch">Темп і висота тону</string>
