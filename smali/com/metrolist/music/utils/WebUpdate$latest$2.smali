@@ -149,7 +149,7 @@
     const-string v0, "User-Agent"
 
     .line 37
-    const-string v1, "Miyu/4.3.8 (https://t.me/uxpall)"
+    const-string v1, "Miyu/4.3.9 (https://t.me/uxpall)"
 
     .line 39
     invoke-virtual {p1, v0, v1}, Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V

@@ -1,17 +1,17 @@
-# Miyu — build 4.3.8 (461)
+# Miyu — build 4.3.9 (462)
 
 Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
 | | |
 |---|---|
-| File | `Miyu-4.3.8.apk` — 37.451.870 byte (36,7 MB) |
-| SHA-256 | `9666ec871b91b45e7928ced8aee909448958dc4416484e6495a44f94699272f0` |
+| File | `Miyu-4.3.9.apk` — 37.534.285 byte (36,7 MB) |
+| SHA-256 | `e4624a1fccd6fb7be6d905640d9510f6d0bc63a5edad39088c316e710da456cf` |
 | Package | `app.miyu.my.id` (tidak berubah) |
-| Versi | 4.3.8 (461) — sebelumnya 4.3.6 (459) |
-| Sertifikat | **keystore Miyu sendiri**, SHA-256 `c3:4e:c1:bd:9e:7c:5f:12:a7:51:f0:6d:56:da:6f:a8:a6:83:46:d4:70:d8:5a:a7:d6:a4:4d:02:a1:5a:1f:98` |
+| Versi | 4.3.9 (462) — sebelumnya 4.3.6 (459) |
+| Sertifikat | **keystore Miyu sendiri**, SHA-256 `e5:7d:d6:db:f7:b7:3d:2d:2c:35:b1:b5:ce:c8:20:a5:7b:39:7c:f0:5f:8e:71:2e:f4:18:73:e0:7e:b4:8b:68` |
 | Skema signing | v2 + v3 (v1 tidak aktif, minSdk 26) |
 | minSdk / targetSdk | 26 / 36 |
-| Entri APK | 995 (sama dengan build sebelumnya, tidak ada yang hilang) |
+| Entri APK | 1128 (996 isi + 132 `META-INF/*`) — tidak ada berkas asli yang hilang |
 
 ## ⚠️ Wajib uninstall sekali
 
@@ -20,35 +20,70 @@ meng-update aplikasi yang sertifikatnya sama, jadi:
 
 ```bash
 adb uninstall app.miyu.my.id      # atau hapus manual di pengaturan
-adb install Miyu-4.3.8.apk
+adb install Miyu-4.3.9.apk
 ```
 
 Data (playlist, login, setelan) **hilang** saat uninstall. Ini terjadi **sekali**
 saja — rilis-rilis berikutnya bisa `adb install -r` / update biasa karena
 kuncinya sekarang milik sendiri dan dijaga.
 
-## Perubahan di 4.3.7 & 4.3.8
+
+## ⚠️ Perbaikan penting di 4.3.9
+
+Build 4.3.8 **gagal dipasang** dengan pesan *"Aplikasi tidak diinstal karena
+paket tampaknya tidak valid"*. Penyebabnya: APK hasil `apktool b` **tidak
+di-zipalign** — `resources.arsc` harus 4-byte aligned dan setiap `lib/*.so`
+harus 4096-byte aligned (wajib karena app memakai `extractNativeLibs="false"`).
+Di 4.3.8 ada 13 entri yang meleset.
+
+Mulai 4.3.9 setiap build dijalankan lewat `tools/zipalign_apk.py` dulu
+(streaming, byte-identik, sekaligus membuang *data descriptor* yang membuat
+apksigner menolak menandatangani), baru kemudian di-sign.
+
+```bash
+python3 tools/zipalign_apk.py out.apk aligned.apk
+```
+Cek cepat hasilnya:
+
+```bash
+python3 - <<'EOF'
+import struct
+d=open('Miyu-4.3.9.apk','rb').read(); off=0
+while d[off:off+4]==b'PK\x03\x04':
+    v,f,m,t,dt,crc,csz,usz,n,e=struct.unpack('<HHHHHIIIHH', d[off+4:off+30])
+    name=d[off+30:off+30+n].decode()
+    if name=='resources.arsc': assert (off+30+n+e)%4==0
+    if name.endswith('.so'):   assert (off+30+n+e)%4096==0
+    off+=30+n+e+csz
+print('alignment OK')
+EOF
+```
+
+## Perubahan di 4.3.7 → 4.3.9
 
 1. **Ukuran turun 8,1 MB** (45,5 MB → 37,4 MB) tanpa menghapus fitur.
    Penyebabnya video banner `res/raw/dev_banner.mp4` yang disimpan **tanpa
    kompresi** sebesar 8,27 MB → di-encode ulang ke 720p H.264 CRF 24
    (168 KB). Tampilan di layar ponsel praktis sama; audio memang tidak ada di
    sumbernya. Fitur/asset lain tidak disentuh.
-2. **Layar Profil Miyu** (baru di 4.3.8) — nama, bio, avatar inisial, level
+2. **Ikon aplikasi bernama** (baru di 4.3.9) — mark M + tombol play +
+   tulisan "Miyu" di atas latar gelap, termasuk versi adaptive (aman dari
+   pemotongan mask launcher).
+3. **Layar Profil Miyu** (baru di 4.3.8) — nama, bio, avatar inisial, level
    dari data nyata, centang biru/admin lewat kode admin. Buka dari shortcut
    lama-tekan ikon aplikasi → "Profil" atau "Level".
-3. **Auto-update diperbaiki** — pemeriksa versi masih mencari nama file
+4. **Auto-update diperbaiki** — pemeriksa versi masih mencari nama file
    `Auralys-*.apk`, jadi update tidak pernah terdeteksi.
    Sekarang: regex `Miyu-(versi).apk`, User-Agent `Miyu/4.3.7`, dan sumber
    feed pindah dari `app.miyu.my.id` (domain sudah mati / NXDOMAIN) ke
    `https://api.github.com/repos/HOOOOOOQ/Auralys_src/releases/latest`.
    JSON GitHub Releases memuat nama aset, jadi parser lama langsung bekerja.
-4. **Semua teks versi** diselaraskan ke 4.3.8 (461): About, Changelog, header
+5. **Semua teks versi** diselaraskan ke 4.3.8 (461): About, Changelog, header
    crash, dialog update, Sync, Last.fm UA, `LastSeenVersion`.
-5. **Warna dinamis (Material You) diperbaiki** — build 4.3.6 sempat menimpa
+6. **Warna dinamis (Material You) diperbaiki** — build 4.3.6 sempat menimpa
    `mc3_palette` menjadi hitam semua; sekarang referensi
    `@android:color/system_*` asli sudah kembali.
-6. **Keystore sendiri** — `keystore/miyu-release.jks` (RSA 4096, berlaku
+7. **Keystore sendiri** — `keystore/miyu-release.jks` (RSA 4096, berlaku
    30 tahun, sampai 2056).
 
 ## Perubahan rebrand (dari 4.3.6, tetap ada)
@@ -91,7 +126,7 @@ baru ke `dist/` di branch `main`. Langkah rilis berikutnya:
 
 1. Naikkan versi (`apktool.yml` + semua string versi di smali).
 2. Build & sign, lalu simpan dengan nama **`dist/Miyu-<versi>.apk`**
-   (contoh `dist/Miyu-4.3.8.apk`). Huruf besar/kecil tidak masalah,
+   (contoh `dist/Miyu-4.3.9.apk`). Huruf besar/kecil tidak masalah,
    pola `Miyu-` + angka + `.apk` wajib.
 3. Commit & push ke `main`. Selesai — aplikasi akan mendeteksi sendiri.
 
@@ -113,7 +148,7 @@ java -jar apksigner.jar sign \
      --ks-pass pass:$(cat keystore/KEYSTORE-PASSWORD.txt) \
      --key-pass pass:$(cat keystore/KEYSTORE-PASSWORD.txt) \
      --v1-signing-enabled false --v2-signing-enabled true --v3-signing-enabled true \
-     --min-sdk-version 26 -o Miyu-4.3.8.apk miyu-unsigned.apk
+     --min-sdk-version 26 -o Miyu-4.3.9.apk miyu-unsigned.apk
 ```
 
 Catatan yang sudah dibereskan agar `apktool b` berhasil pada project ini:
