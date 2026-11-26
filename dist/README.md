@@ -1,13 +1,13 @@
-# Miyu — build 4.6.0 (467) — FINAL
+# Miyu — build 4.6.0 (468)
 
 Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
 | | |
 |---|---|
 | File | `Miyu-4.6.0.apk` — 38.833.980 byte (37,0 MB) |
-| SHA-256 | `ae74010876260f8050f6c6f2b3bb192acb423a79115787a80d25b53cfb727103` |
+| SHA-256 | `e04a7c3d6bd62de915c1eb7e3079f22d57e08527c433d847bbba73c1dc3c2f37` |
 | Package | `app.miyu.my.id` (tidak berubah) |
-| Versi | 4.6.0 (467) |
+| Versi | 4.6.0 (468) |
 | Sertifikat | **identitas asli Miyu** (AOSP testkey) — SHA-256 `a40da80a…bf5dc` |
 | Skema signing | v1 + v2 + v3 |
 | minSdk / targetSdk | 26 / 36 |
@@ -304,9 +304,9 @@ sendiri sehingga wajib uninstall — itu kesalahan besar yang sekarang beres.)
 
 - `AndroidManifest.xml` — tidak lagi memaksa `extractNativeLibs` salah; alias
   & shortcut profile benar
-- `apktool.json` — `VersionInfo` 4.3.6/459 → **4.6.0/467**, `packageInfo` ditambah
+- `apktool.json` — `VersionInfo` 4.3.6/459 → **4.6.0/468**, `packageInfo` ditambah
 - 15 file smali — versi tersebar (`4.5.0`, `App version 4.5.0 (464)`,
-  User-Agent) diseragamkan ke **4.6.0 (467)**
+  User-Agent) diseragamkan ke **4.6.0** (BuildConfig) dan `versionCode` 468
 - `smali/.../WebUpdate$latest$2.smali`, `AppNavigationKt$$…Lambda20.smali`
   — URL repo 404 → benar
 - `res/values/strings.xml`, `values-in` — label `Miyu`
@@ -327,8 +327,10 @@ sendiri sehingga wajib uninstall — itu kesalahan besar yang sekarang beres.)
 | `apksigner verify` | v2 ✅ v3 ✅ |
 | Cert SHA-256 vs APK lama | **identik** |
 | package name | `app.miyu.my.id` (sama) |
-| versionCode | 459 → **467** (naik) |
+| versionCode | 459 → **468** (naik) |
 | Simulasi upgrade | **bisa menimpa tanpa uninstall** |
+| aapt2 dump badging / optimize | lolos (exit 0) |
+| Diagnosis biner mandiri | 67 pemeriksaan, 0 gagal |
 
 ## 5. Keterbatasan yang harus saya akui
 
@@ -347,3 +349,13 @@ build lama di HP, atau "Play Protect" memblokir.
 adb install -r dist/Miyu-4.6.0.apk     # -r = update, data tetap
 ```
 Atau buka file APK-nya langsung di HP (izinkan "instal dari sumber ini").
+
+## Kenapa build ini berbeda dari 467
+
+`467` sudah beredar. Supaya tidak ada hambatan "downgrade" di sebagian
+installer/OEM, `versionCode` dinaikkan ke **468**. Perubahan lain: nol —
+daftar berkas di dalam APK **identik 1428 entri** dengan 467.
+
+Laporan diagnosis lengkap hasil pemeriksaan file APK final ada di
+[`DIAGNOSIS-4.6.0.md`](DIAGNOSIS-4.6.0.md). Build reproducible:
+`bash tools/build_release.sh 468 4.6.0`.
