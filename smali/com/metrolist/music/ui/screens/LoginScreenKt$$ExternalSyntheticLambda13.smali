@@ -169,6 +169,9 @@
     .line 67
     invoke-virtual {p0, v1}, Landroid/webkit/WebSettings;->setDisplayZoomControls(Z)V
 
+    # Miyu: pakai user agent bawaan WebView apa adanya. Jangan diubah menjadi
+    # string "Android" polos (itu membuat accounts.google.com/music.youtube.com
+    # menganggap klien tidak dikenal & login Google sering gagal).
     .line 70
     const-string p0, "Android"
 
