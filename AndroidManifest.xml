@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    android:compileSdkVersion="37"
+    android:compileSdkVersionCodename="17"
+    package="com.auralyst.app"
+    platformBuildVersionCode="37"
+    platformBuildVersionName="17"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Memungkinkan aplikasi membuat soket jaringan dan menggunakan protokol jaringan khusus. Browser dan aplikasi lain menyediakan sarana untuk mengirim data ke internet sehingga izin ini tidak diperlukan untuk mengirim data ke internet. -->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <!-- Mengizinkan aplikasi untuk menampilkan notifikasi -->
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Memungkinkan aplikasi melihat informasi tentang koneksi jaringan, misalnya jaringan yang ada dan terhubung. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Mengizinkan apl memulai sendiri segera setelah sistem selesai booting. Hal ini dapat memperpanjang waktu yang diperlukan untuk memulai ponsel dan memungkinkan apl memperlambat ponsel secara keseluruhan jika terus berjalan. -->
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Mengizinkan apl mencegah ponsel tidur. -->
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+    <!-- Aplikasi ini dapat menjadwalkan tugas agar terjadi pada waktu yang diinginkan di masa mendatang. Hal ini juga berarti bahwa aplikasi dapat berjalan saat Anda tidak sedang menggunakan perangkat secara aktif. -->
+    <uses-permission
+        android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <!-- Mengizinkan aplikasi menggunakan layanan di latar depan. -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Mengizinkan aplikasi menggunakan layanan latar depan dengan jenis "mediaPlayback" -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <!-- Mengizinkan aplikasi menggunakan layanan latar depan dengan jenis "dataSync" -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <!-- Mengizinkan aplikasi menggunakan layanan latar depan dengan jenis "microphone" -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <!-- Aplikasi ini dapat merekam audio menggunakan mikrofon saat aplikasi sedang digunakan. -->
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO" />
+    <!-- Mengizinkan aplikasi membaca file audio dari penyimpanan bersama. -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_AUDIO" />
+    <!-- Mengizinkan aplikasi membaca konten penyimpanan bersama Anda. -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- Mengizinkan aplikasi menulis konten penyimpanan bersama Anda. -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <!-- Aplikasi ini dapat mengambil gambar dan merekam video menggunakan kamera saat aplikasi sedang digunakan. -->
+    <uses-permission
+        android:name="android.permission.CAMERA" />
+    <!-- Aplikasi ini dapat muncul di atas aplikasi lain atau bagian lain pada layar. Ini dapat mengganggu penggunaan aplikasi biasa dan mengubah kemunculan aplikasi lainnya. -->
+    <uses-permission
+        android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <queries>
+        <intent>
+            <action
+                android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL" />
+        </intent>
+        <package
+            android:name="com.google.android.projection.gearhead" />
+    </queries>
+    <permission
+        android:name="com.auralyst.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+    <uses-permission
+        android:name="com.auralyst.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <application
+        android:theme="@style/Theme.Metrolist"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.metrolist.music.App"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:supportsRtl="false"
+        android:banner="@mipmap/tv_banner"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appCategory="audio"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:localeConfig="@xml/_generated_res_locale_config"
+        android:enableOnBackInvokedCallback="true">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:theme="@style/zxing_CaptureTheme"
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:theme="@style/Theme.Metrolist"
+            android:name="com.metrolist.music.ui.screens.lockscreen.LockScreenLyricsActivity"
+            android:exported="false"
+            android:taskAffinity="com.auralyst.app.lockscreen"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" />
+        <activity
+            android:theme="@style/Theme.Metrolist"
+            android:name="com.metrolist.music.ui.screens.CrashActivity"
+            android:exported="false"
+            android:process=":crash"
+            android:excludeFromRecents="true" />
+        <activity
+            android:theme="@style/Theme.Metrolist"
+            android:name="com.metrolist.music.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="density|keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="adjustResize"
+            android:resizeableActivity="true">
+            <layout
+                android:minWidth="280.0dip"
+                android:minHeight="320.0dip"
+                android:defaultWidth="420.0dip"
+                android:defaultHeight="700.0dip" />
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <action
+                    android:name="android.intent.action.MUSIC_PLAYER" />
+                <category
+                    android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <category
+                    android:name="android.intent.category.APP_MUSIC" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="com.metrolist.music.action.RECOGNITION" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true">
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https" />
+                <data
+                    android:host="metrolist.cc" />
+                <data
+                    android:pathPrefix="/listen" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true">
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <action
+                    android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+                <action
+                    android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="http" />
+                <data
+                    android:scheme="https" />
+                <data
+                    android:host="youtube.com" />
+                <data
+                    android:host="m.youtube.com" />
+                <data
+                    android:host="www.youtube.com" />
+                <data
+                    android:host="music.youtube.com" />
+                <data
+                    android:pathPrefix="/v/" />
+                <data
+                    android:pathPrefix="/embed/" />
+                <data
+                    android:pathPrefix="/watch" />
+                <data
+                    android:pathPrefix="/channel/" />
+                <data
+                    android:pathPrefix="/user/" />
+                <data
+                    android:pathPrefix="/c/" />
+                <data
+                    android:pathPrefix="/playlist" />
+                <data
+                    android:pathPrefix="/browse/" />
+                <data
+                    android:pathPrefix="/search" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true">
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <action
+                    android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+                <action
+                    android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="http" />
+                <data
+                    android:scheme="https" />
+                <data
+                    android:host="youtu.be" />
+                <data
+                    android:pathPrefix="/" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <action
+                    android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+                <action
+                    android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="vnd.youtube" />
+                <data
+                    android:scheme="vnd.youtube.launch" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SEND" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:mimeType="text/plain" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_cair"
+            android:name="com.metrolist.music.MainActivityCair"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_cair_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_mewah"
+            android:name="com.metrolist.music.MainActivityMewah"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_mewah_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_lavender"
+            android:name="com.metrolist.music.MainActivityLavender"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_lavender_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_matcha"
+            android:name="com.metrolist.music.MainActivityMatcha"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_matcha_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_ruby"
+            android:name="com.metrolist.music.MainActivityRuby"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_ruby_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_kopi"
+            android:name="com.metrolist.music.MainActivityKopi"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_kopi_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_mono"
+            android:name="com.metrolist.music.MainActivityMono"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_mono_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_sakura"
+            android:name="com.metrolist.music.MainActivitySakura"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_sakura_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_aurora"
+            android:name="com.metrolist.music.MainActivityAurora"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_aurora_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_bintang"
+            android:name="com.metrolist.music.MainActivityBintang"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_bintang_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_gema"
+            android:name="com.metrolist.music.MainActivityGema"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_gema_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_neon"
+            android:name="com.metrolist.music.MainActivityNeon"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_neon_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_piringan"
+            android:name="com.metrolist.music.MainActivityPiringan"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_piringan_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_senja"
+            android:name="com.metrolist.music.MainActivitySenja"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_senja_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_ocean"
+            android:name="com.metrolist.music.MainActivityOcean"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_ocean_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_forest"
+            android:name="com.metrolist.music.MainActivityForest"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_forest_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_gold"
+            android:name="com.metrolist.music.MainActivityGold"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_gold_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_glass"
+            android:name="com.metrolist.music.MainActivityGlass"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_glass_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_night"
+            android:name="com.metrolist.music.MainActivityNight"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_night_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_static"
+            android:name="com.metrolist.music.MainActivityStatic"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_static_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher"
+            android:name="com.metrolist.music.MainActivityAlias"
+            android:enabled="true"
+            android:exported="true"
+            android:targetActivity="com.metrolist.music.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="com.metrolist.music.discord.DiscordOAuthActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="metrolistdiscord" />
+                <data
+                    android:host="oauth2" />
+                <data
+                    android:pathPrefix="/callback" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.auralyst.app.FileProvider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:exported="false" />
+        <activity
+            android:theme="@style/Theme.Metrolist.Transparent"
+            android:name="com.metrolist.music.recognition.RecognitionLaunchActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:noHistory="true" />
+        <service
+            android:label="@string/island_accessibility_label"
+            android:name="com.metrolist.music.playback.IslandAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/island_accessibility_service" />
+        </service>
+        <service
+            android:name="com.metrolist.music.playback.MusicService"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback">
+            <intent-filter>
+                <action
+                    android:name="androidx.media3.session.MediaSessionService" />
+                <action
+                    android:name="androidx.media3.session.MediaLibraryService" />
+                <action
+                    android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.metrolist.music.playback.ExoDownloadService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync">
+            <intent-filter>
+                <action
+                    android:name="androidx.media3.exoplayer.downloadService.action.RESTART" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.metrolist.music.listentogether.ListenTogetherActionReceiver"
+            android:exported="false" />
+        <receiver
+            android:name="com.metrolist.music.playback.alarm.MusicAlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.metrolist.music.playback.alarm.MusicAlarmRescheduleReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+                <action
+                    android:name="android.intent.action.TIME_SET" />
+                <action
+                    android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action
+                    android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.media3.session.MediaButtonReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+        <receiver
+            android:label="@string/aw_name_wide"
+            android:name="com.metrolist.music.widget.AuralysWidgetReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+                <action
+                    android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/auralys_widget_info" />
+        </receiver>
+        <receiver
+            android:label="@string/aw_name_square"
+            android:name="com.metrolist.music.widget.AuralysWidgetSquareReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/auralys_widget_square" />
+        </receiver>
+        <receiver
+            android:label="@string/aw_name_strip"
+            android:name="com.metrolist.music.widget.AuralysWidgetStripReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/auralys_widget_strip" />
+        </receiver>
+        <receiver
+            android:label="@string/aw_name_tall"
+            android:name="com.metrolist.music.widget.AuralysWidgetTallReceiver"
+            android:enabled="@bool/aw_flexible_providers"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/auralys_widget_tall" />
+        </receiver>
+        <receiver
+            android:label="@string/aw_name_tiny"
+            android:name="com.metrolist.music.widget.AuralysWidgetTinyReceiver"
+            android:enabled="@bool/aw_flexible_providers"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/auralys_widget_tiny" />
+        </receiver>
+        <activity
+            android:theme="@style/Theme.Metrolist"
+            android:label="@string/aw_config_title"
+            android:name="com.metrolist.music.widget.AuralysWidgetConfigActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.metrolist.music.recognition.RecognitionForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="microphone" />
+        <service
+            android:label="@string/qs_tile_music_recognizer"
+            android:icon="@drawable/mic"
+            android:name="com.metrolist.music.quicksettings.MusicRecognizerTileService"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.auralyst.app.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="okhttp3.internal.platform.PlatformInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true" />
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

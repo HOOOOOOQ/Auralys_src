@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider
+    android:description="@string/aw_description"
+    android:minWidth="110.0dip"
+    android:minHeight="110.0dip"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/aw_flex"
+    android:configure="com.metrolist.music.widget.AuralysWidgetConfigActivity"
+    android:previewImage="@drawable/aw_preview_square"
+    android:resizeMode="horizontal|vertical"
+    android:minResizeWidth="40.0dip"
+    android:minResizeHeight="40.0dip"
+    android:widgetCategory="home_screen"
+    android:widgetFeatures="reconfigurable"
+    android:targetCellWidth="2"
+    android:targetCellHeight="2"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

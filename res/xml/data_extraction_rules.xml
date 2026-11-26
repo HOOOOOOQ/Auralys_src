@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude
+            domain="file"
+            path="./exoplayer" />
+        <exclude
+            domain="file"
+            path="./download" />
+        <exclude
+            domain="database"
+            path="exoplayer_internal.db" />
+        <exclude
+            domain="file"
+            path="./poster_stickers" />
+        <exclude
+            domain="file"
+            path="./innertubex_ejs" />
+        <exclude
+            domain="sharedpref"
+            path="auralys_spotify_auth.xml" />
+        <exclude
+            domain="root"
+            path="app_webview" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude
+            domain="file"
+            path="./exoplayer" />
+        <exclude
+            domain="file"
+            path="./download" />
+        <exclude
+            domain="database"
+            path="exoplayer_internal.db" />
+        <exclude
+            domain="file"
+            path="./poster_stickers" />
+        <exclude
+            domain="file"
+            path="./innertubex_ejs" />
+        <exclude
+            domain="sharedpref"
+            path="auralys_spotify_auth.xml" />
+        <exclude
+            domain="root"
+            path="app_webview" />
+    </device-transfer>
+</data-extraction-rules>

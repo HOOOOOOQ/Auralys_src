@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/aw_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/aw_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/aw_preview_glass"
+        android:scaleType="fitXY"
+        android:importantForAccessibility="no" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="6.0dip"
+        android:paddingBottom="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingStart="10.0dip"
+        android:paddingEnd="6.0dip">
+        <ImageView
+            android:id="@id/aw_cover"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:src="@drawable/aw_preview_cover"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/album_art" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="4.0dip">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffffff"
+                    android:ellipsize="end"
+                    android:id="@id/aw_title"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_song_playing"
+                    android:maxLines="1"
+                    android:layout_weight="1.0" />
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@id/aw_streak"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4.0dip">
+                    <ImageView
+                        android:id="@id/aw_streak_icon"
+                        android:layout_width="13.0dip"
+                        android:layout_height="13.0dip"
+                        android:src="@drawable/ic_streak_flame"
+                        android:importantForAccessibility="no" />
+                    <TextView
+                        android:textSize="11.0sp"
+                        android:textStyle="bold"
+                        android:textColor="#ffffffff"
+                        android:id="@id/aw_streak_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="2.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="#b3ffffff"
+                android:ellipsize="end"
+                android:id="@id/aw_artist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip"
+                android:text="@string/tap_to_open"
+                android:maxLines="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:id="@id/aw_prev_box"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@id/aw_prev"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/aw_prev"
+                    android:contentDescription="@string/aw_previous" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@id/aw_play_box"
+                android:layout_width="44.0dip"
+                android:layout_height="44.0dip">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@id/aw_play_bg"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:src="@drawable/aw_circle"
+                    android:importantForAccessibility="no" />
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@id/aw_play"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/aw_play"
+                    android:contentDescription="@string/play_pause" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@id/aw_next_box"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@id/aw_next"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/aw_next"
+                    android:contentDescription="@string/aw_next" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:id="@id/aw_progress_box"
+        android:layout_width="fill_parent"
+        android:layout_height="3.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginStart="14.0dip"
+        android:layout_marginEnd="14.0dip">
+        <ImageView
+            android:id="@id/aw_progress_track"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/aw_progress_track"
+            android:scaleType="fitXY"
+            android:importantForAccessibility="no" />
+        <ImageView
+            android:id="@id/aw_progress_fill"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/aw_progress_clip"
+            android:scaleType="fitXY"
+            android:importantForAccessibility="no" />
+    </FrameLayout>
+</FrameLayout>
