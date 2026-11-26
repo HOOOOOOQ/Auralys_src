@@ -212,7 +212,7 @@ Mantén premido o xestor de arrastre para reordenar. A primeira sección amosara
     <string name="crash_close">Pechar</string>
     <string name="crash_description">Aconteceu un erro inesperado. Por favor, comparte o informe do erro para axudar a solucionar o problema</string>
     <string name="crash_no_log">Informe de erros non dispoñible</string>
-    <string name="crash_report_subject">Informe de erros de Auralys</string>
+    <string name="crash_report_subject">Informe de erros de Miyu</string>
     <string name="crash_share_logs">Compartir rexistros</string>
     <string name="crash_share_title">Compartir informe do erro</string>
     <string name="crash_title">A aplicación deixou de funcionar</string>
@@ -429,8 +429,8 @@ Mantén premido o xestor de arrastre para reordenar. A primeira sección amosara
     <string name="kick_user_desc">Eliminar a esta persoa da sesión</string>
     <string name="kmp_upgrade_action">Actualiza a KMP</string>
     <string name="kmp_upgrade_later">Non agora</string>
-    <string name="kmp_upgrade_title">Auralys KMP %s está dispoñible</string>
-    <string name="kmp_upgrade_warning">Auralys KMP está en acceso anticipado. As funcións poden estar defectuosas, incompletas ou cambiar sen previo aviso.</string>
+    <string name="kmp_upgrade_title">Miyu KMP %s está dispoñible</string>
+    <string name="kmp_upgrade_warning">Miyu KMP está en acceso anticipado. As funcións poden estar defectuosas, incompletas ou cambiar sen previo aviso.</string>
     <string name="last_song_listened">Baseada na última canción que escoitaches</string>
     <string name="last_week">Semana pasada</string>
     <string name="latest_version_format">Última: %s</string>
@@ -448,7 +448,7 @@ Mantén premido o xestor de arrastre para reordenar. A primeira sección amosara
     <string name="link_copied">Ligazón copiada no portapapeis</string>
     <string name="list_bullet">•</string>
     <string name="listen_history">Historial de reproducións</string>
-    <string name="listen_on_metrolist">Escoitar en Auralys</string>
+    <string name="listen_on_metrolist">Escoitar en Miyu</string>
     <string name="listen_together">Escoitar xuntos</string>
     <string name="listen_together_auto_approval_joins">Aprobar automaticamente as peticións de unión</string>
     <string name="listen_together_auto_approval_suggestions">Aprobar automaticamente suxestións de cancións</string>
@@ -540,7 +540,7 @@ Mantén premido o xestor de arrastre para reordenar. A primeira sección amosara
     <string name="media3_controls_seek_to_next_description">Avanzar ao elemento seguinte</string>
     <string name="media3_controls_seek_to_previous_description">Retroceder ao elemento anterior</string>
     <string name="media_id">ID multimedia</string>
-    <string name="metrolist">AURALYS</string>
+    <string name="metrolist">MIYU</string>
     <string name="mime_type">Tipo de MIME</string>
     <string name="mini_player">Minirreprodutor</string>
     <string name="mini_player_background_not_available">Non dispoñible cando o novo deseño do minirreprodutor está desactivado</string>
@@ -617,7 +617,7 @@ Mantén premido o xestor de arrastre para reordenar. A primeira sección amosara
     <string name="play_all">Reproducir todo</string>
     <string name="play_next">Seguinte</string>
     <string name="play_next_desc">Reproducir a seguinte na cola</string>
-    <string name="play_on_app">Reproducir en Auralys</string>
+    <string name="play_on_app">Reproducir en Miyu</string>
     <string name="play_pause">Reproducir/Pausar</string>
     <string name="player">Reprodutor</string>
     <string name="player_and_audio">Reprodutor e son</string>
@@ -811,7 +811,7 @@ Mantén premido o xestor de arrastre para reordenar. A primeira sección amosara
     <string name="system_equalizer">Ecualizador do sistema</string>
     <string name="system_equalizer_desc">Abrir o ecualizador nativo de Android</string>
     <string name="tab">Tabulador</string>
-    <string name="tap_to_open">Preme para abrir Auralys</string>
+    <string name="tap_to_open">Preme para abrir Miyu</string>
     <string name="tap_to_recognize">Preme para recoñecer</string>
     <string name="template_percent">%1$d por cento.</string>
     <string name="tempo_and_pitch">Tempo e ton</string>

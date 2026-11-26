@@ -219,7 +219,7 @@ Podržte posuvník pro změnu pořadí. První sekce bude ve výchozím nastaven
     <string name="crash_close">Zavřít</string>
     <string name="crash_description">Došlo k neočekávané chybě. Pošlete nám hlášení o chybě, abyste nám pomohli problém opravit</string>
     <string name="crash_no_log">Není k dispozici žádný záznam o chybě</string>
-    <string name="crash_report_subject">Hlášení o chybě Auralys</string>
+    <string name="crash_report_subject">Hlášení o chybě Miyu</string>
     <string name="crash_share_logs">Sdílet protokoly</string>
     <string name="crash_share_title">Sdílet hlášení o chybě</string>
     <string name="crash_title">Aplikace se zhroutila</string>
@@ -447,8 +447,8 @@ Podržte posuvník pro změnu pořadí. První sekce bude ve výchozím nastaven
     <string name="kick_user_desc">Odebrat tohoto uživatele z místnosti</string>
     <string name="kmp_upgrade_action">Vyzkoušet KMP</string>
     <string name="kmp_upgrade_later">Nezobrazovat</string>
-    <string name="kmp_upgrade_title">Je dostupný Auralys KMP %s</string>
-    <string name="kmp_upgrade_warning">Auralys KMP je stále ve vývoji. Můžete narazit na chyby nebo nedokončené funkce.</string>
+    <string name="kmp_upgrade_title">Je dostupný Miyu KMP %s</string>
+    <string name="kmp_upgrade_warning">Miyu KMP je stále ve vývoji. Můžete narazit na chyby nebo nedokončené funkce.</string>
     <string name="last_song_listened">Podle poslední poslouchané skladby</string>
     <string name="last_week">Minulý týden</string>
     <string name="latest_version_format">Nejnovější: %s</string>
@@ -466,7 +466,7 @@ Podržte posuvník pro změnu pořadí. První sekce bude ve výchozím nastaven
     <string name="link_copied">Odkaz zkopírován do schránky</string>
     <string name="list_bullet">•</string>
     <string name="listen_history">Historie poslechu</string>
-    <string name="listen_on_metrolist">Přehrát v Auralysu</string>
+    <string name="listen_on_metrolist">Přehrát v Miyuu</string>
     <string name="listen_together">Společný poslech</string>
     <string name="listen_together_auto_approval_joins">Automaticky schvalovat žádosti o připojení</string>
     <string name="listen_together_auto_approval_suggestions">Automaticky schvalovat návrhy skladeb</string>
@@ -560,7 +560,7 @@ Podržte posuvník pro změnu pořadí. První sekce bude ve výchozím nastaven
     <string name="media3_controls_seek_to_next_description">Posunout na další položku</string>
     <string name="media3_controls_seek_to_previous_description">Posunout na předchozí položku</string>
     <string name="media_id">ID média</string>
-    <string name="metrolist">AURALYS</string>
+    <string name="metrolist">MIYU</string>
     <string name="mime_type">Typ MIME</string>
     <string name="mini_player">Mini přehrávač</string>
     <string name="mini_player_background_not_available">Nedostupné při zakázaném novém stylu mini přehrávače</string>
@@ -638,7 +638,7 @@ Podržte posuvník pro změnu pořadí. První sekce bude ve výchozím nastaven
     <string name="play_all">Přehrát vše</string>
     <string name="play_next">Přehrát jako další</string>
     <string name="play_next_desc">Přehrát další ve frontě</string>
-    <string name="play_on_app">Přehrát v Auralysu</string>
+    <string name="play_on_app">Přehrát v Miyuu</string>
     <string name="play_pause">Přehrát/pozastavit</string>
     <string name="player">Přehrávač</string>
     <string name="player_and_audio">Přehrávač a zvuk</string>
@@ -849,7 +849,7 @@ Podržte posuvník pro změnu pořadí. První sekce bude ve výchozím nastaven
     <string name="system_equalizer">Systémový ekvalizér</string>
     <string name="system_equalizer_desc">Otevřít vestavěný ekvalizér systému Android</string>
     <string name="tab">Karta</string>
-    <string name="tap_to_open">Klepnutím otevřete Auralys</string>
+    <string name="tap_to_open">Klepnutím otevřete Miyu</string>
     <string name="tap_to_recognize">Klepněte pro rozpoznání</string>
     <string name="template_percent">%1$d procent.</string>
     <string name="tempo_and_pitch">Tempo a výška</string>
@@ -881,7 +881,7 @@ Podržte posuvník pro změnu pořadí. První sekce bude ve výchozím nastaven
     <string name="unpin">Odepnout</string>
     <string name="unpin_from_speed_dial">Odepnout z rychlého výběru</string>
     <string name="update_action">Aktualizovat</string>
-    <string name="update_available_message">Auralys %s je připraven ke stažení.</string>
+    <string name="update_available_message">Miyu %s je připraven ke stažení.</string>
     <string name="update_available_title">Je dostupná nová aktualizace</string>
     <string name="update_channel_desc">Oznámení o nových verzích aplikace</string>
     <string name="update_channel_name">Aktualizace aplikací</string>

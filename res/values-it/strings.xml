@@ -219,7 +219,7 @@ Premi a lungo il simbolo di trascinamento per riordinare le sezioni. La prima ve
     <string name="crash_close">Chiudi</string>
     <string name="crash_description">Si è verificato un errore inaspettato. Condividi il rapporto sugli arresti anomali per aiutarci a risolvere il problema</string>
     <string name="crash_no_log">Nessun log di errore disponibile</string>
-    <string name="crash_report_subject">Rapporto di errore Auralys</string>
+    <string name="crash_report_subject">Rapporto di errore Miyu</string>
     <string name="crash_share_logs">Condividi i registri</string>
     <string name="crash_share_title">Condividi rapporto di errore</string>
     <string name="crash_title">Applicazione bloccata</string>
@@ -448,8 +448,8 @@ Premi a lungo il simbolo di trascinamento per riordinare le sezioni. La prima ve
     <string name="kick_user_desc">Rimuovi questa persona dalla sessione</string>
     <string name="kmp_upgrade_action">Prova la versione KMP</string>
     <string name="kmp_upgrade_later">Non ora</string>
-    <string name="kmp_upgrade_title">Auralys KMP %s è disponibile</string>
-    <string name="kmp_upgrade_warning">Auralys KMP è ancora in sviluppo. Potresti riscontrare bug o funzionalità incomplete.</string>
+    <string name="kmp_upgrade_title">Miyu KMP %s è disponibile</string>
+    <string name="kmp_upgrade_warning">Miyu KMP è ancora in sviluppo. Potresti riscontrare bug o funzionalità incomplete.</string>
     <string name="last_song_listened">"Basato sull'ultimo brano ascoltato"</string>
     <string name="last_week">Settimana scorsa</string>
     <string name="latest_version_format">Ultima: %s</string>
@@ -467,7 +467,7 @@ Premi a lungo il simbolo di trascinamento per riordinare le sezioni. La prima ve
     <string name="link_copied">Link copiato negli appunti</string>
     <string name="list_bullet">•</string>
     <string name="listen_history">Cronologia degli ascolti</string>
-    <string name="listen_on_metrolist">Ascolta su Auralys</string>
+    <string name="listen_on_metrolist">Ascolta su Miyu</string>
     <string name="listen_together">Ascolta insieme</string>
     <string name="listen_together_auto_approval_joins">Approva automaticamente le richieste di adesione</string>
     <string name="listen_together_auto_approval_suggestions">Approvazione automatica dei brani suggeriti</string>
@@ -561,7 +561,7 @@ Premi a lungo il simbolo di trascinamento per riordinare le sezioni. La prima ve
     <string name="media3_controls_seek_to_next_description">"Vai all'elemento successivo"</string>
     <string name="media3_controls_seek_to_previous_description">"Vai all'elemento precedente"</string>
     <string name="media_id">ID media</string>
-    <string name="metrolist">AURALYS</string>
+    <string name="metrolist">MIYU</string>
     <string name="mime_type">Tipo MIME</string>
     <string name="mini_player">Mini lettore</string>
     <string name="mini_player_background_not_available">Non disponibile quando il nuovo mini lettore è disabilitato</string>
@@ -639,7 +639,7 @@ Premi a lungo il simbolo di trascinamento per riordinare le sezioni. La prima ve
     <string name="play_all">Riproduci tutto</string>
     <string name="play_next">Riproduci come successiva</string>
     <string name="play_next_desc">Suona il prossimo in coda</string>
-    <string name="play_on_app">Riproduci su Auralys</string>
+    <string name="play_on_app">Riproduci su Miyu</string>
     <string name="play_pause">Play/Pausa</string>
     <string name="player">Lettore</string>
     <string name="player_and_audio">Riproduttore e audio</string>
@@ -850,7 +850,7 @@ Premi a lungo il simbolo di trascinamento per riordinare le sezioni. La prima ve
     <string name="system_equalizer">Equalizzatore di sistema</string>
     <string name="system_equalizer_desc">"Apri l'equalizzatore integrato di Android"</string>
     <string name="tab">Scheda</string>
-    <string name="tap_to_open">Premi per aprire Auralys</string>
+    <string name="tap_to_open">Premi per aprire Miyu</string>
     <string name="tap_to_recognize">Tocca per riconoscere</string>
     <string name="template_percent">%1$d percento.</string>
     <string name="tempo_and_pitch">Tempo e tono</string>
@@ -885,7 +885,7 @@ Premi a lungo il simbolo di trascinamento per riordinare le sezioni. La prima ve
     <string name="unpin">Sblocca</string>
     <string name="unpin_from_speed_dial">Sblocca dalla selezione rapida</string>
     <string name="update_action">Aggiorna</string>
-    <string name="update_available_message">Auralys %s è pronto per essere scaricato.</string>
+    <string name="update_available_message">Miyu %s è pronto per essere scaricato.</string>
     <string name="update_available_title">Nuovo aggiornamento disponibile</string>
     <string name="update_channel_desc">Notifiche sulle nuove versioni app</string>
     <string name="update_channel_name">"Aggiornamenti dell'app"</string>
