@@ -13,6 +13,7 @@
 
 # keystore signing -- JANGAN commit private key / password
 /keystore/*.jks
+!/keystore/backup/*
 /keystore/*.keystore
 /keystore/KEYSTORE-PASSWORD.txt
 *.jks

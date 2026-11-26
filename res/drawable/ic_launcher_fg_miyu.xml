@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Miyu: foreground ikon varian -> logo bernama (mark + tulisan Miyu) -->
+<bitmap
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/miyu_mark_fg"
+    android:gravity="center" />

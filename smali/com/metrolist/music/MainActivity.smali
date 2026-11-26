@@ -110,7 +110,7 @@
     invoke-direct {p0}, Lcom/metrolist/music/Hilt_MainActivity;-><init>()V
 
     .line 4
-    const-string v0, "4.3.9"
+    const-string v0, "4.4.0"
 
     .line 6
     invoke-static {v0}, Landroidx/compose/runtime/Stack;->mutableStateOf$default(Ljava/lang/Object;)Landroidx/compose/runtime/ParcelableSnapshotMutableState;

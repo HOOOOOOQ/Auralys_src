@@ -115,7 +115,7 @@
     invoke-static {p1, p0}, Lio/ktor/http/HttpMessagePropertiesKt;->contentType(Lio/ktor/http/HttpMessageBuilder;Lio/ktor/http/ContentType;)V
 
     .line 10
-    const-string p0, "Miyu/4.3.9 (https://t.me/uxpall)"
+    const-string p0, "Miyu/4.4.0 (https://t.me/uxpall)"
 
     .line 12
     invoke-static {p1, p0}, Lio/ktor/http/HttpMessagePropertiesKt;->userAgent(Lio/ktor/http/HttpMessageBuilder;Ljava/lang/String;)V
