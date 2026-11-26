@@ -1199,7 +1199,7 @@
     invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 733
-    const-string v5, "\nApp version: 4.3.8 (461)\nArchitecture: universal\n"
+    const-string v5, "\nApp version: 4.3.9 (462)\nArchitecture: universal\n"
 
     .line 735
     invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

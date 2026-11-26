@@ -110,7 +110,7 @@
     sget-object p1, Lcom/metrolist/music/constants/PreferenceKeysKt;->LastSeenVersionKey:Landroidx/datastore/preferences/core/Preferences$Key;
 
     .line 10
-    const-string v0, "4.3.8"
+    const-string v0, "4.3.9"
 
     .line 12
     invoke-virtual {p0, p1, v0}, Landroidx/datastore/preferences/core/MutablePreferences;->set(Landroidx/datastore/preferences/core/Preferences$Key;Ljava/lang/Object;)V

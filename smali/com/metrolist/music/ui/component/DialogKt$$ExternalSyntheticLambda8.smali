@@ -115,7 +115,7 @@
     if-eqz v1, :cond_1
 
     .line 41
-    const-string v1, "4.3.8"
+    const-string v1, "4.3.9"
 
     .line 43
     filled-new-array {v2, v1}, [Ljava/lang/Object;
