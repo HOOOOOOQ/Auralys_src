@@ -545,7 +545,7 @@
 
 # UI
 .method private final tv(ILjava/lang/String;FZ)Landroid/widget/TextView;
-    .locals 1
+    .locals 3
 
     new-instance v0, Landroid/widget/TextView;
 
@@ -557,11 +557,22 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    # p4 (Z) = minta teks tebal.
+    # Android TIDAK punya setTypeface(I)V. Yang ada hanya:
+    #   setTypeface(Landroid/graphics/Typeface;)V
+    #   setTypeface(Landroid/graphics/Typeface;I)V
+    # Pemanggilan lama setTypeface(I)V -> NoSuchMethodError saat onCreate.
+    # Perbaikan: minta Typeface bold dari framework lalu pakai overload 2-arg.
     if-eqz p4, :cond_0
 
-    const/4 p1, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTypeface(I)V
+    invoke-static {v1}, Landroid/graphics/Typeface;->defaultFromStyle(I)Landroid/graphics/Typeface;
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
     :cond_0
     return-object v0

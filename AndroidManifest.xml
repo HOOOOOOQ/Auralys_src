@@ -292,12 +292,17 @@
                     android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <!-- Ikon kedua ("Profil Miyu") dimatikan: android:enabled=false.
+             Alias TIDAK dihapus dan Activity target tetap terdaftar, jadi fitur
+             Profil Miyu tetap hidup dan bisa dibuka lewat app shortcut
+             (res/xml/shortcuts.xml: miyu_profile, miyu_level).
+             Ubah kembali ke true bila ingin ikon terpisah lagi. -->
         <activity-alias
             android:label="@string/miyu_profile_app_label"
             android:icon="@mipmap/ic_launcher"
             android:name="com.metrolist.music.ProfileLauncher"
             android:targetActivity="com.metrolist.music.ui.screens.MiyuProfileActivity"
-            android:enabled="true"
+            android:enabled="false"
             android:exported="true">
             <intent-filter>
                 <action
