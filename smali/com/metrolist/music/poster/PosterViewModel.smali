@@ -504,7 +504,7 @@
     iput-object v0, v10, Lcom/metrolist/music/poster/PosterViewModel;->stickerFlow:Lcom/metrolist/music/poster/sticker/StickerEditFlow;
 
     .line 250
-    const-string v1, "auralys.poster"
+    const-string v1, "miyu.poster"
 
     .line 252
     invoke-virtual {v9, v1}, Landroidx/lifecycle/SavedStateHandle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -1024,7 +1024,7 @@
     check-cast v0, Ljava/util/LinkedHashMap;
 
     .line 550
-    const-string v7, "auralys.poster.sticker"
+    const-string v7, "miyu.poster.sticker"
 
     .line 552
     invoke-interface {v0, v7, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

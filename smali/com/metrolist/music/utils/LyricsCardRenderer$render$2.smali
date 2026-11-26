@@ -2527,7 +2527,7 @@
     add-float/2addr v14, v1
 
     .line 1550
-    const-string v1, "Auralys"
+    const-string v1, "Miyu"
 
     .line 1552
     invoke-virtual {v10, v1, v12, v14, v0}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V

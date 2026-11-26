@@ -147,7 +147,7 @@
     move-object/from16 v1, p0
 
     .line 3
-    const-string v2, "https://auralys.invalid/"
+    const-string v2, "https://miyu.invalid/"
 
     .line 5
     iget-object v0, v1, Lcom/metrolist/music/utils/DownloadExporter$export$2;->L$0:Ljava/lang/Object;
@@ -739,7 +739,7 @@
 
     .line 377
     :cond_10
-    const-string v0, "Music/Auralys"
+    const-string v0, "Music/Miyu"
 
     .line 379
     const-string v3, "relative_path"
@@ -902,7 +902,7 @@
     invoke-virtual {v10, v15, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 483
-    const-string v9, "Download/Auralys"
+    const-string v9, "Download/Miyu"
 
     .line 485
     invoke-virtual {v10, v3, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V

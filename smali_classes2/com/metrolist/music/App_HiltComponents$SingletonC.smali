@@ -7,11 +7,11 @@
 .implements Lcom/metrolist/music/di/LyricsHelperEntryPoint;
 .implements Lcom/metrolist/music/poster/PosterDatabaseEntryPoint;
 .implements Lcom/metrolist/music/recognition/RecognitionEntryPoint;
-.implements Lcom/metrolist/music/widget/AuralysWidgetReceiver_GeneratedInjector;
-.implements Lcom/metrolist/music/widget/AuralysWidgetSquareReceiver_GeneratedInjector;
-.implements Lcom/metrolist/music/widget/AuralysWidgetStripReceiver_GeneratedInjector;
-.implements Lcom/metrolist/music/widget/AuralysWidgetTallReceiver_GeneratedInjector;
-.implements Lcom/metrolist/music/widget/AuralysWidgetTinyReceiver_GeneratedInjector;
+.implements Lcom/metrolist/music/widget/MiyuWidgetReceiver_GeneratedInjector;
+.implements Lcom/metrolist/music/widget/MiyuWidgetSquareReceiver_GeneratedInjector;
+.implements Lcom/metrolist/music/widget/MiyuWidgetStripReceiver_GeneratedInjector;
+.implements Lcom/metrolist/music/widget/MiyuWidgetTallReceiver_GeneratedInjector;
+.implements Lcom/metrolist/music/widget/MiyuWidgetTinyReceiver_GeneratedInjector;
 .implements Ldagger/hilt/android/internal/managers/ActivityRetainedComponentManager$ActivityRetainedComponentBuilderEntryPoint;
 .implements Ldagger/hilt/android/internal/managers/ServiceComponentManager$ServiceComponentBuilderEntryPoint;
 .implements Ldagger/hilt/internal/GeneratedComponent;

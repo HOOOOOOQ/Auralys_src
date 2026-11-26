@@ -165,7 +165,7 @@
     sget-object v0, Ltimber/log/Timber;->Forest:Lokhttp3/ConnectionPool;
 
     .line 71
-    const-string v3, "AuralysWidget"
+    const-string v3, "MiyuWidget"
 
     .line 73
     invoke-virtual {v0, v3}, Lokhttp3/ConnectionPool;->tag(Ljava/lang/String;)V

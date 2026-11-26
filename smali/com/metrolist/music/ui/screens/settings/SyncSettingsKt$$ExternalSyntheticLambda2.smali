@@ -255,7 +255,7 @@
     const/4 v13, 0x0
 
     .line 146
-    invoke-static/range {v7 .. v16}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->CircularProgressIndicator-LxG7B9w(Landroidx/compose/ui/Modifier;JFJILandroidx/compose/runtime/Composer;II)V
+    invoke-static/range {v7 .. v16}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->CircularProgressIndicator-LxG7B9w(Landroidx/compose/ui/Modifier;JFJILandroidx/compose/runtime/Composer;II)V
 
     .line 149
     check-cast v0, Lcom/metrolist/music/sync/SyncUiState$Running;

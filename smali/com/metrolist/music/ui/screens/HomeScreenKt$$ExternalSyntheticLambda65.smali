@@ -294,7 +294,7 @@
     if-nez v3, :cond_0
 
     .line 27
-    const-string v3, "auralys_greeting"
+    const-string v3, "miyu_greeting"
 
     .line 29
     sget-object v7, Lcom/metrolist/music/ui/screens/ComposableSingletons$HomeScreenKt;->lambda$369607925:Landroidx/compose/runtime/internal/ComposableLambdaImpl;
@@ -318,7 +318,7 @@
     invoke-direct {v7, v6, v8, v3}, Landroidx/compose/runtime/internal/ComposableLambdaImpl;-><init>(ZILjava/lang/Object;)V
 
     .line 47
-    const-string v3, "auralys_streak"
+    const-string v3, "miyu_streak"
 
     .line 49
     invoke-static {v1, v3, v5, v7, v4}, Landroidx/compose/foundation/lazy/LazyListIntervalContent;->item$default(Landroidx/compose/foundation/lazy/LazyListIntervalContent;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function3;I)V

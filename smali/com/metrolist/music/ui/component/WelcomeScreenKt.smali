@@ -886,7 +886,7 @@
     move-object/from16 v4, v19
 
     .line 517
-    invoke-static/range {v8 .. v18}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->AuralysMark-qi6gXK8(Landroidx/compose/ui/Modifier;JJFFFLandroidx/compose/runtime/Composer;II)V
+    invoke-static/range {v8 .. v18}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->MiyuMark-qi6gXK8(Landroidx/compose/ui/Modifier;JJFFFLandroidx/compose/runtime/Composer;II)V
 
     .line 520
     move-object/from16 v13, v16
@@ -976,7 +976,7 @@
     move-object/from16 v27, v8
 
     .line 577
-    const-string v8, "Auralys"
+    const-string v8, "Miyu"
 
     .line 579
     invoke-static/range {v8 .. v31}, Landroidx/compose/material3/TextKt;->Text-Nvy7gAk(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V

@@ -110,7 +110,7 @@
     invoke-direct {p0}, Lcom/metrolist/music/Hilt_MainActivity;-><init>()V
 
     .line 4
-    const-string v0, "4.4.0"
+    const-string v0, "4.5.0"
 
     .line 6
     invoke-static {v0}, Landroidx/compose/runtime/Stack;->mutableStateOf$default(Ljava/lang/Object;)Landroidx/compose/runtime/ParcelableSnapshotMutableState;
@@ -122,7 +122,7 @@
     iput-object v0, p0, Lcom/metrolist/music/MainActivity;->latestVersionName$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
 
     .line 12
-    sget-boolean v0, Lcom/metrolist/music/ui/component/AuralysSplashState;->shown:Z
+    sget-boolean v0, Lcom/metrolist/music/ui/component/MiyuSplashState;->shown:Z
 
     .line 14
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -3681,7 +3681,7 @@
     invoke-static {p0, v0}, Landroidx/activity/compose/ComponentActivityKt;->setContent$default(Landroidx/activity/ComponentActivity;Landroidx/compose/runtime/internal/ComposableLambdaImpl;)V
 
     .line 189
-    sget-boolean p1, Lcom/metrolist/music/ui/component/AuralysSplashState;->shown:Z
+    sget-boolean p1, Lcom/metrolist/music/ui/component/MiyuSplashState;->shown:Z
 
     .line 191
     if-nez p1, :cond_3

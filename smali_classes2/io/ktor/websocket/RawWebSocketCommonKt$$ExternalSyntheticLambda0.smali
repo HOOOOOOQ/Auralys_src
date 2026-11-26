@@ -67,22 +67,22 @@
     packed-switch v0, :pswitch_data_0
 
     .line 10
-    check-cast p0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivity;
+    check-cast p0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivity;
 
     .line 12
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 14
-    sget v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivity;->$r8$clinit:I
+    sget v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivity;->$r8$clinit:I
 
     .line 16
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 19
-    sget-object v0, Lcom/metrolist/music/widget/AuralysWidgetConfigStore;->KEYS:Ljava/util/List;
+    sget-object v0, Lcom/metrolist/music/widget/MiyuWidgetConfigStore;->KEYS:Ljava/util/List;
 
     .line 21
-    const-string v0, "auralys_widget_config"
+    const-string v0, "miyu_widget_config"
 
     .line 23
     const/4 v2, 0x0
@@ -109,7 +109,7 @@
     move-result-object v2
 
     .line 38
-    iget-object v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
+    iget-object v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
 
     .line 40
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
@@ -133,7 +133,7 @@
     move-result-object v2
 
     .line 54
-    iget v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->tint:I
+    iget v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->tint:I
 
     .line 56
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -151,7 +151,7 @@
     move-result-object v2
 
     .line 66
-    iget v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->opacity:I
+    iget v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->opacity:I
 
     .line 68
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -169,7 +169,7 @@
     move-result-object v2
 
     .line 78
-    iget v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->shine:I
+    iget v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->shine:I
 
     .line 80
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -187,7 +187,7 @@
     move-result-object v2
 
     .line 90
-    iget v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->corner:I
+    iget v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->corner:I
 
     .line 92
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -205,7 +205,7 @@
     move-result-object v2
 
     .line 102
-    iget v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->frost:I
+    iget v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->frost:I
 
     .line 104
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -223,7 +223,7 @@
     move-result-object v2
 
     .line 114
-    iget v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->edge:I
+    iget v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->edge:I
 
     .line 116
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -241,7 +241,7 @@
     move-result-object v2
 
     .line 126
-    iget-object v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->coverShape:Lcom/metrolist/music/widget/WidgetCoverShape;
+    iget-object v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->coverShape:Lcom/metrolist/music/widget/WidgetCoverShape;
 
     .line 128
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
@@ -265,7 +265,7 @@
     move-result-object v2
 
     .line 142
-    iget-object v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->textSize:Lcom/metrolist/music/widget/WidgetTextSize;
+    iget-object v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->textSize:Lcom/metrolist/music/widget/WidgetTextSize;
 
     .line 144
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
@@ -289,7 +289,7 @@
     move-result-object v2
 
     .line 158
-    iget-object v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->playButton:Lcom/metrolist/music/widget/WidgetPlayButton;
+    iget-object v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->playButton:Lcom/metrolist/music/widget/WidgetPlayButton;
 
     .line 160
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
@@ -313,7 +313,7 @@
     move-result-object v2
 
     .line 174
-    iget-boolean v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->showCover:Z
+    iget-boolean v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->showCover:Z
 
     .line 176
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -331,7 +331,7 @@
     move-result-object v2
 
     .line 186
-    iget-boolean v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->showProgress:Z
+    iget-boolean v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->showProgress:Z
 
     .line 188
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -349,7 +349,7 @@
     move-result-object v2
 
     .line 198
-    iget-boolean v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->showTime:Z
+    iget-boolean v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->showTime:Z
 
     .line 200
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -367,7 +367,7 @@
     move-result-object v2
 
     .line 210
-    iget-boolean v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->showLike:Z
+    iget-boolean v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->showLike:Z
 
     .line 212
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -385,7 +385,7 @@
     move-result-object v2
 
     .line 222
-    iget-boolean v3, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->showSkip:Z
+    iget-boolean v3, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->showSkip:Z
 
     .line 224
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -403,7 +403,7 @@
     move-result-object v2
 
     .line 234
-    iget-boolean p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->showStreak:Z
+    iget-boolean p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->showStreak:Z
 
     .line 236
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -415,7 +415,7 @@
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     .line 243
-    iget-object p1, p0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivity;->manager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+    iget-object p1, p0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivity;->manager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 245
     if-eqz p1, :cond_0
@@ -427,7 +427,7 @@
     move-result-object v0
 
     .line 251
-    invoke-virtual {p1, v0}, Lcom/metrolist/music/widget/AuralysWidgetManager;->renderAll([I)V
+    invoke-virtual {p1, v0}, Lcom/metrolist/music/widget/MiyuWidgetManager;->renderAll([I)V
 
     .line 254
     new-instance p1, Landroid/content/Intent;

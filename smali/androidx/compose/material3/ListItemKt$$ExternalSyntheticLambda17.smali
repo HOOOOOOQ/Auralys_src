@@ -177,13 +177,13 @@
     iget-object v0, v0, Landroidx/compose/material3/ListItemKt$$ExternalSyntheticLambda17;->f$0:Ljava/lang/Object;
 
     .line 80
-    check-cast v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivity;
+    check-cast v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivity;
 
     .line 82
     move-object/from16 v2, p1
 
     .line 84
-    check-cast v2, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v2, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 86
     move-object/from16 v3, p2
@@ -207,34 +207,34 @@
     move-result v5
 
     .line 100
-    sget v1, Lcom/metrolist/music/widget/AuralysWidgetConfigActivity;->$r8$clinit:I
+    sget v1, Lcom/metrolist/music/widget/MiyuWidgetConfigActivity;->$r8$clinit:I
 
     .line 102
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 105
-    iget-object v0, v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivity;->manager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+    iget-object v0, v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivity;->manager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 107
     if-eqz v0, :cond_2
 
     .line 109
-    invoke-virtual {v0}, Lcom/metrolist/music/widget/AuralysWidgetManager;->watchStreak()V
+    invoke-virtual {v0}, Lcom/metrolist/music/widget/MiyuWidgetManager;->watchStreak()V
 
     .line 112
-    iget-object v1, v0, Lcom/metrolist/music/widget/AuralysWidgetManager;->last:Lcom/metrolist/music/widget/AuralysWidgetState;
+    iget-object v1, v0, Lcom/metrolist/music/widget/MiyuWidgetManager;->last:Lcom/metrolist/music/widget/MiyuWidgetState;
 
     .line 114
     if-nez v1, :cond_0
 
     .line 116
-    invoke-virtual {v0}, Lcom/metrolist/music/widget/AuralysWidgetManager;->idleState()Lcom/metrolist/music/widget/AuralysWidgetState;
+    invoke-virtual {v0}, Lcom/metrolist/music/widget/MiyuWidgetManager;->idleState()Lcom/metrolist/music/widget/MiyuWidgetState;
 
     .line 119
     move-result-object v6
 
     .line 120
-    iget-object v1, v0, Lcom/metrolist/music/widget/AuralysWidgetManager;->context:Landroid/content/Context;
+    iget-object v1, v0, Lcom/metrolist/music/widget/MiyuWidgetManager;->context:Landroid/content/Context;
 
     .line 122
     const v3, 0x7f1101b6
@@ -249,7 +249,7 @@
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 132
-    iget-object v1, v0, Lcom/metrolist/music/widget/AuralysWidgetManager;->context:Landroid/content/Context;
+    iget-object v1, v0, Lcom/metrolist/music/widget/MiyuWidgetManager;->context:Landroid/content/Context;
 
     .line 134
     const v3, 0x7f1101b5
@@ -279,20 +279,20 @@
     const/4 v13, 0x0
 
     .line 154
-    invoke-static/range {v6 .. v15}, Lcom/metrolist/music/widget/AuralysWidgetState;->copy$default(Lcom/metrolist/music/widget/AuralysWidgetState;Ljava/lang/String;Ljava/lang/String;JJIZI)Lcom/metrolist/music/widget/AuralysWidgetState;
+    invoke-static/range {v6 .. v15}, Lcom/metrolist/music/widget/MiyuWidgetState;->copy$default(Lcom/metrolist/music/widget/MiyuWidgetState;Ljava/lang/String;Ljava/lang/String;JJIZI)Lcom/metrolist/music/widget/MiyuWidgetState;
 
     .line 157
     move-result-object v1
 
     .line 158
     :cond_0
-    invoke-virtual {v0, v1}, Lcom/metrolist/music/widget/AuralysWidgetManager;->withStreak(Lcom/metrolist/music/widget/AuralysWidgetState;)Lcom/metrolist/music/widget/AuralysWidgetState;
+    invoke-virtual {v0, v1}, Lcom/metrolist/music/widget/MiyuWidgetManager;->withStreak(Lcom/metrolist/music/widget/MiyuWidgetState;)Lcom/metrolist/music/widget/MiyuWidgetState;
 
     .line 161
     move-result-object v6
 
     .line 162
-    iget v1, v6, Lcom/metrolist/music/widget/AuralysWidgetState;->streakDays:I
+    iget v1, v6, Lcom/metrolist/music/widget/MiyuWidgetState;->streakDays:I
 
     .line 164
     if-lez v1, :cond_1
@@ -327,7 +327,7 @@
     const/4 v13, 0x7
 
     .line 178
-    invoke-static/range {v6 .. v15}, Lcom/metrolist/music/widget/AuralysWidgetState;->copy$default(Lcom/metrolist/music/widget/AuralysWidgetState;Ljava/lang/String;Ljava/lang/String;JJIZI)Lcom/metrolist/music/widget/AuralysWidgetState;
+    invoke-static/range {v6 .. v15}, Lcom/metrolist/music/widget/MiyuWidgetState;->copy$default(Lcom/metrolist/music/widget/MiyuWidgetState;Ljava/lang/String;Ljava/lang/String;JJIZI)Lcom/metrolist/music/widget/MiyuWidgetState;
 
     .line 181
     move-result-object v6
@@ -337,13 +337,13 @@
 
     .line 183
     :goto_1
-    iget-object v1, v0, Lcom/metrolist/music/widget/AuralysWidgetManager;->context:Landroid/content/Context;
+    iget-object v1, v0, Lcom/metrolist/music/widget/MiyuWidgetManager;->context:Landroid/content/Context;
 
     .line 185
     const/4 v6, 0x0
 
     .line 186
-    invoke-static/range {v1 .. v6}, Lcom/metrolist/music/widget/AuralysWidgetRenderer;->build(Landroid/content/Context;Lcom/metrolist/music/widget/AuralysWidgetConfig;Lcom/metrolist/music/widget/AuralysWidgetState;IIZ)Landroid/widget/RemoteViews;
+    invoke-static/range {v1 .. v6}, Lcom/metrolist/music/widget/MiyuWidgetRenderer;->build(Landroid/content/Context;Lcom/metrolist/music/widget/MiyuWidgetConfig;Lcom/metrolist/music/widget/MiyuWidgetState;IIZ)Landroid/widget/RemoteViews;
 
     .line 189
     move-result-object v0

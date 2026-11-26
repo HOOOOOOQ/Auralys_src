@@ -144,7 +144,7 @@
     invoke-virtual {v8, v0}, Landroidx/compose/runtime/GapComposer;->startReplaceGroup(I)V
 
     .line 67
-    invoke-static {v7, v3, v8, v5}, Lcom/metrolist/music/ui/component/AuralysRowButtonsKt;->RowMoreButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
+    invoke-static {v7, v3, v8, v5}, Lcom/metrolist/music/ui/component/MiyuRowButtonsKt;->RowMoreButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
 
     .line 70
     :goto_1

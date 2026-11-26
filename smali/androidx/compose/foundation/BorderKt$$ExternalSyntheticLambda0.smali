@@ -144,7 +144,7 @@
     iget-wide v8, v0, Landroidx/compose/foundation/BorderKt$$ExternalSyntheticLambda0;->f$2:J
 
     .line 50
-    invoke-static/range {v5 .. v12}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->drawAuralysMark-RIQooxk(Landroidx/compose/ui/graphics/drawscope/DrawScope;JJFFF)V
+    invoke-static/range {v5 .. v12}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->drawMiyuMark-RIQooxk(Landroidx/compose/ui/graphics/drawscope/DrawScope;JJFFF)V
 
     .line 53
     return-object v2
@@ -205,7 +205,7 @@
     const/high16 v11, 0x3f800000    # 1.0f
 
     .line 91
-    invoke-static/range {v5 .. v12}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->drawAuralysMark-RIQooxk(Landroidx/compose/ui/graphics/drawscope/DrawScope;JJFFF)V
+    invoke-static/range {v5 .. v12}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->drawMiyuMark-RIQooxk(Landroidx/compose/ui/graphics/drawscope/DrawScope;JJFFF)V
 
     .line 94
     return-object v2

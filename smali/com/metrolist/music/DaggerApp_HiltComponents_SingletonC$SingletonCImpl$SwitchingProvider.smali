@@ -707,7 +707,7 @@
 
     .line 414
     :pswitch_11
-    new-instance p0, Lcom/metrolist/music/widget/AuralysWidgetManager;
+    new-instance p0, Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 416
     iget-object v1, v0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;->applicationContextModule:Landroidx/navigation/internal/NavContext;
@@ -745,7 +745,7 @@
 
     .line 438
     :goto_3
-    invoke-direct {p0, v1, v0}, Lcom/metrolist/music/widget/AuralysWidgetManager;-><init>(Landroid/content/Context;Ldagger/internal/DoubleCheck;)V
+    invoke-direct {p0, v1, v0}, Lcom/metrolist/music/widget/MiyuWidgetManager;-><init>(Landroid/content/Context;Ldagger/internal/DoubleCheck;)V
 
     .line 441
     return-object p0

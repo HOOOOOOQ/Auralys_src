@@ -641,7 +641,7 @@
     move-result v1
 
     .line 17
-    const-string v2, "auralys_file"
+    const-string v2, "miyu_file"
 
     .line 19
     if-eqz v1, :cond_1

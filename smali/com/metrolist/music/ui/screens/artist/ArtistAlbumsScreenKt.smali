@@ -1204,7 +1204,7 @@
     const/4 v4, 0x0
 
     .line 741
-    invoke-static {v2, v0, v11, v1, v4}, Lcom/metrolist/music/ui/component/IosHudKt;->AuralysSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+    invoke-static {v2, v0, v11, v1, v4}, Lcom/metrolist/music/ui/component/IosHudKt;->MiyuSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 
     .line 744
     const/4 v0, 0x1

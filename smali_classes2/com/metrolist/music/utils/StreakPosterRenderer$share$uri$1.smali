@@ -135,7 +135,7 @@
     new-instance p1, Ljava/lang/StringBuilder;
 
     .line 10
-    const-string v2, "auralys_streak_"
+    const-string v2, "miyu_streak_"
 
     .line 12
     invoke-direct {p1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V

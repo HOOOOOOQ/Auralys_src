@@ -2308,7 +2308,7 @@
     move-object/from16 v2, v40
 
     .line 1407
-    invoke-static {v2, v0, v6, v1, v7}, Lcom/metrolist/music/ui/component/IosHudKt;->AuralysSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+    invoke-static {v2, v0, v6, v1, v7}, Lcom/metrolist/music/ui/component/IosHudKt;->MiyuSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 
     .line 1410
     invoke-virtual {v6, v12}, Landroidx/compose/runtime/GapComposer;->end(Z)V

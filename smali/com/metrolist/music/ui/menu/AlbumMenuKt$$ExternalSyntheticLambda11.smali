@@ -2363,13 +2363,13 @@
     if-ne p1, p2, :cond_1
 
     .line 69
-    new-instance p1, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda27;
+    new-instance p1, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda27;
 
     .line 71
     const/16 p2, 0x1a
 
     .line 73
-    invoke-direct {p1, p0, p2}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda27;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p1, p0, p2}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda27;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 76
     invoke-virtual {v9, p1}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V

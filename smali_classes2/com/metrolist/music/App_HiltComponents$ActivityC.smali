@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/metrolist/music/MainActivity_GeneratedInjector;
-.implements Lcom/metrolist/music/widget/AuralysWidgetConfigActivity_GeneratedInjector;
+.implements Lcom/metrolist/music/widget/MiyuWidgetConfigActivity_GeneratedInjector;
 .implements Ldagger/hilt/android/internal/lifecycle/DefaultViewModelFactories$ActivityEntryPoint;
 .implements Ldagger/hilt/android/internal/lifecycle/HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint;
 .implements Ldagger/hilt/internal/GeneratedComponent;

@@ -93,7 +93,7 @@
     move-result v6
 
     .line 27
-    sget-object v7, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v7, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 29
     and-int/lit8 v7, v6, 0x3

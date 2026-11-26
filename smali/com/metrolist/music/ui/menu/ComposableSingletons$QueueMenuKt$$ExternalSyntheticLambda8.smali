@@ -2645,7 +2645,7 @@
     move-object/from16 v17, v0
 
     .line 1587
-    invoke-static/range {v10 .. v19}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->CircularProgressIndicator-LxG7B9w(Landroidx/compose/ui/Modifier;JFJILandroidx/compose/runtime/Composer;II)V
+    invoke-static/range {v10 .. v19}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->CircularProgressIndicator-LxG7B9w(Landroidx/compose/ui/Modifier;JFJILandroidx/compose/runtime/Composer;II)V
 
     .line 1590
     goto :goto_22

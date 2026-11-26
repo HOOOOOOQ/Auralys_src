@@ -1116,7 +1116,7 @@
 
     .line 104
     :cond_1
-    const-string v9, "AuralysDynamicIsland"
+    const-string v9, "MiyuDynamicIsland"
 
     .line 106
     invoke-virtual {v8, v9}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
@@ -1208,7 +1208,7 @@
 
     .line 169
     :cond_2
-    const-string v4, "AuralysDynamicIslandTouch"
+    const-string v4, "MiyuDynamicIslandTouch"
 
     .line 171
     invoke-virtual {v12, v4}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V

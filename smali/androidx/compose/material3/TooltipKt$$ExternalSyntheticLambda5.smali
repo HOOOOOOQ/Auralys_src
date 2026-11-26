@@ -62,7 +62,7 @@
     move-result v1
 
     .line 20
-    sget-object v3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 22
     invoke-interface {v0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -74,7 +74,7 @@
     move-object v4, v3
 
     .line 27
-    check-cast v4, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v4, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 29
     invoke-static {v1}, Lkotlin/math/MathKt;->roundToInt(F)I
@@ -131,7 +131,7 @@
     const/16 v19, 0x0
 
     .line 56
-    invoke-static/range {v4 .. v21}, Lcom/metrolist/music/widget/AuralysWidgetConfig;->copy$default(Lcom/metrolist/music/widget/AuralysWidgetConfig;Lcom/metrolist/music/widget/WidgetStyle;IIIIIILcom/metrolist/music/widget/WidgetCoverShape;Lcom/metrolist/music/widget/WidgetTextSize;Lcom/metrolist/music/widget/WidgetPlayButton;ZZZZZZI)Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    invoke-static/range {v4 .. v21}, Lcom/metrolist/music/widget/MiyuWidgetConfig;->copy$default(Lcom/metrolist/music/widget/MiyuWidgetConfig;Lcom/metrolist/music/widget/WidgetStyle;IIIIIILcom/metrolist/music/widget/WidgetCoverShape;Lcom/metrolist/music/widget/WidgetTextSize;Lcom/metrolist/music/widget/WidgetPlayButton;ZZZZZZI)Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 59
     move-result-object v1
@@ -156,7 +156,7 @@
     move-result v1
 
     .line 72
-    sget-object v3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 74
     invoke-interface {v0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -168,7 +168,7 @@
     move-object v4, v3
 
     .line 79
-    check-cast v4, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v4, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 81
     invoke-static {v1}, Lkotlin/math/MathKt;->roundToInt(F)I
@@ -225,7 +225,7 @@
     const/16 v19, 0x0
 
     .line 108
-    invoke-static/range {v4 .. v21}, Lcom/metrolist/music/widget/AuralysWidgetConfig;->copy$default(Lcom/metrolist/music/widget/AuralysWidgetConfig;Lcom/metrolist/music/widget/WidgetStyle;IIIIIILcom/metrolist/music/widget/WidgetCoverShape;Lcom/metrolist/music/widget/WidgetTextSize;Lcom/metrolist/music/widget/WidgetPlayButton;ZZZZZZI)Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    invoke-static/range {v4 .. v21}, Lcom/metrolist/music/widget/MiyuWidgetConfig;->copy$default(Lcom/metrolist/music/widget/MiyuWidgetConfig;Lcom/metrolist/music/widget/WidgetStyle;IIIIIILcom/metrolist/music/widget/WidgetCoverShape;Lcom/metrolist/music/widget/WidgetTextSize;Lcom/metrolist/music/widget/WidgetPlayButton;ZZZZZZI)Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 111
     move-result-object v1
@@ -250,7 +250,7 @@
     move-result v1
 
     .line 124
-    sget-object v3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 126
     invoke-interface {v0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -262,7 +262,7 @@
     move-object v4, v3
 
     .line 131
-    check-cast v4, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v4, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 133
     invoke-static {v1}, Lkotlin/math/MathKt;->roundToInt(F)I
@@ -319,7 +319,7 @@
     const/16 v19, 0x0
 
     .line 160
-    invoke-static/range {v4 .. v21}, Lcom/metrolist/music/widget/AuralysWidgetConfig;->copy$default(Lcom/metrolist/music/widget/AuralysWidgetConfig;Lcom/metrolist/music/widget/WidgetStyle;IIIIIILcom/metrolist/music/widget/WidgetCoverShape;Lcom/metrolist/music/widget/WidgetTextSize;Lcom/metrolist/music/widget/WidgetPlayButton;ZZZZZZI)Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    invoke-static/range {v4 .. v21}, Lcom/metrolist/music/widget/MiyuWidgetConfig;->copy$default(Lcom/metrolist/music/widget/MiyuWidgetConfig;Lcom/metrolist/music/widget/WidgetStyle;IIIIIILcom/metrolist/music/widget/WidgetCoverShape;Lcom/metrolist/music/widget/WidgetTextSize;Lcom/metrolist/music/widget/WidgetPlayButton;ZZZZZZI)Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 163
     move-result-object v1
@@ -344,7 +344,7 @@
     move-result v1
 
     .line 176
-    sget-object v3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 178
     invoke-interface {v0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -356,7 +356,7 @@
     move-object v4, v3
 
     .line 183
-    check-cast v4, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v4, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 185
     invoke-static {v1}, Lkotlin/math/MathKt;->roundToInt(F)I
@@ -413,7 +413,7 @@
     const/16 v19, 0x0
 
     .line 212
-    invoke-static/range {v4 .. v21}, Lcom/metrolist/music/widget/AuralysWidgetConfig;->copy$default(Lcom/metrolist/music/widget/AuralysWidgetConfig;Lcom/metrolist/music/widget/WidgetStyle;IIIIIILcom/metrolist/music/widget/WidgetCoverShape;Lcom/metrolist/music/widget/WidgetTextSize;Lcom/metrolist/music/widget/WidgetPlayButton;ZZZZZZI)Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    invoke-static/range {v4 .. v21}, Lcom/metrolist/music/widget/MiyuWidgetConfig;->copy$default(Lcom/metrolist/music/widget/MiyuWidgetConfig;Lcom/metrolist/music/widget/WidgetStyle;IIIIIILcom/metrolist/music/widget/WidgetCoverShape;Lcom/metrolist/music/widget/WidgetTextSize;Lcom/metrolist/music/widget/WidgetPlayButton;ZZZZZZI)Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 215
     move-result-object v1

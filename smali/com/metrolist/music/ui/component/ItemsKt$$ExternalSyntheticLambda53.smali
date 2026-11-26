@@ -104,7 +104,7 @@
     move-result p2
 
     .line 29
-    invoke-static {v3, p2, p1, v2, p0}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, p2, p1, v2, p0}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 32
     return-object v1

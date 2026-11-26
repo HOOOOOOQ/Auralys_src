@@ -166,7 +166,7 @@
     const/4 p0, 0x0
 
     .line 68
-    invoke-static {v0, p0, p2, v1}, Lcom/metrolist/music/ui/component/AuralysRowButtonsKt;->RowMoreButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
+    invoke-static {v0, p0, p2, v1}, Lcom/metrolist/music/ui/component/MiyuRowButtonsKt;->RowMoreButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
 
     .line 71
     goto :goto_1

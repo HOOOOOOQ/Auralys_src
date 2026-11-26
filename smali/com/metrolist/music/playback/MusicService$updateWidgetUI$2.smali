@@ -323,7 +323,7 @@
     move-result v5
 
     .line 124
-    iget-object v0, v14, Lcom/metrolist/music/playback/MusicService;->widgetManager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+    iget-object v0, v14, Lcom/metrolist/music/playback/MusicService;->widgetManager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 126
     if-eqz v0, :cond_b
@@ -402,7 +402,7 @@
     move-object v3, v15
 
     .line 170
-    invoke-virtual/range {v0 .. v10}, Lcom/metrolist/music/widget/AuralysWidgetManager;->updateWidgets(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZJJLkotlin/coroutines/jvm/internal/ContinuationImpl;)Ljava/lang/Object;
+    invoke-virtual/range {v0 .. v10}, Lcom/metrolist/music/widget/MiyuWidgetManager;->updateWidgets(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZJJLkotlin/coroutines/jvm/internal/ContinuationImpl;)Ljava/lang/Object;
 
     .line 173
     move-result-object v0

@@ -199,7 +199,7 @@
     iput-object v0, p1, Lcom/metrolist/music/playback/MusicService;->eqProfileRepository:Lcom/metrolist/music/eq/data/EQProfileRepository;
 
     .line 100
-    iget-object v0, p0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;->auralysWidgetManagerProvider:Ldagger/internal/Provider;
+    iget-object v0, p0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;->MiyuWidgetManagerProvider:Ldagger/internal/Provider;
 
     .line 102
     invoke-interface {v0}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
@@ -208,10 +208,10 @@
     move-result-object v0
 
     .line 106
-    check-cast v0, Lcom/metrolist/music/widget/AuralysWidgetManager;
+    check-cast v0, Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 108
-    iput-object v0, p1, Lcom/metrolist/music/playback/MusicService;->widgetManager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+    iput-object v0, p1, Lcom/metrolist/music/playback/MusicService;->widgetManager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 110
     iget-object v0, p0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;->provideListenTogetherManagerProvider:Ldagger/internal/Provider;

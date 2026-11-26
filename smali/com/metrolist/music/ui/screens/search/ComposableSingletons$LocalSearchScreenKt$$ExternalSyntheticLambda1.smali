@@ -2695,7 +2695,7 @@
     move-object/from16 v23, v4
 
     .line 1709
-    invoke-static/range {v17 .. v24}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
+    invoke-static/range {v17 .. v24}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
 
     .line 1712
     invoke-virtual {v4, v3}, Landroidx/compose/runtime/GapComposer;->end(Z)V
@@ -3245,7 +3245,7 @@
     move-object/from16 v23, v4
 
     .line 2070
-    invoke-static/range {v17 .. v24}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
+    invoke-static/range {v17 .. v24}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
 
     .line 2073
     invoke-virtual {v4, v3}, Landroidx/compose/runtime/GapComposer;->end(Z)V
@@ -3890,7 +3890,7 @@
     move-object/from16 v23, v2
 
     .line 2495
-    invoke-static/range {v17 .. v24}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
+    invoke-static/range {v17 .. v24}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
 
     .line 2498
     invoke-virtual {v2, v3}, Landroidx/compose/runtime/GapComposer;->end(Z)V

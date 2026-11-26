@@ -38,7 +38,7 @@
     move-result-object p0
 
     .line 9
-    const-string v1, "AuralysExports"
+    const-string v1, "MiyuExports"
 
     .line 11
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -845,7 +845,7 @@
     .locals 5
 
     .line 1
-    const-string v0, "/AuralysExports"
+    const-string v0, "/MiyuExports"
 
     .line 3
     const-string v1, "is_pending"

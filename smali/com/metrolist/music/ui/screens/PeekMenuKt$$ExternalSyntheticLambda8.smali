@@ -541,7 +541,7 @@
     const-string v0, "android.intent.extra.SUBJECT"
 
     .line 330
-    const-string v1, "auralys_crash_"
+    const-string v1, "miyu_crash_"
 
     .line 332
     const v2, 0x7f110221

@@ -77,7 +77,7 @@
     move-result-object p0
 
     .line 12
-    const-string v0, "auralys://sync"
+    const-string v0, "miyu://sync"
 
     .line 14
     const/4 v1, 0x1
@@ -812,7 +812,7 @@
 
     .line 453
     :cond_16
-    const-string p0, "not an auralys://sync code"
+    const-string p0, "not an miyu://sync code"
 
     .line 455
     invoke-static {p0}, Lcom/metrolist/music/sync/SyncInvite$Companion;->bad(Ljava/lang/String;)V

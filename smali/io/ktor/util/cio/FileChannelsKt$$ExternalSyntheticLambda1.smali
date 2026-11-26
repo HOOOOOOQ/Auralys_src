@@ -358,7 +358,7 @@
     iget-object v1, v0, Lio/ktor/util/cio/FileChannelsKt$$ExternalSyntheticLambda1;->f$0:Ljava/lang/Object;
 
     .line 186
-    check-cast v1, Lcom/metrolist/music/widget/AuralysWidgetReceiver;
+    check-cast v1, Lcom/metrolist/music/widget/MiyuWidgetReceiver;
 
     .line 188
     iget-object v0, v0, Lio/ktor/util/cio/FileChannelsKt$$ExternalSyntheticLambda1;->f$1:Ljava/lang/Object;
@@ -373,13 +373,13 @@
     check-cast v2, [I
 
     .line 196
-    iget-object v1, v1, Lcom/metrolist/music/widget/AuralysWidgetReceiver;->manager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+    iget-object v1, v1, Lcom/metrolist/music/widget/MiyuWidgetReceiver;->manager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 198
     if-eqz v1, :cond_1
 
     .line 200
-    invoke-virtual {v1, v2}, Lcom/metrolist/music/widget/AuralysWidgetManager;->renderAll([I)V
+    invoke-virtual {v1, v2}, Lcom/metrolist/music/widget/MiyuWidgetManager;->renderAll([I)V
 
     .line 203
     sget-object v1, Lcom/metrolist/music/playback/MusicService;->PERSISTED_FILES:Ljava/util/List;

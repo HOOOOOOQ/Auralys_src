@@ -4221,7 +4221,7 @@
     move-object/from16 v23, v7
 
     .line 2745
-    invoke-static/range {v17 .. v24}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
+    invoke-static/range {v17 .. v24}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
 
     .line 2748
     invoke-virtual {v7, v14}, Landroidx/compose/runtime/GapComposer;->end(Z)V

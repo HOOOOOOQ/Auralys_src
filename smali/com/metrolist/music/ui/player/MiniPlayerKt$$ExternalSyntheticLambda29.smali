@@ -128,7 +128,7 @@
     iget-wide v8, v0, Lcom/metrolist/music/ui/player/MiniPlayerKt$$ExternalSyntheticLambda29;->f$2:J
 
     .line 37
-    invoke-static/range {v5 .. v12}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
+    invoke-static/range {v5 .. v12}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->ContainedLoadingIndicator-eopBjH0(Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;I)V
 
     .line 40
     return-object v2

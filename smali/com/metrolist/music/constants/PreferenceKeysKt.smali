@@ -2306,7 +2306,7 @@
     sput-object v0, Lcom/metrolist/music/constants/PreferenceKeysKt;->QueueEditLockKey:Landroidx/datastore/preferences/core/Preferences$Key;
 
     .line 191
-    const-string v0, "auralysAutoplayNoRepeat"
+    const-string v0, "MiyuAutoplayNoRepeat"
 
     invoke-static {v0}, Lcoil3/util/LifecyclesKt;->booleanKey(Ljava/lang/String;)Landroidx/datastore/preferences/core/Preferences$Key;
 

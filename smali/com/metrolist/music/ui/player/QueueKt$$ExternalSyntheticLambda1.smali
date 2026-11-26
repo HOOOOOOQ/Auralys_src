@@ -4079,7 +4079,7 @@
     const/4 v15, 0x0
 
     .line 2544
-    invoke-static {v1, v0, v13, v9, v15}, Lcom/metrolist/music/ui/component/IosHudKt;->AuralysSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+    invoke-static {v1, v0, v13, v9, v15}, Lcom/metrolist/music/ui/component/IosHudKt;->MiyuSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 
     .line 2547
     goto :goto_22

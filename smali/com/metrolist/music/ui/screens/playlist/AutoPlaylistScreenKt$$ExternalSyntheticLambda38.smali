@@ -208,13 +208,13 @@
     if-ne v0, v3, :cond_1
 
     .line 80
-    new-instance v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda27;
+    new-instance v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda27;
 
     .line 82
     const/4 v4, 0x4
 
     .line 83
-    invoke-direct {v0, v15, v4}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda27;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {v0, v15, v4}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda27;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 86
     invoke-virtual {v1, v0}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V

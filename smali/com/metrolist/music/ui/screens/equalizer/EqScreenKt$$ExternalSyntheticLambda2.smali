@@ -98,7 +98,7 @@
     move-result v2
 
     .line 42
-    sget-object v4, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v4, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 44
     and-int/lit8 v4, v2, 0x3
@@ -213,7 +213,7 @@
     move-result v2
 
     .line 117
-    sget-object v3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 119
     and-int/lit8 v3, v2, 0x3
@@ -331,7 +331,7 @@
     move-result v3
 
     .line 194
-    sget-object v4, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v4, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 196
     and-int/lit8 v4, v3, 0x3
@@ -446,7 +446,7 @@
     move-result v2
 
     .line 269
-    sget-object v3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 271
     and-int/lit8 v3, v2, 0x3
@@ -576,7 +576,7 @@
     move-result v2
 
     .line 357
-    sget-object v3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 359
     and-int/lit8 v3, v2, 0x3

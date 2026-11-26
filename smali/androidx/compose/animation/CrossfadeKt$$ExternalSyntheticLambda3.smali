@@ -148,7 +148,7 @@
     move-object/from16 v19, v0
 
     .line 38
-    check-cast v19, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v19, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 40
     move-object/from16 v20, v4
@@ -190,7 +190,7 @@
     move-result v24
 
     .line 67
-    invoke-static/range {v19 .. v24}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->ConfigScreen(Lcom/metrolist/music/widget/AuralysWidgetConfig;Lkotlin/Pair;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
+    invoke-static/range {v19 .. v24}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->ConfigScreen(Lcom/metrolist/music/widget/MiyuWidgetConfig;Lkotlin/Pair;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
 
     .line 70
     return-object v14

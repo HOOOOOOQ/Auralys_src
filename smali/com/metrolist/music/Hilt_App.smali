@@ -114,7 +114,7 @@
     iput-object v2, v1, Lcom/metrolist/music/App;->applicationScope:Lkotlinx/coroutines/CoroutineScope;
 
     .line 31
-    iget-object v2, v0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;->auralysWidgetManagerProvider:Ldagger/internal/Provider;
+    iget-object v2, v0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;->MiyuWidgetManagerProvider:Ldagger/internal/Provider;
 
     .line 33
     invoke-interface {v2}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
@@ -123,10 +123,10 @@
     move-result-object v2
 
     .line 37
-    check-cast v2, Lcom/metrolist/music/widget/AuralysWidgetManager;
+    check-cast v2, Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 39
-    iput-object v2, v1, Lcom/metrolist/music/App;->widgetManager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+    iput-object v2, v1, Lcom/metrolist/music/App;->widgetManager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 41
     iget-object v0, v0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;->localMusicScannerProvider:Ldagger/internal/Provider;

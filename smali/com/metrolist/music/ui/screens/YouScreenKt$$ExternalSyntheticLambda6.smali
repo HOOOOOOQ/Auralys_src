@@ -778,7 +778,7 @@
     move-wide/from16 v20, v3
 
     .line 491
-    invoke-static/range {v19 .. v28}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->CircularProgressIndicator-LxG7B9w(Landroidx/compose/ui/Modifier;JFJILandroidx/compose/runtime/Composer;II)V
+    invoke-static/range {v19 .. v28}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->CircularProgressIndicator-LxG7B9w(Landroidx/compose/ui/Modifier;JFJILandroidx/compose/runtime/Composer;II)V
 
     .line 494
     const/high16 v3, 0x41400000    # 12.0f
