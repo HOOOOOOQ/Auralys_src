@@ -1,0 +1,332 @@
+.class public final Lio/ktor/http/HttpMessagePropertiesJvmKt;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000(\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u001a\u0017\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\u0002\u00a2\u0006\u0004\u0008\u0003\u0010\u0004\u001a\u0017\u0010\u0005\u001a\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0006\u001a\u0019\u0010\t\u001a\u00020\u0008*\u00020\u00072\u0006\u0010\u0001\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\t\u0010\n\u001a\u0013\u0010\u000b\u001a\u0004\u0018\u00010\u0002*\u00020\u0007\u00a2\u0006\u0004\u0008\u000b\u0010\u000c\u001a\u0013\u0010\r\u001a\u0004\u0018\u00010\u0002*\u00020\u0007\u00a2\u0006\u0004\u0008\r\u0010\u000c\u001a\u0013\u0010\u000b\u001a\u0004\u0018\u00010\u0002*\u00020\u000e\u00a2\u0006\u0004\u0008\u000b\u0010\u000f\u001a\u0013\u0010\r\u001a\u0004\u0018\u00010\u0002*\u00020\u000e\u00a2\u0006\u0004\u0008\r\u0010\u000f\u001a\u0013\u0010\u0001\u001a\u0004\u0018\u00010\u0002*\u00020\u000e\u00a2\u0006\u0004\u0008\u0001\u0010\u000f\"\u0014\u0010\u0013\u001a\u00020\u00108BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0011\u0010\u0012\u00a8\u0006\u0014"
+    }
+    d2 = {
+        "",
+        "date",
+        "Ljava/util/Date;",
+        "parseHttpDate",
+        "(Ljava/lang/String;)Ljava/util/Date;",
+        "formatHttpDate",
+        "(Ljava/util/Date;)Ljava/lang/String;",
+        "Lio/ktor/http/HttpMessageBuilder;",
+        "",
+        "ifModifiedSince",
+        "(Lio/ktor/http/HttpMessageBuilder;Ljava/util/Date;)V",
+        "lastModified",
+        "(Lio/ktor/http/HttpMessageBuilder;)Ljava/util/Date;",
+        "expires",
+        "Lio/ktor/http/HttpMessage;",
+        "(Lio/ktor/http/HttpMessage;)Ljava/util/Date;",
+        "Ljava/text/SimpleDateFormat;",
+        "getHTTP_DATE_FORMAT",
+        "()Ljava/text/SimpleDateFormat;",
+        "HTTP_DATE_FORMAT",
+        "ktor-http"
+    }
+    k = 0x2
+    mv = {
+        0x2,
+        0x3,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method public static final date(Lio/ktor/http/HttpMessage;)Ljava/util/Date;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 4
+    invoke-interface {p0}, Lio/ktor/http/HttpMessage;->getHeaders()Lio/ktor/http/Headers;
+
+    .line 7
+    move-result-object p0
+
+    .line 8
+    const-string v0, "Date"
+
+    .line 10
+    invoke-interface {p0, v0}, Lio/ktor/util/StringValues;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 13
+    move-result-object p0
+
+    .line 14
+    if-eqz p0, :cond_0
+
+    .line 16
+    invoke-static {p0}, Lio/ktor/http/HttpMessagePropertiesJvmKt;->parseHttpDate(Ljava/lang/String;)Ljava/util/Date;
+
+    .line 19
+    move-result-object p0
+
+    .line 20
+    return-object p0
+
+    .line 21
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 22
+    return-object p0
+.end method
+
+.method public static final expires(Lio/ktor/http/HttpMessage;)Ljava/util/Date;
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 23
+    invoke-interface {p0}, Lio/ktor/http/HttpMessage;->getHeaders()Lio/ktor/http/Headers;
+
+    move-result-object p0
+
+    const-string v0, "Expires"
+
+    invoke-interface {p0, v0}, Lio/ktor/util/StringValues;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p0}, Lio/ktor/http/HttpMessagePropertiesJvmKt;->parseHttpDate(Ljava/lang/String;)Ljava/util/Date;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static final expires(Lio/ktor/http/HttpMessageBuilder;)Ljava/util/Date;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 4
+    invoke-interface {p0}, Lio/ktor/http/HttpMessageBuilder;->getHeaders()Lio/ktor/http/HeadersBuilder;
+
+    .line 7
+    move-result-object p0
+
+    .line 8
+    const-string v0, "Expires"
+
+    .line 10
+    invoke-virtual {p0, v0}, Lio/ktor/util/StringValuesBuilderImpl;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 13
+    move-result-object p0
+
+    .line 14
+    if-eqz p0, :cond_0
+
+    .line 16
+    invoke-static {p0}, Lio/ktor/http/HttpMessagePropertiesJvmKt;->parseHttpDate(Ljava/lang/String;)Ljava/util/Date;
+
+    .line 19
+    move-result-object p0
+
+    .line 20
+    return-object p0
+
+    .line 21
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 22
+    return-object p0
+.end method
+
+.method private static final formatHttpDate(Ljava/util/Date;)Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lio/ktor/http/HttpMessagePropertiesJvmKt;->getHTTP_DATE_FORMAT()Ljava/text/SimpleDateFormat;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    invoke-virtual {v0, p0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    .line 8
+    move-result-object p0
+
+    .line 9
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 12
+    return-object p0
+.end method
+
+.method private static final getHTTP_DATE_FORMAT()Ljava/text/SimpleDateFormat;
+    .locals 3
+
+    .line 1
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    .line 3
+    const-string v1, "EEE, dd MMM yyyy HH:mm:ss z"
+
+    .line 5
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    .line 7
+    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    .line 10
+    const-string v1, "GMT"
+
+    .line 12
+    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    .line 15
+    move-result-object v1
+
+    .line 16
+    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
+    .line 19
+    return-object v0
+.end method
+
+.method public static final ifModifiedSince(Lio/ktor/http/HttpMessageBuilder;Ljava/util/Date;)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 4
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 7
+    invoke-interface {p0}, Lio/ktor/http/HttpMessageBuilder;->getHeaders()Lio/ktor/http/HeadersBuilder;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    const-string v0, "If-Modified-Since"
+
+    .line 13
+    invoke-static {p1}, Lio/ktor/http/HttpMessagePropertiesJvmKt;->formatHttpDate(Ljava/util/Date;)Ljava/lang/String;
+
+    .line 16
+    move-result-object p1
+
+    .line 17
+    invoke-virtual {p0, v0, p1}, Lio/ktor/util/StringValuesBuilderImpl;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 20
+    return-void
+.end method
+
+.method public static final lastModified(Lio/ktor/http/HttpMessage;)Ljava/util/Date;
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 23
+    invoke-interface {p0}, Lio/ktor/http/HttpMessage;->getHeaders()Lio/ktor/http/Headers;
+
+    move-result-object p0
+
+    const-string v0, "Last-Modified"
+
+    invoke-interface {p0, v0}, Lio/ktor/util/StringValues;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p0}, Lio/ktor/http/HttpMessagePropertiesJvmKt;->parseHttpDate(Ljava/lang/String;)Ljava/util/Date;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static final lastModified(Lio/ktor/http/HttpMessageBuilder;)Ljava/util/Date;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 4
+    invoke-interface {p0}, Lio/ktor/http/HttpMessageBuilder;->getHeaders()Lio/ktor/http/HeadersBuilder;
+
+    .line 7
+    move-result-object p0
+
+    .line 8
+    const-string v0, "Last-Modified"
+
+    .line 10
+    invoke-virtual {p0, v0}, Lio/ktor/util/StringValuesBuilderImpl;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 13
+    move-result-object p0
+
+    .line 14
+    if-eqz p0, :cond_0
+
+    .line 16
+    invoke-static {p0}, Lio/ktor/http/HttpMessagePropertiesJvmKt;->parseHttpDate(Ljava/lang/String;)Ljava/util/Date;
+
+    .line 19
+    move-result-object p0
+
+    .line 20
+    return-object p0
+
+    .line 21
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 22
+    return-object p0
+.end method
+
+.method private static final parseHttpDate(Ljava/lang/String;)Ljava/util/Date;
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lio/ktor/http/HttpMessagePropertiesJvmKt;->getHTTP_DATE_FORMAT()Ljava/text/SimpleDateFormat;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    invoke-virtual {v0, p0}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
+
+    .line 8
+    move-result-object p0
+
+    .line 9
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 12
+    return-object p0
+.end method

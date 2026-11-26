@@ -1,0 +1,179 @@
+.class public interface abstract Landroidx/media3/session/IMediaSession;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+# interfaces
+.implements Landroid/os/IInterface;
+
+
+# virtual methods
+.method public abstract addMediaItemWithIndex(Landroidx/media3/session/IMediaController;IILandroid/os/Bundle;)V
+.end method
+
+.method public abstract addMediaItems(Landroidx/media3/session/IMediaController;ILandroid/os/IBinder;)V
+.end method
+
+.method public abstract addMediaItemsWithIndex(Landroidx/media3/session/IMediaController;IILandroid/os/IBinder;)V
+.end method
+
+.method public abstract clearMediaItems(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract connect(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;)V
+.end method
+
+.method public abstract decreaseDeviceVolume(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract decreaseDeviceVolumeWithFlags(Landroidx/media3/session/IMediaController;II)V
+.end method
+
+.method public abstract flushCommandQueue(Landroidx/media3/session/IMediaController;)V
+.end method
+
+.method public abstract increaseDeviceVolume(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract increaseDeviceVolumeWithFlags(Landroidx/media3/session/IMediaController;II)V
+.end method
+
+.method public abstract moveMediaItem(Landroidx/media3/session/IMediaController;III)V
+.end method
+
+.method public abstract moveMediaItems(Landroidx/media3/session/IMediaController;IIII)V
+.end method
+
+.method public abstract mute(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract onControllerResult(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;)V
+.end method
+
+.method public abstract onCustomCommand(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;Landroid/os/Bundle;)V
+.end method
+
+.method public abstract onCustomCommandWithProgressUpdate(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;Landroid/os/Bundle;Z)V
+.end method
+
+.method public abstract onSurfaceSizeChanged(Landroidx/media3/session/IMediaController;III)V
+.end method
+
+.method public abstract pause(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract play(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract prepare(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract release(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract removeMediaItem(Landroidx/media3/session/IMediaController;II)V
+.end method
+
+.method public abstract removeMediaItems(Landroidx/media3/session/IMediaController;III)V
+.end method
+
+.method public abstract replaceMediaItem(Landroidx/media3/session/IMediaController;IILandroid/os/Bundle;)V
+.end method
+
+.method public abstract replaceMediaItems(Landroidx/media3/session/IMediaController;IIILandroid/os/IBinder;)V
+.end method
+
+.method public abstract seekBack(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract seekForward(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract seekTo(Landroidx/media3/session/IMediaController;IJ)V
+.end method
+
+.method public abstract seekToDefaultPosition(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract seekToDefaultPositionWithMediaItemIndex(Landroidx/media3/session/IMediaController;II)V
+.end method
+
+.method public abstract seekToNext(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract seekToNextMediaItem(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract seekToPrevious(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract seekToPreviousMediaItem(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract seekToWithMediaItemIndex(Landroidx/media3/session/IMediaController;IIJ)V
+.end method
+
+.method public abstract setAudioAttributes(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;Z)V
+.end method
+
+.method public abstract setDeviceMuted(Landroidx/media3/session/IMediaController;IZ)V
+.end method
+
+.method public abstract setDeviceMutedWithFlags(Landroidx/media3/session/IMediaController;IZI)V
+.end method
+
+.method public abstract setDeviceVolume(Landroidx/media3/session/IMediaController;II)V
+.end method
+
+.method public abstract setDeviceVolumeWithFlags(Landroidx/media3/session/IMediaController;III)V
+.end method
+
+.method public abstract setMediaItem(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;)V
+.end method
+
+.method public abstract setMediaItemWithResetPosition(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;Z)V
+.end method
+
+.method public abstract setMediaItemWithStartPosition(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;J)V
+.end method
+
+.method public abstract setMediaItemsWithResetPosition(Landroidx/media3/session/IMediaController;ILandroid/os/IBinder;Z)V
+.end method
+
+.method public abstract setMediaItemsWithStartIndex(Landroidx/media3/session/IMediaController;ILandroid/os/IBinder;IJ)V
+.end method
+
+.method public abstract setPlayWhenReady(Landroidx/media3/session/IMediaController;IZ)V
+.end method
+
+.method public abstract setPlaybackParameters(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;)V
+.end method
+
+.method public abstract setPlaybackSpeed(Landroidx/media3/session/IMediaController;IF)V
+.end method
+
+.method public abstract setPlaylistMetadata(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;)V
+.end method
+
+.method public abstract setRepeatMode(Landroidx/media3/session/IMediaController;II)V
+.end method
+
+.method public abstract setShuffleModeEnabled(Landroidx/media3/session/IMediaController;IZ)V
+.end method
+
+.method public abstract setTrackSelectionParameters(Landroidx/media3/session/IMediaController;ILandroid/os/Bundle;)V
+.end method
+
+.method public abstract setVideoSurface(Landroidx/media3/session/IMediaController;ILandroid/view/Surface;)V
+.end method
+
+.method public abstract setVideoSurfaceWithSize(Landroidx/media3/session/IMediaController;ILandroid/view/Surface;II)V
+.end method
+
+.method public abstract setVolume(Landroidx/media3/session/IMediaController;IF)V
+.end method
+
+.method public abstract stop(Landroidx/media3/session/IMediaController;I)V
+.end method
+
+.method public abstract unmute(Landroidx/media3/session/IMediaController;I)V
+.end method

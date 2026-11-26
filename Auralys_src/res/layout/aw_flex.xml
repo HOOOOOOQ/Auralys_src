@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/aw_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/aw_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/aw_preview_glass"
+        android:scaleType="fitXY"
+        android:importantForAccessibility="no" />
+    <ImageView
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_cover"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/album_art" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:ellipsize="end"
+        android:gravity="start|center"
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_title"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        android:text="@string/no_song_playing"
+        android:maxLines="1"
+        android:includeFontPadding="false" />
+    <TextView
+        android:textSize="11.0sp"
+        android:textColor="#b3ffffff"
+        android:ellipsize="end"
+        android:gravity="start|center"
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_artist"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        android:text="@string/tap_to_open"
+        android:maxLines="1"
+        android:includeFontPadding="false" />
+    <FrameLayout
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_like_box"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/aw_like"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:src="@drawable/aw_heart_outline"
+            android:contentDescription="@string/like" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_prev_box"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/aw_prev"
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:src="@drawable/aw_prev"
+            android:contentDescription="@string/aw_previous" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_play_box"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/aw_play_bg"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:src="@drawable/aw_circle"
+            android:importantForAccessibility="no" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/aw_play"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:src="@drawable/aw_play"
+            android:contentDescription="@string/play_pause" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_next_box"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/aw_next"
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:src="@drawable/aw_next"
+            android:contentDescription="@string/aw_next" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_progress_box"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip">
+        <ImageView
+            android:id="@id/aw_progress_track"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/aw_progress_track"
+            android:scaleType="fitXY"
+            android:importantForAccessibility="no" />
+        <ImageView
+            android:id="@id/aw_progress_fill"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/aw_progress_clip"
+            android:scaleType="fitXY"
+            android:importantForAccessibility="no" />
+    </FrameLayout>
+    <TextView
+        android:textSize="10.0sp"
+        android:textColor="#b3ffffff"
+        android:gravity="start|center"
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_time_now"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        android:text="0:00"
+        android:maxLines="1"
+        android:includeFontPadding="false" />
+    <TextView
+        android:textSize="10.0sp"
+        android:textColor="#b3ffffff"
+        android:gravity="end|center"
+        android:layout_gravity="start|center|top"
+        android:id="@id/aw_time_total"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        android:text="0:00"
+        android:maxLines="1"
+        android:includeFontPadding="false" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="start|center|top"
+        android:orientation="horizontal"
+        android:id="@id/aw_streak"
+        android:visibility="gone"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip">
+        <ImageView
+            android:id="@id/aw_streak_icon"
+            android:layout_width="14.0dip"
+            android:layout_height="14.0dip"
+            android:src="@drawable/ic_streak_flame"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:textSize="11.0sp"
+            android:textStyle="bold"
+            android:textColor="#ffffffff"
+            android:id="@id/aw_streak_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:includeFontPadding="false"
+            android:layout_marginStart="2.0dip" />
+    </LinearLayout>
+</FrameLayout>

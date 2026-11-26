@@ -1,0 +1,594 @@
+.class public final synthetic Lcom/metrolist/music/db/entities/CachedSection$$serializer;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+# interfaces
+.implements Lkotlinx/serialization/internal/GeneratedSerializer;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/metrolist/music/db/entities/CachedSection;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1019
+    name = "$serializer"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lkotlinx/serialization/internal/GeneratedSerializer;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Deprecated;
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u00c7\u0002\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001R\u0017\u0010\u0004\u001a\u00020\u00038\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0004\u0010\u0005\u001a\u0004\u0008\u0006\u0010\u0007\u00a8\u0006\u0008"
+    }
+    d2 = {
+        "com/metrolist/music/db/entities/CachedSection.$serializer",
+        "Lkotlinx/serialization/internal/GeneratedSerializer;",
+        "Lcom/metrolist/music/db/entities/CachedSection;",
+        "Lkotlinx/serialization/descriptors/SerialDescriptor;",
+        "descriptor",
+        "Lkotlinx/serialization/descriptors/SerialDescriptor;",
+        "getDescriptor",
+        "()Lkotlinx/serialization/descriptors/SerialDescriptor;",
+        "app"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x4,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final INSTANCE:Lcom/metrolist/music/db/entities/CachedSection$$serializer;
+
+.field private static final descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    .line 1
+    new-instance v0, Lcom/metrolist/music/db/entities/CachedSection$$serializer;
+
+    .line 3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    sput-object v0, Lcom/metrolist/music/db/entities/CachedSection$$serializer;->INSTANCE:Lcom/metrolist/music/db/entities/CachedSection$$serializer;
+
+    .line 8
+    new-instance v1, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    .line 10
+    const-string v2, "com.metrolist.music.db.entities.CachedSection"
+
+    .line 12
+    const/4 v3, 0x4
+
+    .line 13
+    invoke-direct {v1, v2, v0, v3}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;-><init>(Ljava/lang/String;Lkotlinx/serialization/internal/GeneratedSerializer;I)V
+
+    .line 16
+    const-string/jumbo v0, "title"
+
+    .line 19
+    const/4 v2, 0x0
+
+    .line 20
+    invoke-virtual {v1, v0, v2}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->addElement(Ljava/lang/String;Z)V
+
+    .line 23
+    const-string v0, "items"
+
+    .line 25
+    invoke-virtual {v1, v0, v2}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->addElement(Ljava/lang/String;Z)V
+
+    .line 28
+    const-string v0, "moreBrowseId"
+
+    .line 30
+    const/4 v2, 0x1
+
+    .line 31
+    invoke-virtual {v1, v0, v2}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->addElement(Ljava/lang/String;Z)V
+
+    .line 34
+    const-string v0, "moreParams"
+
+    .line 36
+    invoke-virtual {v1, v0, v2}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->addElement(Ljava/lang/String;Z)V
+
+    .line 39
+    sput-object v1, Lcom/metrolist/music/db/entities/CachedSection$$serializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    .line 41
+    return-void
+.end method
+
+
+# virtual methods
+.method public final childSerializers()[Lkotlinx/serialization/KSerializer;
+    .locals 3
+
+    .line 1
+    sget-object p0, Lcom/metrolist/music/db/entities/CachedSection;->$childSerializers:[Lkotlin/Lazy;
+
+    .line 3
+    const/4 v0, 0x4
+
+    .line 4
+    new-array v0, v0, [Lkotlinx/serialization/KSerializer;
+
+    .line 6
+    sget-object v1, Lkotlinx/serialization/internal/StringSerializer;->INSTANCE:Lkotlinx/serialization/internal/StringSerializer;
+
+    .line 8
+    const/4 v2, 0x0
+
+    .line 9
+    aput-object v1, v0, v2
+
+    .line 11
+    const/4 v2, 0x1
+
+    .line 12
+    aget-object p0, p0, v2
+
+    .line 14
+    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    .line 17
+    move-result-object p0
+
+    .line 18
+    aput-object p0, v0, v2
+
+    .line 20
+    const/4 p0, 0x2
+
+    .line 21
+    invoke-static {v1}, Lokhttp3/HttpUrl$Companion;->getNullable(Lkotlinx/serialization/KSerializer;)Lkotlinx/serialization/KSerializer;
+
+    .line 24
+    move-result-object v2
+
+    .line 25
+    aput-object v2, v0, p0
+
+    .line 27
+    const/4 p0, 0x3
+
+    .line 28
+    invoke-static {v1}, Lokhttp3/HttpUrl$Companion;->getNullable(Lkotlinx/serialization/KSerializer;)Lkotlinx/serialization/KSerializer;
+
+    .line 31
+    move-result-object v1
+
+    .line 32
+    aput-object v1, v0, p0
+
+    .line 34
+    return-object v0
+.end method
+
+.method public final deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+    .locals 20
+
+    .line 1
+    sget-object v0, Lcom/metrolist/music/db/entities/CachedSection$$serializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    .line 3
+    move-object/from16 v1, p1
+
+    .line 5
+    invoke-interface {v1, v0}, Lkotlinx/serialization/encoding/Decoder;->beginStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/encoding/CompositeDecoder;
+
+    .line 8
+    move-result-object v1
+
+    .line 9
+    sget-object v2, Lcom/metrolist/music/db/entities/CachedSection;->$childSerializers:[Lkotlin/Lazy;
+
+    .line 11
+    invoke-interface {v1}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeSequentially()Z
+
+    .line 14
+    move-result v3
+
+    .line 15
+    const/4 v4, 0x3
+
+    .line 16
+    const/4 v5, 0x2
+
+    .line 17
+    const/4 v6, 0x1
+
+    .line 18
+    const/4 v7, 0x0
+
+    .line 19
+    const/4 v8, 0x0
+
+    .line 20
+    if-eqz v3, :cond_0
+
+    .line 22
+    invoke-interface {v1, v0, v7}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeStringElement(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/String;
+
+    .line 25
+    move-result-object v3
+
+    .line 26
+    aget-object v2, v2, v6
+
+    .line 28
+    invoke-interface {v2}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    .line 31
+    move-result-object v2
+
+    .line 32
+    check-cast v2, Lkotlinx/serialization/DeserializationStrategy;
+
+    .line 34
+    invoke-interface {v1, v0, v6, v2, v8}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 37
+    move-result-object v2
+
+    .line 38
+    check-cast v2, Ljava/util/List;
+
+    .line 40
+    sget-object v6, Lkotlinx/serialization/internal/StringSerializer;->INSTANCE:Lkotlinx/serialization/internal/StringSerializer;
+
+    .line 42
+    invoke-interface {v1, v0, v5, v6, v8}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeNullableSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 45
+    move-result-object v5
+
+    .line 46
+    check-cast v5, Ljava/lang/String;
+
+    .line 48
+    invoke-interface {v1, v0, v4, v6, v8}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeNullableSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 51
+    move-result-object v4
+
+    .line 52
+    check-cast v4, Ljava/lang/String;
+
+    .line 54
+    const/16 v6, 0xf
+
+    .line 56
+    move-object/from16 v17, v2
+
+    .line 58
+    move-object/from16 v16, v3
+
+    .line 60
+    move-object/from16 v19, v4
+
+    .line 62
+    move-object/from16 v18, v5
+
+    .line 64
+    move v15, v6
+
+    .line 65
+    goto :goto_1
+
+    .line 66
+    :cond_0
+    move v13, v6
+
+    .line 67
+    move v12, v7
+
+    .line 68
+    move-object v3, v8
+
+    .line 69
+    move-object v9, v3
+
+    .line 70
+    move-object v10, v9
+
+    .line 71
+    move-object v11, v10
+
+    .line 72
+    :goto_0
+    if-eqz v13, :cond_6
+
+    .line 74
+    invoke-interface {v1, v0}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeElementIndex(Lkotlinx/serialization/descriptors/SerialDescriptor;)I
+
+    .line 77
+    move-result v14
+
+    .line 78
+    const/4 v15, -0x1
+
+    .line 79
+    if-eq v14, v15, :cond_5
+
+    .line 81
+    if-eqz v14, :cond_4
+
+    .line 83
+    if-eq v14, v6, :cond_3
+
+    .line 85
+    if-eq v14, v5, :cond_2
+
+    .line 87
+    if-ne v14, v4, :cond_1
+
+    .line 89
+    sget-object v14, Lkotlinx/serialization/internal/StringSerializer;->INSTANCE:Lkotlinx/serialization/internal/StringSerializer;
+
+    .line 91
+    invoke-interface {v1, v0, v4, v14, v10}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeNullableSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 94
+    move-result-object v10
+
+    .line 95
+    check-cast v10, Ljava/lang/String;
+
+    .line 97
+    or-int/lit8 v12, v12, 0x8
+
+    .line 99
+    goto :goto_0
+
+    .line 100
+    :cond_1
+    invoke-static {v14}, Lio/ktor/util/PathKt$$ExternalSyntheticBUOutline0;->m(I)V
+
+    .line 103
+    return-object v8
+
+    .line 104
+    :cond_2
+    sget-object v14, Lkotlinx/serialization/internal/StringSerializer;->INSTANCE:Lkotlinx/serialization/internal/StringSerializer;
+
+    .line 106
+    invoke-interface {v1, v0, v5, v14, v11}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeNullableSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 109
+    move-result-object v11
+
+    .line 110
+    check-cast v11, Ljava/lang/String;
+
+    .line 112
+    or-int/lit8 v12, v12, 0x4
+
+    .line 114
+    goto :goto_0
+
+    .line 115
+    :cond_3
+    aget-object v14, v2, v6
+
+    .line 117
+    invoke-interface {v14}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    .line 120
+    move-result-object v14
+
+    .line 121
+    check-cast v14, Lkotlinx/serialization/DeserializationStrategy;
+
+    .line 123
+    invoke-interface {v1, v0, v6, v14, v3}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 126
+    move-result-object v3
+
+    .line 127
+    check-cast v3, Ljava/util/List;
+
+    .line 129
+    or-int/lit8 v12, v12, 0x2
+
+    .line 131
+    goto :goto_0
+
+    .line 132
+    :cond_4
+    invoke-interface {v1, v0, v7}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeStringElement(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/String;
+
+    .line 135
+    move-result-object v9
+
+    .line 136
+    or-int/lit8 v12, v12, 0x1
+
+    .line 138
+    goto :goto_0
+
+    .line 139
+    :cond_5
+    move v13, v7
+
+    .line 140
+    goto :goto_0
+
+    .line 141
+    :cond_6
+    move-object/from16 v17, v3
+
+    .line 143
+    move-object/from16 v16, v9
+
+    .line 145
+    move-object/from16 v19, v10
+
+    .line 147
+    move-object/from16 v18, v11
+
+    .line 149
+    move v15, v12
+
+    .line 150
+    :goto_1
+    invoke-interface {v1, v0}, Lkotlinx/serialization/encoding/CompositeDecoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+
+    .line 153
+    new-instance v14, Lcom/metrolist/music/db/entities/CachedSection;
+
+    .line 155
+    invoke-direct/range {v14 .. v19}, Lcom/metrolist/music/db/entities/CachedSection;-><init>(ILjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 158
+    return-object v14
+.end method
+
+.method public final getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
+    .locals 0
+
+    .line 1
+    sget-object p0, Lcom/metrolist/music/db/entities/CachedSection$$serializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    .line 3
+    return-object p0
+.end method
+
+.method public final serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+    .locals 5
+
+    .line 1
+    check-cast p2, Lcom/metrolist/music/db/entities/CachedSection;
+
+    .line 3
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 6
+    sget-object p0, Lcom/metrolist/music/db/entities/CachedSection$$serializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    .line 8
+    invoke-interface {p1, p0}, Lkotlinx/serialization/encoding/Encoder;->beginStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/encoding/CompositeEncoder;
+
+    .line 11
+    move-result-object p1
+
+    .line 12
+    sget-object v0, Lcom/metrolist/music/db/entities/CachedSection;->$childSerializers:[Lkotlin/Lazy;
+
+    .line 14
+    iget-object v1, p2, Lcom/metrolist/music/db/entities/CachedSection;->title:Ljava/lang/String;
+
+    .line 16
+    iget-object v2, p2, Lcom/metrolist/music/db/entities/CachedSection;->moreParams:Ljava/lang/String;
+
+    .line 18
+    iget-object v3, p2, Lcom/metrolist/music/db/entities/CachedSection;->moreBrowseId:Ljava/lang/String;
+
+    .line 20
+    const/4 v4, 0x0
+
+    .line 21
+    invoke-interface {p1, p0, v4, v1}, Lkotlinx/serialization/encoding/CompositeEncoder;->encodeStringElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILjava/lang/String;)V
+
+    .line 24
+    const/4 v1, 0x1
+
+    .line 25
+    aget-object v0, v0, v1
+
+    .line 27
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    .line 30
+    move-result-object v0
+
+    .line 31
+    check-cast v0, Lkotlinx/serialization/SerializationStrategy;
+
+    .line 33
+    iget-object p2, p2, Lcom/metrolist/music/db/entities/CachedSection;->items:Ljava/util/List;
+
+    .line 35
+    invoke-interface {p1, p0, v1, v0, p2}, Lkotlinx/serialization/encoding/CompositeEncoder;->encodeSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)V
+
+    .line 38
+    const/4 p2, 0x2
+
+    .line 39
+    invoke-interface {p1, p0, p2}, Lkotlinx/serialization/encoding/CompositeEncoder;->shouldEncodeElementDefault(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z
+
+    .line 42
+    move-result v0
+
+    .line 43
+    if-eqz v0, :cond_0
+
+    .line 45
+    goto :goto_0
+
+    .line 46
+    :cond_0
+    if-eqz v3, :cond_1
+
+    .line 48
+    :goto_0
+    sget-object v0, Lkotlinx/serialization/internal/StringSerializer;->INSTANCE:Lkotlinx/serialization/internal/StringSerializer;
+
+    .line 50
+    invoke-interface {p1, p0, p2, v0, v3}, Lkotlinx/serialization/encoding/CompositeEncoder;->encodeNullableSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)V
+
+    .line 53
+    :cond_1
+    const/4 p2, 0x3
+
+    .line 54
+    invoke-interface {p1, p0, p2}, Lkotlinx/serialization/encoding/CompositeEncoder;->shouldEncodeElementDefault(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z
+
+    .line 57
+    move-result v0
+
+    .line 58
+    if-eqz v0, :cond_2
+
+    .line 60
+    goto :goto_1
+
+    .line 61
+    :cond_2
+    if-eqz v2, :cond_3
+
+    .line 63
+    :goto_1
+    sget-object v0, Lkotlinx/serialization/internal/StringSerializer;->INSTANCE:Lkotlinx/serialization/internal/StringSerializer;
+
+    .line 65
+    invoke-interface {p1, p0, p2, v0, v2}, Lkotlinx/serialization/encoding/CompositeEncoder;->encodeNullableSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)V
+
+    .line 68
+    :cond_3
+    invoke-interface {p1, p0}, Lkotlinx/serialization/encoding/CompositeEncoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+
+    .line 71
+    return-void
+.end method

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="alarm_playlist_song_count">
+        <item quantity="other">%d songs</item>
+        <item quantity="one">%d song</item>
+    </plurals>
+    <plurals name="auralys434_widget_streak_desc">
+        <item quantity="other">Streak: %d days</item>
+        <item quantity="one">Streak: %d day</item>
+    </plurals>
+    <plurals name="auralys_history_merge_done">
+        <item quantity="other">History from your account merged: %1$d plays</item>
+        <item quantity="one">History from your account merged: %1$d play</item>
+    </plurals>
+    <plurals name="auralys_history_merge_last">
+        <item quantity="other">Last: %1$s, %2$d plays added</item>
+        <item quantity="one">Last: %1$s, %2$d play added</item>
+    </plurals>
+    <plurals name="auralys_queue_remove_played_message">
+        <item quantity="other">The %d songs above the one playing now will be removed from the queue.</item>
+        <item quantity="one">The song above the one playing now will be removed from the queue.</item>
+    </plurals>
+    <plurals name="auralys_queue_removed_played">
+        <item quantity="other">%d songs removed from the queue</item>
+        <item quantity="one">%d song removed from the queue</item>
+    </plurals>
+    <plurals name="auralys_streak_gallery_days">
+        <item quantity="other">%d days</item>
+        <item quantity="one">%d day</item>
+    </plurals>
+    <plurals name="auralys_streak_goal_short">
+        <item quantity="other">%1$s · %2$d days to go</item>
+        <item quantity="one">%1$s · %2$d day to go</item>
+    </plurals>
+    <plurals name="auralys_streak_poster_days">
+        <item quantity="other">days in a row</item>
+        <item quantity="one">day in a row</item>
+    </plurals>
+    <plurals name="band_count">
+        <item quantity="other">%d bands</item>
+        <item quantity="one">%d band</item>
+    </plurals>
+    <plurals name="minute">
+        <item quantity="other">%d minutes</item>
+        <item quantity="one">1 minute</item>
+    </plurals>
+    <plurals name="n_album">
+        <item quantity="other">%d albums</item>
+        <item quantity="one">%d album</item>
+    </plurals>
+    <plurals name="n_artist">
+        <item quantity="other">%d artists</item>
+        <item quantity="one">%d artist</item>
+    </plurals>
+    <plurals name="n_channel">
+        <item quantity="other">%d channels</item>
+        <item quantity="one">%d channel</item>
+    </plurals>
+    <plurals name="n_episode">
+        <item quantity="other">%d episodes</item>
+        <item quantity="one">%d episode</item>
+    </plurals>
+    <plurals name="n_month">
+        <item quantity="other">%d months</item>
+        <item quantity="one">%d month</item>
+    </plurals>
+    <plurals name="n_playlist">
+        <item quantity="other">%d playlists</item>
+        <item quantity="one">%d playlist</item>
+    </plurals>
+    <plurals name="n_selected">
+        <item quantity="other">%d selected</item>
+    </plurals>
+    <plurals name="n_song">
+        <item quantity="other">%d songs</item>
+        <item quantity="one">%d song</item>
+    </plurals>
+    <plurals name="n_time">
+        <item quantity="other">%d times</item>
+        <item quantity="one">%d time</item>
+    </plurals>
+    <plurals name="n_week">
+        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d week</item>
+    </plurals>
+    <plurals name="n_year">
+        <item quantity="other">%d years</item>
+        <item quantity="one">%d year</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="other">%d seconds</item>
+        <item quantity="one">1 second</item>
+    </plurals>
+</resources>

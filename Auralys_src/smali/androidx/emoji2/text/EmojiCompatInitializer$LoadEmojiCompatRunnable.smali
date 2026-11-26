@@ -1,0 +1,106 @@
+.class public final Landroidx/emoji2/text/EmojiCompatInitializer$LoadEmojiCompatRunnable;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic $r8$classId:B
+
+
+# direct methods
+.method public synthetic constructor <init>(B)V
+    .locals 0
+
+    .line 1
+    iput-byte p1, p0, Landroidx/emoji2/text/EmojiCompatInitializer$LoadEmojiCompatRunnable;->$r8$classId:B
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    return-void
+.end method
+
+.method private final run$com$google$common$util$concurrent$InterruptibleTask$DoNothingRunnable()V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .line 1
+    iget-byte p0, p0, Landroidx/emoji2/text/EmojiCompatInitializer$LoadEmojiCompatRunnable;->$r8$classId:B
+
+    .line 3
+    packed-switch p0, :pswitch_data_0
+
+    .line 6
+    return-void
+
+    .line 7
+    :pswitch_0
+    :try_start_0
+    const-string p0, "EmojiCompat.EmojiCompatInitializer.run"
+
+    .line 9
+    sget v0, Landroidx/core/os/TraceCompat;->$r8$clinit:I
+
+    .line 11
+    invoke-static {p0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    .line 14
+    invoke-static {}, Landroidx/emoji2/text/EmojiCompat;->isConfigured()Z
+
+    .line 17
+    move-result p0
+
+    .line 18
+    if-eqz p0, :cond_0
+
+    .line 20
+    invoke-static {}, Landroidx/emoji2/text/EmojiCompat;->get()Landroidx/emoji2/text/EmojiCompat;
+
+    .line 23
+    move-result-object p0
+
+    .line 24
+    invoke-virtual {p0}, Landroidx/emoji2/text/EmojiCompat;->load()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 27
+    :cond_0
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 30
+    return-void
+
+    .line 31
+    :catchall_0
+    move-exception p0
+
+    .line 32
+    sget v0, Landroidx/core/os/TraceCompat;->$r8$clinit:I
+
+    .line 34
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 37
+    throw p0
+
+    nop
+
+    .line 39
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

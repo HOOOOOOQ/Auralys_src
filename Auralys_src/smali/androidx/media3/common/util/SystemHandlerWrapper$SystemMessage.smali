@@ -1,0 +1,87 @@
+.class public final Landroidx/media3/common/util/SystemHandlerWrapper$SystemMessage;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+
+# instance fields
+.field public message:Landroid/os/Message;
+
+
+# virtual methods
+.method public final recycle()V
+    .locals 3
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    iput-object v0, p0, Landroidx/media3/common/util/SystemHandlerWrapper$SystemMessage;->message:Landroid/os/Message;
+
+    .line 4
+    sget-object v0, Landroidx/media3/common/util/SystemHandlerWrapper;->messagePool:Ljava/util/ArrayList;
+
+    .line 6
+    monitor-enter v0
+
+    .line 7
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    .line 10
+    move-result v1
+
+    .line 11
+    const/16 v2, 0x32
+
+    .line 13
+    if-ge v1, v2, :cond_0
+
+    .line 15
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 18
+    goto :goto_0
+
+    .line 19
+    :catchall_0
+    move-exception p0
+
+    .line 20
+    goto :goto_1
+
+    .line 21
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    .line 22
+    return-void
+
+    .line 23
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 24
+    throw p0
+.end method
+
+.method public final sendToTarget()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Landroidx/media3/common/util/SystemHandlerWrapper$SystemMessage;->message:Landroid/os/Message;
+
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 6
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    .line 9
+    invoke-virtual {p0}, Landroidx/media3/common/util/SystemHandlerWrapper$SystemMessage;->recycle()V
+
+    .line 12
+    return-void
+.end method

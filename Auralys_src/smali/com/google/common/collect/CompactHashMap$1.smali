@@ -1,0 +1,320 @@
+.class public final Lcom/google/common/collect/CompactHashMap$1;
+.super Ljava/lang/Object;
+.source "r8-map-id-c5c0f297f8ead2f08c59e8497aaab2253cc6a28c65d73e52ec0c34cbd10913d5"
+
+# interfaces
+.implements Ljava/util/Iterator;
+
+
+# instance fields
+.field public final synthetic $r8$classId:B
+
+.field public currentIndex:I
+
+.field public expectedMetadata:I
+
+.field public indexToRemove:I
+
+.field public final synthetic this$0:Lcom/google/common/collect/CompactHashMap;
+
+.field public final synthetic this$0$1:Lcom/google/common/collect/CompactHashMap;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/common/collect/CompactHashMap;B)V
+    .locals 0
+
+    .line 1
+    iput-byte p2, p0, Lcom/google/common/collect/CompactHashMap$1;->$r8$classId:B
+
+    .line 3
+    iput-object p1, p0, Lcom/google/common/collect/CompactHashMap$1;->this$0:Lcom/google/common/collect/CompactHashMap;
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    iput-object p1, p0, Lcom/google/common/collect/CompactHashMap$1;->this$0$1:Lcom/google/common/collect/CompactHashMap;
+
+    .line 10
+    iget p2, p1, Lcom/google/common/collect/CompactHashMap;->metadata:I
+
+    .line 12
+    iput p2, p0, Lcom/google/common/collect/CompactHashMap$1;->expectedMetadata:I
+
+    .line 14
+    invoke-virtual {p1}, Lcom/google/common/collect/CompactHashMap;->isEmpty()Z
+
+    .line 17
+    move-result p1
+
+    .line 18
+    const/4 p2, -0x1
+
+    .line 19
+    if-eqz p1, :cond_0
+
+    .line 21
+    move p1, p2
+
+    .line 22
+    goto :goto_0
+
+    .line 23
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 24
+    :goto_0
+    iput p1, p0, Lcom/google/common/collect/CompactHashMap$1;->currentIndex:I
+
+    .line 26
+    iput p2, p0, Lcom/google/common/collect/CompactHashMap$1;->indexToRemove:I
+
+    .line 28
+    return-void
+.end method
+
+
+# virtual methods
+.method public final hasNext()Z
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/google/common/collect/CompactHashMap$1;->currentIndex:I
+
+    .line 3
+    if-ltz p0, :cond_0
+
+    .line 5
+    const/4 p0, 0x1
+
+    .line 6
+    return p0
+
+    .line 7
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 8
+    return p0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/google/common/collect/CompactHashMap$1;->this$0$1:Lcom/google/common/collect/CompactHashMap;
+
+    .line 3
+    iget v1, v0, Lcom/google/common/collect/CompactHashMap;->metadata:I
+
+    .line 5
+    iget v2, p0, Lcom/google/common/collect/CompactHashMap$1;->expectedMetadata:I
+
+    .line 7
+    const/4 v3, 0x0
+
+    .line 8
+    if-ne v1, v2, :cond_2
+
+    .line 10
+    invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap$1;->hasNext()Z
+
+    .line 13
+    move-result v1
+
+    .line 14
+    if-eqz v1, :cond_1
+
+    .line 16
+    iget v1, p0, Lcom/google/common/collect/CompactHashMap$1;->currentIndex:I
+
+    .line 18
+    iput v1, p0, Lcom/google/common/collect/CompactHashMap$1;->indexToRemove:I
+
+    .line 20
+    iget-byte v2, p0, Lcom/google/common/collect/CompactHashMap$1;->$r8$classId:B
+
+    .line 22
+    iget-object v3, p0, Lcom/google/common/collect/CompactHashMap$1;->this$0:Lcom/google/common/collect/CompactHashMap;
+
+    .line 24
+    packed-switch v2, :pswitch_data_0
+
+    .line 27
+    invoke-virtual {v3}, Lcom/google/common/collect/CompactHashMap;->requireValues()[Ljava/lang/Object;
+
+    .line 30
+    move-result-object v2
+
+    .line 31
+    aget-object v1, v2, v1
+
+    .line 33
+    goto :goto_0
+
+    .line 34
+    :pswitch_0
+    new-instance v2, Lcom/google/common/collect/CompactHashMap$MapEntry;
+
+    .line 36
+    invoke-direct {v2, v3, v1}, Lcom/google/common/collect/CompactHashMap$MapEntry;-><init>(Lcom/google/common/collect/CompactHashMap;I)V
+
+    .line 39
+    move-object v1, v2
+
+    .line 40
+    goto :goto_0
+
+    .line 41
+    :pswitch_1
+    invoke-virtual {v3}, Lcom/google/common/collect/CompactHashMap;->requireKeys()[Ljava/lang/Object;
+
+    .line 44
+    move-result-object v2
+
+    .line 45
+    aget-object v1, v2, v1
+
+    .line 47
+    :goto_0
+    iget v2, p0, Lcom/google/common/collect/CompactHashMap$1;->currentIndex:I
+
+    .line 49
+    add-int/lit8 v2, v2, 0x1
+
+    .line 51
+    iget v0, v0, Lcom/google/common/collect/CompactHashMap;->size:I
+
+    .line 53
+    if-ge v2, v0, :cond_0
+
+    .line 55
+    goto :goto_1
+
+    .line 56
+    :cond_0
+    const/4 v2, -0x1
+
+    .line 57
+    :goto_1
+    iput v2, p0, Lcom/google/common/collect/CompactHashMap$1;->currentIndex:I
+
+    .line 59
+    return-object v1
+
+    .line 60
+    :cond_1
+    invoke-static {}, Lokhttp3/internal/_UtilJvmKt$$ExternalSyntheticLambda0;->m$1()V
+
+    .line 63
+    return-object v3
+
+    .line 64
+    :cond_2
+    invoke-static {}, Landroidx/compose/foundation/MarqueeSpacing$Companion$$ExternalSyntheticLambda0;->m()V
+
+    .line 67
+    return-object v3
+
+    nop
+
+    .line 69
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final remove()V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/google/common/collect/CompactHashMap$1;->this$0$1:Lcom/google/common/collect/CompactHashMap;
+
+    .line 3
+    iget v1, v0, Lcom/google/common/collect/CompactHashMap;->metadata:I
+
+    .line 5
+    iget v2, p0, Lcom/google/common/collect/CompactHashMap$1;->expectedMetadata:I
+
+    .line 7
+    if-ne v1, v2, :cond_1
+
+    .line 9
+    iget v1, p0, Lcom/google/common/collect/CompactHashMap$1;->indexToRemove:I
+
+    .line 11
+    const/4 v2, 0x1
+
+    .line 12
+    if-ltz v1, :cond_0
+
+    .line 14
+    move v1, v2
+
+    .line 15
+    goto :goto_0
+
+    .line 16
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 17
+    :goto_0
+    const-string v3, "no calls to next() since the last call to remove()"
+
+    .line 19
+    invoke-static {v3, v1}, Landroidx/core/os/BundleCompat;->checkState(Ljava/lang/String;Z)V
+
+    .line 22
+    iget v1, p0, Lcom/google/common/collect/CompactHashMap$1;->expectedMetadata:I
+
+    .line 24
+    add-int/lit8 v1, v1, 0x20
+
+    .line 26
+    iput v1, p0, Lcom/google/common/collect/CompactHashMap$1;->expectedMetadata:I
+
+    .line 28
+    iget v1, p0, Lcom/google/common/collect/CompactHashMap$1;->indexToRemove:I
+
+    .line 30
+    invoke-virtual {v0}, Lcom/google/common/collect/CompactHashMap;->requireKeys()[Ljava/lang/Object;
+
+    .line 33
+    move-result-object v3
+
+    .line 34
+    aget-object v1, v3, v1
+
+    .line 36
+    invoke-virtual {v0, v1}, Lcom/google/common/collect/CompactHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 39
+    iget v0, p0, Lcom/google/common/collect/CompactHashMap$1;->currentIndex:I
+
+    .line 41
+    sub-int/2addr v0, v2
+
+    .line 42
+    iput v0, p0, Lcom/google/common/collect/CompactHashMap$1;->currentIndex:I
+
+    .line 44
+    const/4 v0, -0x1
+
+    .line 45
+    iput v0, p0, Lcom/google/common/collect/CompactHashMap$1;->indexToRemove:I
+
+    .line 47
+    return-void
+
+    .line 48
+    :cond_1
+    invoke-static {}, Landroidx/compose/foundation/MarqueeSpacing$Companion$$ExternalSyntheticLambda0;->m()V
+
+    .line 51
+    return-void
+.end method
