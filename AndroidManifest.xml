@@ -278,6 +278,20 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
+        <activity
+            android:theme="@style/Theme.Metrolist"
+            android:label="@string/miyu_profile_title"
+            android:name="com.metrolist.music.ui.screens.MiyuProfileActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity-alias
             android:label="@string/app_name"
             android:icon="@mipmap/ic_launcher_cair"

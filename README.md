@@ -5,7 +5,7 @@ menjadi **Miyu**, plus APK hasil build ulang.
 
 | | |
 |---|---|
-| **APK siap pasang** | [`dist/Miyu-4.3.7.apk`](dist/Miyu-4.3.7.apk) (36,7 MB) |
+| **APK siap pasang** | [`dist/Miyu-4.3.8.apk`](dist/Miyu-4.3.8.apk) (36,7 MB) |
 | Detail build, hash, catatan signing | [`dist/README.md`](dist/README.md) |
 | Analisis lengkap repo & APK | [`ANALISIS.md`](ANALISIS.md) |
 | Aset logo & QR | [`brand/`](brand) |
@@ -20,7 +20,7 @@ menjadi **Miyu**, plus APK hasil build ulang.
 - Resource tautan: Telegram / TikTok / Saweria / rilis
 - **Tidak ada fitur yang dihapus**
 
-## Yang baru di 4.3.7 (460)
+## Yang baru di 4.3.7 (460) → 4.3.8 (461)
 
 - Ukuran APK turun **8,1 MB** (video banner 8,27 MB → 168 KB, fitur tetap)
 - Auto-update akhirnya berfungsi: pola file `Miyu-<versi>.apk`, feed dari
@@ -29,6 +29,8 @@ menjadi **Miyu**, plus APK hasil build ulang.
   RSA 4096, berlaku sampai 2056) — bukan testkey publik lagi
 - Warna dinamis Material You diperbaiki (build 4.3.6 sempat menghitamkan
   `mc3_palette`)
+- **Layar Profil Miyu**: nama, bio, avatar, level dari data nyata,
+  centang biru + admin (kode admin), dibuka dari shortcut ikon aplikasi
 
 ## Sosial
 

@@ -21,4 +21,25 @@
             android:action="com.metrolist.music.action.LIBRARY"
             android:targetClass="com.metrolist.music.MainActivity" />
     </shortcut>
+    <shortcut
+        android:icon="@drawable/shortcut_library"
+        android:enabled="true"
+        android:shortcutId="miyu_profile"
+        android:shortcutShortLabel="@string/miyu_profile_title"
+        android:shortcutLongLabel="@string/miyu_profile_open">
+        <intent
+            android:targetPackage="app.miyu.my.id"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.metrolist.music.ui.screens.MiyuProfileActivity" />
+    </shortcut>
+    <shortcut
+        android:icon="@drawable/shortcut_library"
+        android:enabled="true"
+        android:shortcutId="miyu_level"
+        android:shortcutShortLabel="@string/miyu_profile_level">
+        <intent
+            android:targetPackage="app.miyu.my.id"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.metrolist.music.ui.screens.MiyuProfileActivity" />
+    </shortcut>
 </shortcuts>

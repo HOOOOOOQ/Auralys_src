@@ -1905,4 +1905,13 @@ Long-press the drag handle to reorder. The first section will be shown by defaul
     <string name="miyu_profile_edit">Edit profil</string>
     <string name="miyu_profile_admin_code">Kode admin</string>
     <string name="miyu_profile_saved">Profil disimpan</string>
+    <string name="miyu_profile_open">Profil, level, dan centang biru</string>
+    <string name="miyu_profile_level_title">Level Miyu</string>
+    <string name="miyu_profile_admin_hint">Kode admin</string>
+    <string name="miyu_profile_admin_ok">Admin aktif, profil terverifikasi</string>
+    <string name="miyu_profile_admin_bad">Kode admin salah</string>
+    <string name="miyu_profile_save">Simpan profil</string>
+    <string name="miyu_profile_back">Kembali ke Miyu</string>
+    <string name="miyu_profile_stats">%1$d jam %2$d menit didengarkan · %3$d lagu disukai</string>
+    <string name="miyu_profile_next_level">%1$d menit lagi ke level berikutnya</string>
 </resources>

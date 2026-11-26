@@ -244,7 +244,7 @@
     sget-object v5, Lcom/metrolist/music/utils/Updater;->INSTANCE:Lcom/metrolist/music/utils/Updater;
 
     .line 72
-    const-string v5, "4.3.7"
+    const-string v5, "4.3.8"
 
     .line 74
     iget-object v4, v4, Lcom/metrolist/music/utils/ReleaseInfo;->tagName:Ljava/lang/String;
