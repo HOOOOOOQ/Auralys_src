@@ -4,8 +4,8 @@ Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
 | | |
 |---|---|
-| File | `miyu-4.3.7-signed.apk` — 37.447.774 byte (36,7 MB) |
-| SHA-256 | `eb1ef334702783afc0c02aaba83aaf74d6a07877aabd1141db3989f74cbb25f4` |
+| File | `Miyu-4.3.7.apk` — 37.447.774 byte (36,7 MB) |
+| SHA-256 | `513346fa4c5f9c2a5bb0a43e0a1944c82b0453d7f1a16306b67da8f3a0604afa` |
 | Package | `app.miyu.my.id` (tidak berubah) |
 | Versi | 4.3.7 (460) — sebelumnya 4.3.6 (459) |
 | Sertifikat | **keystore Miyu sendiri**, SHA-256 `c3:4e:c1:bd:9e:7c:5f:12:a7:51:f0:6d:56:da:6f:a8:a6:83:46:d4:70:d8:5a:a7:d6:a4:4d:02:a1:5a:1f:98` |
@@ -20,7 +20,7 @@ meng-update aplikasi yang sertifikatnya sama, jadi:
 
 ```bash
 adb uninstall app.miyu.my.id      # atau hapus manual di pengaturan
-adb install miyu-4.3.7-signed.apk
+adb install Miyu-4.3.7.apk
 ```
 
 Data (playlist, login, setelan) **hilang** saat uninstall. Ini terjadi **sekali**
@@ -73,20 +73,30 @@ kuncinya sekarang milik sendiri dan dijaga.
 | Saweria | https://saweria.co/ValNihEll |
 | Rilis / update | https://github.com/HOOOOOOQ/Auralys_src/releases/latest |
 
-## Rilis update supaya auto-update jalan
+## Supaya auto-update jalan (tanpa server)
 
-Update checker membaca nama aset dari rilis terbaru, jadi:
+Update checker membaca **daftar isi folder `dist/` di repo ini** lewat
+GitHub Contents API, lalu memilih nama file yang cocok dengan pola
+`Miyu-<versi>.apk` dan membandingkan versinya:
 
-1. Buat rilis GitHub dengan tag `v4.3.7` di repo `HOOOOOOQ/Auralys_src`.
-2. **Unggah APK dengan nama `Miyu-4.3.7.apk`** (wajib pola `Miyu-<versi>.apk`).
-3. Versi di dalam nama file harus lebih tinggi dari versi terpasang.
-
-Cek cepat:
-
-```bash
-curl -s https://api.github.com/repos/HOOOOOOQ/Auralys_src/releases/latest \
-  | grep -o '"name": "Miyu-[^"]*"'
 ```
+GET https://api.github.com/repos/HOOOOOOQ/Auralys_src/contents/dist
+```
+
+Artinya **tidak perlu hosting / domain / upload manual** — cukup commit APK
+baru ke `dist/` di branch `main`. Langkah rilis berikutnya:
+
+1. Naikkan versi (`apktool.yml` + semua string versi di smali).
+2. Build & sign, lalu simpan dengan nama **`dist/Miyu-<versi>.apk`**
+   (contoh `dist/Miyu-4.3.8.apk`). Huruf besar/kecil tidak masalah,
+   pola `Miyu-` + angka + `.apk` wajib.
+3. Commit & push ke `main`. Selesai — aplikasi akan mendeteksi sendiri.
+
+Batas GitHub Contents API 1 MB per file **hanya untuk respons JSON** (yang
+dibaca cuma daftar nama/ukuran), file APK sendiri diunduh lewat
+`raw.githubusercontent.com`, jadi ukuran 37 MB tidak masalah.
+
+> User-Agent yang dikirim app: `Miyu/<versi> (https://t.me/uxpall)`.
 
 ## Build ulang sendiri
 
@@ -100,7 +110,7 @@ java -jar apksigner.jar sign \
      --ks-pass pass:$(cat keystore/KEYSTORE-PASSWORD.txt) \
      --key-pass pass:$(cat keystore/KEYSTORE-PASSWORD.txt) \
      --v1-signing-enabled false --v2-signing-enabled true --v3-signing-enabled true \
-     --min-sdk-version 26 -o miyu-4.3.7-signed.apk miyu-unsigned.apk
+     --min-sdk-version 26 -o Miyu-4.3.7.apk miyu-unsigned.apk
 ```
 
 Catatan yang sudah dibereskan agar `apktool b` berhasil pada project ini:

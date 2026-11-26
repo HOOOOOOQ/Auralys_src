@@ -5,7 +5,7 @@ menjadi **Miyu**, plus APK hasil build ulang.
 
 | | |
 |---|---|
-| **APK siap pasang** | [`dist/miyu-4.3.7-signed.apk`](dist/miyu-4.3.7-signed.apk) (36,7 MB) |
+| **APK siap pasang** | [`dist/Miyu-4.3.7.apk`](dist/Miyu-4.3.7.apk) (36,7 MB) |
 | Detail build, hash, catatan signing | [`dist/README.md`](dist/README.md) |
 | Analisis lengkap repo & APK | [`ANALISIS.md`](ANALISIS.md) |
 | Aset logo & QR | [`brand/`](brand) |
