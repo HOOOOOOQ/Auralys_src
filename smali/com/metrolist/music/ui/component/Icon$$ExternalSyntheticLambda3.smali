@@ -1800,7 +1800,7 @@
     move-result v2
 
     .line 1140
-    invoke-static {v0, v15, v1, v2}, Lcom/metrolist/music/ui/component/AuralysRowButtonsKt;->RowMoreButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
+    invoke-static {v0, v15, v1, v2}, Lcom/metrolist/music/ui/component/MiyuRowButtonsKt;->RowMoreButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
 
     .line 1143
     return-object v14

@@ -483,7 +483,7 @@
     move-result-object v0
 
     .line 12
-    const-string v1, "auralys_spotify_auth"
+    const-string v1, "miyu_spotify_auth"
 
     .line 14
     const/4 v2, 0x0

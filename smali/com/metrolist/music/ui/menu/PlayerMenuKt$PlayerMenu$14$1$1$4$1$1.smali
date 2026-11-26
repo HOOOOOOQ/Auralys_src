@@ -146,7 +146,7 @@
     .locals 6
 
     .line 1
-    const-string v0, "auralys_card_"
+    const-string v0, "miyu_card_"
 
     .line 3
     iget-boolean v1, p0, Lcom/metrolist/music/ui/menu/PlayerMenuKt$PlayerMenu$14$1$1$4$1$1;->label:Z

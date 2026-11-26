@@ -359,7 +359,7 @@
     move-object/from16 v27, v16
 
     .line 201
-    invoke-static/range {v3 .. v13}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->AuralysMark-qi6gXK8(Landroidx/compose/ui/Modifier;JJFFFLandroidx/compose/runtime/Composer;II)V
+    invoke-static/range {v3 .. v13}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->MiyuMark-qi6gXK8(Landroidx/compose/ui/Modifier;JJFFFLandroidx/compose/runtime/Composer;II)V
 
     .line 204
     const/high16 v3, 0x41800000    # 16.0f

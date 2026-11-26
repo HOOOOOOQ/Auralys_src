@@ -348,7 +348,7 @@
     check-cast p0, Landroid/content/ClipboardManager;
 
     .line 203
-    const-string v0, "Auralys Playback Error"
+    const-string v0, "Miyu Playback Error"
 
     .line 205
     invoke-static {v0, v4}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;

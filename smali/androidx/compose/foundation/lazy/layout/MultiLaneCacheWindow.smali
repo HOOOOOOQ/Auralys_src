@@ -324,10 +324,10 @@
 
     .line 58
     :cond_1
-    new-instance v1, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda11;
+    new-instance v1, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda11;
 
     .line 60
-    invoke-direct {v1, p0, p1, p2, p4}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda11;-><init>(Landroidx/compose/foundation/lazy/layout/MultiLaneCacheWindow;Landroidx/compose/foundation/lazy/layout/CacheWindowScope;II)V
+    invoke-direct {v1, p0, p1, p2, p4}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda11;-><init>(Landroidx/compose/foundation/lazy/layout/MultiLaneCacheWindow;Landroidx/compose/foundation/lazy/layout/CacheWindowScope;II)V
 
     .line 63
     invoke-interface {p1, p4, v1}, Landroidx/compose/foundation/lazy/layout/CacheWindowScope;->schedulePrefetch(ILkotlin/jvm/functions/Function1;)Ljava/util/List;

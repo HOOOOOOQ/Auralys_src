@@ -139,7 +139,7 @@
     const/4 v1, 0x0
 
     .line 8
-    const-string v2, "4.4.0"
+    const-string v2, "4.5.0"
 
     .line 10
     const/4 v3, 0x0

@@ -69,13 +69,13 @@
 
     .line 18
     :pswitch_0
-    sget-object p0, Lcom/metrolist/music/widget/AuralysWidgetReceiver;->RENDER_QUEUE:Lcom/metrolist/music/widget/WidgetRenderQueue;
+    sget-object p0, Lcom/metrolist/music/widget/MiyuWidgetReceiver;->RENDER_QUEUE:Lcom/metrolist/music/widget/WidgetRenderQueue;
 
     .line 20
     new-instance p0, Ljava/lang/Thread;
 
     .line 22
-    const-string v1, "auralys-widget-render"
+    const-string v1, "miyu-widget-render"
 
     .line 24
     invoke-direct {p0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V

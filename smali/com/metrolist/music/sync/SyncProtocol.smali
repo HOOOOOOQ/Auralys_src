@@ -32,7 +32,7 @@
     .locals 2
 
     .line 1
-    const-string v0, "auralys-sync-v1"
+    const-string v0, "miyu-sync-v1"
 
     .line 3
     sget-object v1, Lkotlin/text/Charsets;->US_ASCII:Ljava/nio/charset/Charset;

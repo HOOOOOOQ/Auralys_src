@@ -1687,7 +1687,7 @@
     const v2, 0x44e8a000    # 1861.0f
 
     .line 1072
-    const-string v4, "Auralys"
+    const-string v4, "Miyu"
 
     .line 1074
     invoke-virtual {v3, v4, v1, v2, v0}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V

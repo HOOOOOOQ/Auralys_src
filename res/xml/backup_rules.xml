@@ -17,7 +17,7 @@
         path="./innertubex_ejs" />
     <exclude
         domain="sharedpref"
-        path="auralys_spotify_auth.xml" />
+        path="miyu_spotify_auth.xml" />
     <exclude
         domain="root"
         path="app_webview" />

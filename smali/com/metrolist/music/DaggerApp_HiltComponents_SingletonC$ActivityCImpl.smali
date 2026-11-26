@@ -397,14 +397,14 @@
     return-object v0
 .end method
 
-.method public final injectAuralysWidgetConfigActivity(Lcom/metrolist/music/widget/AuralysWidgetConfigActivity;)V
+.method public final injectMiyuWidgetConfigActivity(Lcom/metrolist/music/widget/MiyuWidgetConfigActivity;)V
     .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$ActivityCImpl;->singletonCImpl:Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;
 
     .line 3
-    iget-object p0, p0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;->auralysWidgetManagerProvider:Ldagger/internal/Provider;
+    iget-object p0, p0, Lcom/metrolist/music/DaggerApp_HiltComponents_SingletonC$SingletonCImpl;->MiyuWidgetManagerProvider:Ldagger/internal/Provider;
 
     .line 5
     invoke-interface {p0}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
@@ -413,10 +413,10 @@
     move-result-object p0
 
     .line 9
-    check-cast p0, Lcom/metrolist/music/widget/AuralysWidgetManager;
+    check-cast p0, Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 11
-    iput-object p0, p1, Lcom/metrolist/music/widget/AuralysWidgetConfigActivity;->manager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+    iput-object p0, p1, Lcom/metrolist/music/widget/MiyuWidgetConfigActivity;->manager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 13
     return-void

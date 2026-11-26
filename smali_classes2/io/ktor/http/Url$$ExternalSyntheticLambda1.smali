@@ -1066,7 +1066,7 @@
     check-cast p0, Landroidx/compose/runtime/MutableState;
 
     .line 615
-    sget-object v1, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v1, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 617
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -1075,7 +1075,7 @@
     move-result-object p0
 
     .line 621
-    check-cast p0, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p0, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 623
     invoke-interface {v0, p0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;

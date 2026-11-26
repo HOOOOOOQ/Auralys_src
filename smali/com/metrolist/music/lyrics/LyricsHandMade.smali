@@ -46,7 +46,7 @@
     new-instance v0, Landroidx/datastore/preferences/core/Preferences$Key;
 
     .line 10
-    const-string v1, "auralys_lyrics_hand_made"
+    const-string v1, "miyu_lyrics_hand_made"
 
     .line 12
     invoke-direct {v0, v1}, Landroidx/datastore/preferences/core/Preferences$Key;-><init>(Ljava/lang/String;)V

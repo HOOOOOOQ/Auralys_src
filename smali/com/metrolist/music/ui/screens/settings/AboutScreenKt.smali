@@ -1111,7 +1111,7 @@
     move-object/from16 v28, v20
 
     .line 162
-    invoke-static/range {v1 .. v11}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->AuralysMark-qi6gXK8(Landroidx/compose/ui/Modifier;JJFFFLandroidx/compose/runtime/Composer;II)V
+    invoke-static/range {v1 .. v11}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->MiyuMark-qi6gXK8(Landroidx/compose/ui/Modifier;JJFFFLandroidx/compose/runtime/Composer;II)V
 
     .line 165
     invoke-static {v14, v15}, Landroidx/compose/foundation/layout/SizeKt;->width-3ABfNKs(Landroidx/compose/ui/Modifier;F)Landroidx/compose/ui/Modifier;
@@ -1460,7 +1460,7 @@
     move-object/from16 v9, v21
 
     .line 387
-    const-string v1, "4.4.0"
+    const-string v1, "4.5.0"
 
     .line 389
     const-string/jumbo v2, "universal"
@@ -2056,7 +2056,7 @@
     move-result-object v3
 
     .line 313
-    const-string v18, "4.4.0"
+    const-string v18, "4.5.0"
 
     .line 315
     filled-new-array/range {v18 .. v18}, [Ljava/lang/Object;
@@ -3943,7 +3943,7 @@
     const/4 v8, 0x6
 
     .line 1573
-    invoke-static {v3, v0, v5, v8, v15}, Lcom/metrolist/music/ui/component/IosHudKt;->AuralysSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+    invoke-static {v3, v0, v5, v8, v15}, Lcom/metrolist/music/ui/component/IosHudKt;->MiyuSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 
     .line 1576
     const/4 v15, 0x1

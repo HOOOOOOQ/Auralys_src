@@ -116,7 +116,7 @@
     return-void
 .end method
 
-.method public static final AuralysSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+.method public static final MiyuSnackbarHost(Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
     .locals 26
 
     .line 1
@@ -341,10 +341,10 @@
 
     .line 131
     :cond_6
-    new-instance v14, Lcom/metrolist/music/ui/component/IosHudKt$AuralysSnackbarHost$1$1;
+    new-instance v14, Lcom/metrolist/music/ui/component/IosHudKt$MiyuSnackbarHost$1$1;
 
     .line 133
-    invoke-direct {v14, v3, v9, v5, v6}, Lcom/metrolist/music/ui/component/IosHudKt$AuralysSnackbarHost$1$1;-><init>(Landroidx/compose/material3/SnackbarHostState$SnackbarDataImpl;Landroidx/compose/animation/core/MutableTransitionState;Landroidx/compose/runtime/MutableState;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v14, v3, v9, v5, v6}, Lcom/metrolist/music/ui/component/IosHudKt$MiyuSnackbarHost$1$1;-><init>(Landroidx/compose/material3/SnackbarHostState$SnackbarDataImpl;Landroidx/compose/animation/core/MutableTransitionState;Landroidx/compose/runtime/MutableState;Lkotlin/coroutines/Continuation;)V
 
     .line 136
     invoke-virtual {v7, v14}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -394,10 +394,10 @@
 
     .line 168
     :cond_8
-    new-instance v15, Lcom/metrolist/music/ui/component/IosHudKt$AuralysSnackbarHost$2$1;
+    new-instance v15, Lcom/metrolist/music/ui/component/IosHudKt$MiyuSnackbarHost$2$1;
 
     .line 170
-    invoke-direct {v15, v9, v5, v6}, Lcom/metrolist/music/ui/component/IosHudKt$AuralysSnackbarHost$2$1;-><init>(Landroidx/compose/animation/core/MutableTransitionState;Landroidx/compose/runtime/MutableState;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v15, v9, v5, v6}, Lcom/metrolist/music/ui/component/IosHudKt$MiyuSnackbarHost$2$1;-><init>(Landroidx/compose/animation/core/MutableTransitionState;Landroidx/compose/runtime/MutableState;Lkotlin/coroutines/Continuation;)V
 
     .line 173
     invoke-virtual {v7, v15}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V

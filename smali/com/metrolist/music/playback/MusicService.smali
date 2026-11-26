@@ -323,7 +323,7 @@
 
 .field public watchdogJob:Lkotlinx/coroutines/StandaloneCoroutine;
 
-.field public widgetManager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+.field public widgetManager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
 .field public widgetUpdateInFlight:Z
 

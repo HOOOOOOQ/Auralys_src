@@ -233,7 +233,7 @@
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 67
-    const-string v2, "/Auralys"
+    const-string v2, "/Miyu"
 
     .line 69
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -409,7 +409,7 @@
     move-result-object v4
 
     .line 167
-    const-string v9, "Auralys"
+    const-string v9, "Miyu"
 
     .line 169
     invoke-direct {v3, v4, v9}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V

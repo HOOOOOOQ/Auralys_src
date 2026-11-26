@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method private final invoke$com$metrolist$music$widget$AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda21(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method private final invoke$com$metrolist$music$widget$MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda21(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
     .line 1
@@ -48,7 +48,7 @@
     move-result p3
 
     .line 11
-    sget-object v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 13
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -104,10 +104,10 @@
     move-result-object p1
 
     .line 42
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 44
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->textSize:Lcom/metrolist/music/widget/WidgetTextSize;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->textSize:Lcom/metrolist/music/widget/WidgetTextSize;
 
     .line 46
     sget-object p3, Lcom/metrolist/music/widget/WidgetTextSize;->SMALL:Lcom/metrolist/music/widget/WidgetTextSize;
@@ -139,13 +139,13 @@
     if-ne p3, v0, :cond_2
 
     .line 61
-    new-instance p3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 63
     const/16 v3, 0xa
 
     .line 65
-    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 68
     invoke-virtual {p2, p3}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -161,7 +161,7 @@
     const/16 v4, 0x180
 
     .line 78
-    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 81
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -170,10 +170,10 @@
     move-result-object p1
 
     .line 85
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 87
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->textSize:Lcom/metrolist/music/widget/WidgetTextSize;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->textSize:Lcom/metrolist/music/widget/WidgetTextSize;
 
     .line 89
     sget-object p3, Lcom/metrolist/music/widget/WidgetTextSize;->MEDIUM:Lcom/metrolist/music/widget/WidgetTextSize;
@@ -202,13 +202,13 @@
     if-ne p3, v0, :cond_4
 
     .line 102
-    new-instance p3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 104
     const/16 v3, 0xb
 
     .line 106
-    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 109
     invoke-virtual {p2, p3}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -221,7 +221,7 @@
     const v3, 0x7f1101bb
 
     .line 117
-    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 120
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -230,10 +230,10 @@
     move-result-object p1
 
     .line 124
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 126
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->textSize:Lcom/metrolist/music/widget/WidgetTextSize;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->textSize:Lcom/metrolist/music/widget/WidgetTextSize;
 
     .line 128
     sget-object p3, Lcom/metrolist/music/widget/WidgetTextSize;->LARGE:Lcom/metrolist/music/widget/WidgetTextSize;
@@ -255,13 +255,13 @@
     if-ne p1, v0, :cond_6
 
     .line 139
-    new-instance p1, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p1, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 141
     const/16 p3, 0xc
 
     .line 143
-    invoke-direct {p1, p0, p3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p1, p0, p3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 146
     invoke-virtual {p2, p1}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -274,7 +274,7 @@
     const p0, 0x7f1101ba
 
     .line 154
-    invoke-static {p0, v4, p2, p1, v1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {p0, v4, p2, p1, v1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 157
     goto :goto_3
@@ -291,7 +291,7 @@
     return-object p0
 .end method
 
-.method private final invoke$com$metrolist$music$widget$AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda23(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method private final invoke$com$metrolist$music$widget$MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda23(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
     .line 1
@@ -310,7 +310,7 @@
     move-result p3
 
     .line 11
-    sget-object v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 13
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -366,10 +366,10 @@
     move-result-object p1
 
     .line 42
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 44
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->coverShape:Lcom/metrolist/music/widget/WidgetCoverShape;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->coverShape:Lcom/metrolist/music/widget/WidgetCoverShape;
 
     .line 46
     sget-object p3, Lcom/metrolist/music/widget/WidgetCoverShape;->ROUNDED:Lcom/metrolist/music/widget/WidgetCoverShape;
@@ -401,13 +401,13 @@
     if-ne p3, v0, :cond_2
 
     .line 61
-    new-instance p3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 63
     const/4 v3, 0x5
 
     .line 64
-    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 67
     invoke-virtual {p2, p3}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -423,7 +423,7 @@
     const/16 v4, 0x180
 
     .line 77
-    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 80
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -432,10 +432,10 @@
     move-result-object p1
 
     .line 84
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 86
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->coverShape:Lcom/metrolist/music/widget/WidgetCoverShape;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->coverShape:Lcom/metrolist/music/widget/WidgetCoverShape;
 
     .line 88
     sget-object p3, Lcom/metrolist/music/widget/WidgetCoverShape;->CIRCLE:Lcom/metrolist/music/widget/WidgetCoverShape;
@@ -464,13 +464,13 @@
     if-ne p3, v0, :cond_4
 
     .line 101
-    new-instance p3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 103
     const/4 v3, 0x6
 
     .line 104
-    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 107
     invoke-virtual {p2, p3}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -483,7 +483,7 @@
     const v3, 0x7f1101b7
 
     .line 115
-    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 118
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -492,10 +492,10 @@
     move-result-object p1
 
     .line 122
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 124
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->coverShape:Lcom/metrolist/music/widget/WidgetCoverShape;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->coverShape:Lcom/metrolist/music/widget/WidgetCoverShape;
 
     .line 126
     sget-object p3, Lcom/metrolist/music/widget/WidgetCoverShape;->SQUARE:Lcom/metrolist/music/widget/WidgetCoverShape;
@@ -517,13 +517,13 @@
     if-ne p1, v0, :cond_6
 
     .line 137
-    new-instance p1, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p1, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 139
     const/4 p3, 0x7
 
     .line 140
-    invoke-direct {p1, p0, p3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p1, p0, p3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 143
     invoke-virtual {p2, p1}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -536,7 +536,7 @@
     const p0, 0x7f1101b9
 
     .line 151
-    invoke-static {p0, v4, p2, p1, v1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {p0, v4, p2, p1, v1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 154
     goto :goto_3
@@ -553,7 +553,7 @@
     return-object p0
 .end method
 
-.method private final invoke$com$metrolist$music$widget$AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda25(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method private final invoke$com$metrolist$music$widget$MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda25(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
     .line 1
@@ -572,7 +572,7 @@
     move-result p3
 
     .line 11
-    sget-object v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 13
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -628,10 +628,10 @@
     move-result-object p1
 
     .line 42
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 44
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
 
     .line 46
     sget-object p3, Lcom/metrolist/music/widget/WidgetStyle;->GLASS:Lcom/metrolist/music/widget/WidgetStyle;
@@ -663,10 +663,10 @@
     if-ne p3, v0, :cond_2
 
     .line 61
-    new-instance p3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 63
-    invoke-direct {p3, p0, v1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p3, p0, v1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 66
     invoke-virtual {p2, p3}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -682,7 +682,7 @@
     const/16 v4, 0x180
 
     .line 76
-    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 79
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -691,10 +691,10 @@
     move-result-object p1
 
     .line 83
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 85
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
 
     .line 87
     sget-object p3, Lcom/metrolist/music/widget/WidgetStyle;->CLEAR:Lcom/metrolist/music/widget/WidgetStyle;
@@ -723,10 +723,10 @@
     if-ne p3, v0, :cond_4
 
     .line 100
-    new-instance p3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 102
-    invoke-direct {p3, p0, v2}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p3, p0, v2}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 105
     invoke-virtual {p2, p3}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -739,7 +739,7 @@
     const v3, 0x7f1101bd
 
     .line 113
-    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 116
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -748,10 +748,10 @@
     move-result-object p1
 
     .line 120
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 122
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
 
     .line 124
     sget-object p3, Lcom/metrolist/music/widget/WidgetStyle;->DARK:Lcom/metrolist/music/widget/WidgetStyle;
@@ -780,13 +780,13 @@
     if-ne p3, v0, :cond_6
 
     .line 137
-    new-instance p3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 139
     const/4 v3, 0x2
 
     .line 140
-    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 143
     invoke-virtual {p2, p3}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -799,7 +799,7 @@
     const v3, 0x7f1101bf
 
     .line 151
-    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 154
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -808,10 +808,10 @@
     move-result-object p1
 
     .line 158
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 160
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
 
     .line 162
     sget-object p3, Lcom/metrolist/music/widget/WidgetStyle;->LIGHT:Lcom/metrolist/music/widget/WidgetStyle;
@@ -840,13 +840,13 @@
     if-ne p3, v0, :cond_8
 
     .line 175
-    new-instance p3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 177
     const/4 v3, 0x3
 
     .line 178
-    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p3, p0, v3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 181
     invoke-virtual {p2, p3}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -859,7 +859,7 @@
     const v3, 0x7f1101c1
 
     .line 189
-    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, v4, p2, p3, p1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 192
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -868,10 +868,10 @@
     move-result-object p1
 
     .line 196
-    check-cast p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 198
-    iget-object p1, p1, Lcom/metrolist/music/widget/AuralysWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
+    iget-object p1, p1, Lcom/metrolist/music/widget/MiyuWidgetConfig;->style:Lcom/metrolist/music/widget/WidgetStyle;
 
     .line 200
     sget-object p3, Lcom/metrolist/music/widget/WidgetStyle;->COVER:Lcom/metrolist/music/widget/WidgetStyle;
@@ -893,13 +893,13 @@
     if-ne p1, v0, :cond_a
 
     .line 211
-    new-instance p1, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance p1, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 213
     const/4 p3, 0x4
 
     .line 214
-    invoke-direct {p1, p0, p3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {p1, p0, p3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 217
     invoke-virtual {p2, p1}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -912,7 +912,7 @@
     const p0, 0x7f1101be
 
     .line 225
-    invoke-static {p0, v4, p2, p1, v1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {p0, v4, p2, p1, v1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 228
     goto :goto_5
@@ -1013,7 +1013,7 @@
     move-result v3
 
     .line 50
-    sget-object v4, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v4, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 52
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1057,10 +1057,10 @@
     move-result-object v0
 
     .line 75
-    check-cast v0, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v0, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 77
-    iget-object v0, v0, Lcom/metrolist/music/widget/AuralysWidgetConfig;->playButton:Lcom/metrolist/music/widget/WidgetPlayButton;
+    iget-object v0, v0, Lcom/metrolist/music/widget/MiyuWidgetConfig;->playButton:Lcom/metrolist/music/widget/WidgetPlayButton;
 
     .line 79
     sget-object v3, Lcom/metrolist/music/widget/WidgetPlayButton;->FILLED:Lcom/metrolist/music/widget/WidgetPlayButton;
@@ -1089,13 +1089,13 @@
     if-ne v3, v9, :cond_2
 
     .line 92
-    new-instance v3, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance v3, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 94
     const/16 v4, 0x8
 
     .line 96
-    invoke-direct {v3, v10, v4}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {v3, v10, v4}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 99
     invoke-virtual {v1, v3}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -1111,7 +1111,7 @@
     const/16 v5, 0x180
 
     .line 109
-    invoke-static {v4, v5, v1, v3, v0}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v4, v5, v1, v3, v0}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 112
     invoke-interface {v10}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
@@ -1120,10 +1120,10 @@
     move-result-object v0
 
     .line 116
-    check-cast v0, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v0, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 118
-    iget-object v0, v0, Lcom/metrolist/music/widget/AuralysWidgetConfig;->playButton:Lcom/metrolist/music/widget/WidgetPlayButton;
+    iget-object v0, v0, Lcom/metrolist/music/widget/MiyuWidgetConfig;->playButton:Lcom/metrolist/music/widget/WidgetPlayButton;
 
     .line 120
     sget-object v3, Lcom/metrolist/music/widget/WidgetPlayButton;->PLAIN:Lcom/metrolist/music/widget/WidgetPlayButton;
@@ -1149,13 +1149,13 @@
     if-ne v0, v9, :cond_4
 
     .line 132
-    new-instance v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;
+    new-instance v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;
 
     .line 134
     const/16 v3, 0x9
 
     .line 136
-    invoke-direct {v0, v10, v3}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {v0, v10, v3}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda29;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 139
     invoke-virtual {v1, v0}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -1168,7 +1168,7 @@
     const v3, 0x7f1101b3
 
     .line 147
-    invoke-static {v3, v5, v1, v0, v2}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v3, v5, v1, v0, v2}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 150
     goto :goto_3
@@ -1183,7 +1183,7 @@
 
     .line 155
     :pswitch_0
-    invoke-direct/range {p0 .. p3}, Lcom/metrolist/music/ui/menu/SongMenuKt$$ExternalSyntheticLambda30;->invoke$com$metrolist$music$widget$AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda25(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct/range {p0 .. p3}, Lcom/metrolist/music/ui/menu/SongMenuKt$$ExternalSyntheticLambda30;->invoke$com$metrolist$music$widget$MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda25(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 158
     move-result-object v0
@@ -1193,7 +1193,7 @@
 
     .line 160
     :pswitch_1
-    invoke-direct/range {p0 .. p3}, Lcom/metrolist/music/ui/menu/SongMenuKt$$ExternalSyntheticLambda30;->invoke$com$metrolist$music$widget$AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda23(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct/range {p0 .. p3}, Lcom/metrolist/music/ui/menu/SongMenuKt$$ExternalSyntheticLambda30;->invoke$com$metrolist$music$widget$MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda23(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 163
     move-result-object v0
@@ -1203,7 +1203,7 @@
 
     .line 165
     :pswitch_2
-    invoke-direct/range {p0 .. p3}, Lcom/metrolist/music/ui/menu/SongMenuKt$$ExternalSyntheticLambda30;->invoke$com$metrolist$music$widget$AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda21(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct/range {p0 .. p3}, Lcom/metrolist/music/ui/menu/SongMenuKt$$ExternalSyntheticLambda30;->invoke$com$metrolist$music$widget$MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda21(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 168
     move-result-object v0
@@ -1237,7 +1237,7 @@
     move-result v3
 
     .line 186
-    sget-object v4, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v4, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 188
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1281,10 +1281,10 @@
     move-result-object v0
 
     .line 211
-    check-cast v0, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v0, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 213
-    iget v0, v0, Lcom/metrolist/music/widget/AuralysWidgetConfig;->tint:I
+    iget v0, v0, Lcom/metrolist/music/widget/MiyuWidgetConfig;->tint:I
 
     .line 215
     if-nez v0, :cond_7
@@ -1307,10 +1307,10 @@
     if-ne v0, v9, :cond_8
 
     .line 225
-    new-instance v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda27;
+    new-instance v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda27;
 
     .line 227
-    invoke-direct {v0, v10, v11}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda27;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {v0, v10, v11}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda27;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 230
     invoke-virtual {v1, v0}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -1326,10 +1326,10 @@
     const v4, 0x7f1101c2
 
     .line 240
-    invoke-static {v4, v3, v1, v0, v2}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
+    invoke-static {v4, v3, v1, v0, v2}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Choice(IILandroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function0;Z)V
 
     .line 243
-    sget-object v0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object v0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 245
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1405,10 +1405,10 @@
     move-result-object v7
 
     .line 290
-    check-cast v7, Lcom/metrolist/music/widget/AuralysWidgetConfig;
+    check-cast v7, Lcom/metrolist/music/widget/MiyuWidgetConfig;
 
     .line 292
-    iget v7, v7, Lcom/metrolist/music/widget/AuralysWidgetConfig;->tint:I
+    iget v7, v7, Lcom/metrolist/music/widget/MiyuWidgetConfig;->tint:I
 
     .line 294
     if-ne v7, v4, :cond_9
@@ -1670,13 +1670,13 @@
 
     .line 467
     :cond_f
-    new-instance v2, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda27;
+    new-instance v2, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda27;
 
     .line 469
     const/16 v0, 0x16
 
     .line 471
-    invoke-direct {v2, v10, v0}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt$$ExternalSyntheticLambda27;-><init>(Landroidx/compose/runtime/MutableState;B)V
+    invoke-direct {v2, v10, v0}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt$$ExternalSyntheticLambda27;-><init>(Landroidx/compose/runtime/MutableState;B)V
 
     .line 474
     invoke-virtual {v1, v2}, Landroidx/compose/runtime/GapComposer;->updateRememberedValue(Ljava/lang/Object;)V
@@ -3122,7 +3122,7 @@
     move-object/from16 v28, v1
 
     .line 1426
-    invoke-static/range {v21 .. v30}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->CircularProgressIndicator-LxG7B9w(Landroidx/compose/ui/Modifier;JFJILandroidx/compose/runtime/Composer;II)V
+    invoke-static/range {v21 .. v30}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->CircularProgressIndicator-LxG7B9w(Landroidx/compose/ui/Modifier;JFJILandroidx/compose/runtime/Composer;II)V
 
     .line 1429
     invoke-virtual {v1, v11}, Landroidx/compose/runtime/GapComposer;->end(Z)V

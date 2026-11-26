@@ -1363,7 +1363,7 @@
     invoke-direct {v4}, Landroidx/media3/datasource/cache/CacheFileMetadataIndex;-><init>()V
 
     .line 781
-    const-string v7, "auralys_file"
+    const-string v7, "miyu_file"
 
     .line 783
     invoke-virtual {v4, v5, v7}, Landroidx/media3/datasource/cache/CacheFileMetadataIndex;->checkAndSet(Ljava/lang/Object;Ljava/lang/String;)V

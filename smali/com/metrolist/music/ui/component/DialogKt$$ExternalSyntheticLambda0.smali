@@ -541,7 +541,7 @@
     move-result v2
 
     .line 278
-    invoke-static {v9, v0, v8, v1, v2}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->AuralysSplash(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
+    invoke-static {v9, v0, v8, v1, v2}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->MiyuSplash(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
 
     .line 281
     return-object v7

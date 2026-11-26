@@ -77,7 +77,7 @@
     const-string p0, "User-Agent"
 
     .line 11
-    const-string v1, "Auralys (Android)"
+    const-string v1, "Miyu (Android)"
 
     .line 13
     invoke-virtual {v0, p0, v1}, Lokhttp3/Request$Builder;->header(Ljava/lang/String;Ljava/lang/String;)V

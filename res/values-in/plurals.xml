@@ -3,28 +3,28 @@
     <plurals name="alarm_playlist_song_count">
         <item quantity="other">%d lagu</item>
     </plurals>
-    <plurals name="auralys434_widget_streak_desc">
+    <plurals name="miyu434_widget_streak_desc">
         <item quantity="other">Streak: %d hari</item>
     </plurals>
-    <plurals name="auralys_history_merge_done">
+    <plurals name="miyu_history_merge_done">
         <item quantity="other">Riwayat dari akunmu digabung: %1$d putaran</item>
     </plurals>
-    <plurals name="auralys_history_merge_last">
+    <plurals name="miyu_history_merge_last">
         <item quantity="other">Terakhir: %1$s, %2$d putaran ditambahkan</item>
     </plurals>
-    <plurals name="auralys_queue_remove_played_message">
+    <plurals name="miyu_queue_remove_played_message">
         <item quantity="other">%d lagu di atas lagu yang sedang diputar akan dihapus dari antrean.</item>
     </plurals>
-    <plurals name="auralys_queue_removed_played">
+    <plurals name="miyu_queue_removed_played">
         <item quantity="other">%d lagu dihapus dari antrean</item>
     </plurals>
-    <plurals name="auralys_streak_gallery_days">
+    <plurals name="miyu_streak_gallery_days">
         <item quantity="other">%d hari</item>
     </plurals>
-    <plurals name="auralys_streak_goal_short">
+    <plurals name="miyu_streak_goal_short">
         <item quantity="other">%1$s · %2$d hari lagi</item>
     </plurals>
-    <plurals name="auralys_streak_poster_days">
+    <plurals name="miyu_streak_poster_days">
         <item quantity="other">hari berturut-turut</item>
     </plurals>
     <plurals name="band_count">

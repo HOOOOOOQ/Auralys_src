@@ -255,7 +255,7 @@
     check-cast p1, Landroid/content/Context;
 
     .line 158
-    sget-object p0, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
+    sget-object p0, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->TINT_CHOICES:Ljava/util/ArrayList;
 
     .line 160
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

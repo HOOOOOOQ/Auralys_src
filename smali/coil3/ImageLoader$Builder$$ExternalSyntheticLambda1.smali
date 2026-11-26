@@ -245,7 +245,7 @@
     check-cast v0, Landroid/content/BroadcastReceiver$PendingResult;
 
     .line 122
-    sget-object v1, Lcom/metrolist/music/widget/AuralysWidgetReceiver;->RENDER_QUEUE:Lcom/metrolist/music/widget/WidgetRenderQueue;
+    sget-object v1, Lcom/metrolist/music/widget/MiyuWidgetReceiver;->RENDER_QUEUE:Lcom/metrolist/music/widget/WidgetRenderQueue;
 
     .line 124
     invoke-virtual {v0}, Landroid/content/BroadcastReceiver$PendingResult;->finish()V
@@ -255,13 +255,13 @@
 
     .line 128
     :pswitch_c
-    check-cast v0, Lcom/metrolist/music/widget/AuralysWidgetManager;
+    check-cast v0, Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 130
     new-instance v1, Lcoil3/ImageLoader$Builder;
 
     .line 132
-    iget-object v0, v0, Lcom/metrolist/music/widget/AuralysWidgetManager;->context:Landroid/content/Context;
+    iget-object v0, v0, Lcom/metrolist/music/widget/MiyuWidgetManager;->context:Landroid/content/Context;
 
     .line 134
     invoke-direct {v1, v0}, Lcoil3/ImageLoader$Builder;-><init>(Landroid/content/Context;)V

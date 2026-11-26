@@ -542,7 +542,7 @@
     if-eqz v0, :cond_a
 
     .line 275
-    const-string v1, "Auralys"
+    const-string v1, "Miyu"
 
     .line 277
     invoke-static {v1, v5}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;

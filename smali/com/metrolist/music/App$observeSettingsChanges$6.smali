@@ -195,13 +195,13 @@
 
     .line 43
     :try_start_0
-    iget-object p0, p0, Lcom/metrolist/music/App;->widgetManager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+    iget-object p0, p0, Lcom/metrolist/music/App;->widgetManager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
     .line 45
     if-eqz p0, :cond_3
 
     .line 47
-    invoke-virtual {p0, v2}, Lcom/metrolist/music/widget/AuralysWidgetManager;->renderAll([I)V
+    invoke-virtual {p0, v2}, Lcom/metrolist/music/widget/MiyuWidgetManager;->renderAll([I)V
 
     .line 50
     goto :goto_1

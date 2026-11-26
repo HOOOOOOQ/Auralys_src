@@ -597,7 +597,7 @@
     move-result v2
 
     .line 346
-    invoke-static {v0, v1, v2}, Lcom/metrolist/music/ui/component/AuralysRowButtonsKt;->RowDragGrip(Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
+    invoke-static {v0, v1, v2}, Lcom/metrolist/music/ui/component/MiyuRowButtonsKt;->RowDragGrip(Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
 
     .line 349
     return-object v5

@@ -92,7 +92,7 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     .line 27
-    const-string v3, "Auralys Crash Report\n"
+    const-string v3, "Miyu Crash Report\n"
 
     .line 29
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -218,7 +218,7 @@
     invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 128
-    const-string v8, "\nApp version: 4.4.0 (463)\n"
+    const-string v8, "\nApp version: 4.5.0 (464)\n"
 
     .line 130
     invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

@@ -142,7 +142,7 @@
     move-result v2
 
     .line 49
-    invoke-static {v0, v11, v1, v2}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->Section(ILandroidx/compose/runtime/internal/ComposableLambdaImpl;Landroidx/compose/runtime/Composer;I)V
+    invoke-static {v0, v11, v1, v2}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->Section(ILandroidx/compose/runtime/internal/ComposableLambdaImpl;Landroidx/compose/runtime/Composer;I)V
 
     .line 52
     return-object v15

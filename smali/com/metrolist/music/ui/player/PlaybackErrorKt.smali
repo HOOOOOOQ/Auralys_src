@@ -1169,7 +1169,7 @@
     new-instance v9, Ljava/lang/StringBuilder;
 
     .line 709
-    const-string v14, "Auralys Playback Error Report\n================================\n"
+    const-string v14, "Miyu Playback Error Report\n================================\n"
 
     .line 711
     invoke-direct {v9, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -1199,7 +1199,7 @@
     invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 733
-    const-string v5, "\nApp version: 4.4.0 (463)\nArchitecture: universal\n"
+    const-string v5, "\nApp version: 4.5.0 (464)\nArchitecture: universal\n"
 
     .line 735
     invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

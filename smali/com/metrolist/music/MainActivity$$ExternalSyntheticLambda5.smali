@@ -178,7 +178,7 @@
     const/4 p0, 0x0
 
     .line 84
-    invoke-static {v1, v4, p0, p1, v2}, Lcom/metrolist/music/ui/component/AuralysBrandKt;->AuralysSplash(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
+    invoke-static {v1, v4, p0, p1, v2}, Lcom/metrolist/music/ui/component/MiyuBrandKt;->MiyuSplash(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
 
     .line 87
     goto :goto_1

@@ -496,7 +496,7 @@
     iget-object v0, v0, Lcom/metrolist/music/db/entities/LyricsEntity;->lyrics:Ljava/lang/String;
 
     .line 203
-    const-string v12, "auralys-lyrics-backup 1\n"
+    const-string v12, "miyu-lyrics-backup 1\n"
 
     .line 205
     invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

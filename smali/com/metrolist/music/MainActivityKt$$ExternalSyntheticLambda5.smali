@@ -72,7 +72,7 @@
     invoke-virtual {v1, v0}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
 
     .line 27
-    const-string v2, "auralys_spotify_session_key"
+    const-string v2, "miyu_spotify_session_key"
 
     .line 29
     invoke-virtual {v1, v2, v0}, Ljava/security/KeyStore;->getKey(Ljava/lang/String;[C)Ljava/security/Key;

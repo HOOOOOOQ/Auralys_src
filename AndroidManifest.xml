@@ -278,6 +278,20 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
+        <activity-alias
+            android:label="@string/miyu_profile_app_label"
+            android:icon="@mipmap/ic_launcher"
+            android:name="com.metrolist.music.ProfileLauncher"
+            android:targetActivity="com.metrolist.music.ui.screens.MiyuProfileActivity"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
         <activity
             android:theme="@style/Theme.Metrolist"
             android:label="@string/miyu_profile_title"
@@ -722,7 +736,7 @@
             android:resource="@xml/automotive_app_desc" />
         <receiver
             android:label="@string/aw_name_wide"
-            android:name="com.metrolist.music.widget.AuralysWidgetReceiver"
+            android:name="com.metrolist.music.widget.MiyuWidgetReceiver"
             android:exported="true">
             <intent-filter>
                 <action
@@ -736,11 +750,11 @@
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/auralys_widget_info" />
+                android:resource="@xml/miyu_widget_info" />
         </receiver>
         <receiver
             android:label="@string/aw_name_square"
-            android:name="com.metrolist.music.widget.AuralysWidgetSquareReceiver"
+            android:name="com.metrolist.music.widget.MiyuWidgetSquareReceiver"
             android:exported="true">
             <intent-filter>
                 <action
@@ -748,11 +762,11 @@
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/auralys_widget_square" />
+                android:resource="@xml/miyu_widget_square" />
         </receiver>
         <receiver
             android:label="@string/aw_name_strip"
-            android:name="com.metrolist.music.widget.AuralysWidgetStripReceiver"
+            android:name="com.metrolist.music.widget.MiyuWidgetStripReceiver"
             android:exported="true">
             <intent-filter>
                 <action
@@ -760,11 +774,11 @@
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/auralys_widget_strip" />
+                android:resource="@xml/miyu_widget_strip" />
         </receiver>
         <receiver
             android:label="@string/aw_name_tall"
-            android:name="com.metrolist.music.widget.AuralysWidgetTallReceiver"
+            android:name="com.metrolist.music.widget.MiyuWidgetTallReceiver"
             android:enabled="@bool/aw_flexible_providers"
             android:exported="true">
             <intent-filter>
@@ -773,11 +787,11 @@
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/auralys_widget_tall" />
+                android:resource="@xml/miyu_widget_tall" />
         </receiver>
         <receiver
             android:label="@string/aw_name_tiny"
-            android:name="com.metrolist.music.widget.AuralysWidgetTinyReceiver"
+            android:name="com.metrolist.music.widget.MiyuWidgetTinyReceiver"
             android:enabled="@bool/aw_flexible_providers"
             android:exported="true">
             <intent-filter>
@@ -786,12 +800,12 @@
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/auralys_widget_tiny" />
+                android:resource="@xml/miyu_widget_tiny" />
         </receiver>
         <activity
             android:theme="@style/Theme.Metrolist"
             android:label="@string/aw_config_title"
-            android:name="com.metrolist.music.widget.AuralysWidgetConfigActivity"
+            android:name="com.metrolist.music.widget.MiyuWidgetConfigActivity"
             android:exported="true">
             <intent-filter>
                 <action

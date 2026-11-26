@@ -47,7 +47,7 @@
 
 .field public localMusicScanner:Lcom/metrolist/music/local/LocalMusicScanner;
 
-.field public widgetManager:Lcom/metrolist/music/widget/AuralysWidgetManager;
+.field public widgetManager:Lcom/metrolist/music/widget/MiyuWidgetManager;
 
 
 # direct methods

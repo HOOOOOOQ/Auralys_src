@@ -188,7 +188,7 @@
     move-result v1
 
     .line 60
-    invoke-static {v2, v15, v7, v0, v1}, Lcom/metrolist/music/widget/AuralysWidgetConfigActivityKt;->SwitchRow(Ljava/lang/String;ZLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
+    invoke-static {v2, v15, v7, v0, v1}, Lcom/metrolist/music/widget/MiyuWidgetConfigActivityKt;->SwitchRow(Ljava/lang/String;ZLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
 
     .line 63
     return-object v18

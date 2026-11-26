@@ -182,7 +182,7 @@
     move-result-object p0
 
     .line 36
-    const-string v1, "auralys-lyrics-backup 1\n"
+    const-string v1, "miyu-lyrics-backup 1\n"
 
     .line 38
     const/4 v2, 0x0
