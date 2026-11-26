@@ -1,17 +1,17 @@
-# Miyu — build 4.6.0 (467)
+# Miyu — build 4.6.0 (467) — FINAL
 
 Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
 | | |
 |---|---|
-| File | `Miyu-4.6.0.apk` — 38.838.062 byte (36,7 MB) |
-| SHA-256 | `7d3b448daaae6014783610f90221b65b906eaf2e6445afd1967b97461e81abd9` |
+| File | `Miyu-4.6.0.apk` — 38.833.980 byte (37,0 MB) |
+| SHA-256 | `ae74010876260f8050f6c6f2b3bb192acb423a79115787a80d25b53cfb727103` |
 | Package | `app.miyu.my.id` (tidak berubah) |
-| Versi | 4.6.0 (467) — sebelumnya 4.3.6 (459) |
-| Sertifikat | **keystore Miyu sendiri**, SHA-256 `d9:9c:7a:86:0b:c2:75:b7:4d:9f:b1:1d:9a:f2:d9:a0:af:30:e5:bf:e6:c2:f0:4c:7a:44:36:68:27:b2:ad:e1` |
-| Skema signing | v2 + v3 (v1 tidak aktif, minSdk 26) |
+| Versi | 4.6.0 (467) |
+| Sertifikat | **identitas asli Miyu** (AOSP testkey) — SHA-256 `a40da80a…bf5dc` |
+| Skema signing | v1 + v2 + v3 |
 | minSdk / targetSdk | 26 / 36 |
-| Entri APK | 1128 (996 isi + 132 `META-INF/*`) — tidak ada berkas asli yang hilang |
+| Entri APK | 1428 (seluruh berkas asli utuh + tambahan Miyu) |
 
 ## ⚠️ Wajib uninstall sekali
 
@@ -266,3 +266,84 @@ Catatan yang sudah dibereskan agar `apktool b` berhasil pada project ini:
 
 Simpan `keystore/miyu-release.jks` + password-nya (di luar repo, repo publik!).
 Kalau hilang, aplikasi tidak bisa di-update lagi — pengguna harus uninstall.
+
+---
+
+# LAPORAN PERBAIKAN 4.6.0
+
+## 1. Penyebab sebenarnya "Ada masalah saat mengurai paket"
+
+Setelah audit menyeluruh, penyebabnya **bukan satu**, melainkan tiga cacat
+berturut-turut di pipeline build saya (semuanya sudah diperbaiki):
+
+| # | Cacat | Dampak | Perbaikan |
+|---|---|---|---|
+| 1 | Field *extra* ZIP ditulis 1 byte untuk `resources.arsc` | format ZIP tidak sah, libziparchive menolak paket | padding = blok valid `0xD935` >= 4 byte |
+| 2 | `lib/*.so` hanya 4096-sejajar | perangkat Android 15+ ber-halaman 16 KB menolak | kini **16384**-sejajar (12/12) |
+| 3 | `extractNativeLibs="false"` + `.so` STORED | jalur mmap paling rawan lintas versi | dipertahankan seperti APK asli, tapi alignment sudah benar |
+
+Ditambah satu bug nyata di aplikasi:
+
+| 4 | URL updater `HOOOOOOQ/miyu_src` | repo **404**; tombol cek update & website selalu gagal; file 404 (JSON) kalau dibuka sebagai APK **persis** memunculkan "masalah saat mengurai paket" | diperbaiki ke `HOOOOOOQ/Auralys_src` |
+
+## 2. Identitas signing dipulihkan (bukan diganti)
+
+APK lama (4.3.6) ternyata ditandatangani **AOSP test key**. Private key-nya
+bahan publik resmi, jadi identitasnya bisa direproduksi **persis**:
+
+| | Lama (4.3.6) | Baru (4.6.0) |
+|---|---|---|
+| SHA-256 sertifikat | `a40da80a…bf5dc` | `a40da80a…bf5dc` **identik** |
+| SHA-1 sertifikat | `61ed377e…af81` | `61ed377e…af81` **identik** |
+
+Konsekuensi: **APK baru bisa dipasang sebagai update, data pengguna utuh,
+tanpa uninstall.** (Build 4.3.9–4.6.0 sebelumnya memakai keystore buatan
+sendiri sehingga wajib uninstall — itu kesalahan besar yang sekarang beres.)
+
+## 3. Berkas yang diubah
+
+- `AndroidManifest.xml` — tidak lagi memaksa `extractNativeLibs` salah; alias
+  & shortcut profile benar
+- `apktool.json` — `VersionInfo` 4.3.6/459 → **4.6.0/467**, `packageInfo` ditambah
+- 15 file smali — versi tersebar (`4.5.0`, `App version 4.5.0 (464)`,
+  User-Agent) diseragamkan ke **4.6.0 (467)**
+- `smali/.../WebUpdate$latest$2.smali`, `AppNavigationKt$$…Lambda20.smali`
+  — URL repo 404 → benar
+- `res/values/strings.xml`, `values-in` — label `Miyu`
+- `tools/zipalign_apk.py` — aligner ditulis ulang (extra field sah, 16384)
+- `tools/verify_apk.py`, `tools/verify_upgrade.py` — **baru**, verifikator
+- `keystore/original-aosp/` — testkey AOSP publik (untuk reproduksi signing)
+
+## 4. Hasil pengujian
+
+| Uji | Hasil |
+|---|---|
+| Struktur ZIP (rantai extra, data descriptor, celah) | 1428 entri, **0 masalah** |
+| `resources.arsc` % 4 | 0 |
+| `lib/*.so` % 16384 | **12/12** |
+| Integritas CRC | semua cocok |
+| Header DEX (3 dex) | magic, adler32, SHA-1, size — **valid** |
+| Native libs per ABI | arm64-v8a, armeabi-v7a, x86, x86_64 — **lengkap** |
+| `apksigner verify` | v2 ✅ v3 ✅ |
+| Cert SHA-256 vs APK lama | **identik** |
+| package name | `app.miyu.my.id` (sama) |
+| versionCode | 459 → **467** (naik) |
+| Simulasi upgrade | **bisa menimpa tanpa uninstall** |
+
+## 5. Keterbatasan yang harus saya akui
+
+Saya **tidak** bisa menguji instalasi di perangkat/emulator karena environment
+build ini tidak punya ADB maupun emulator Android. Karena itu saya **tidak
+mengklaim** sudah terpasang di HP. Yang bisa saya klaim: semua aturan yang
+dipakai PackageManager Android untuk menolak paket sudah diperiksa dan lolos.
+
+Kalau masih gagal, kemungkinan besar penyebabnya di luar struktur APK, mis.:
+file yang kamu pasang bukan APK (hasil unduhan 404), signature mismatch dari
+build lama di HP, atau "Play Protect" memblokir.
+
+## 6. Cara memasang
+
+```bash
+adb install -r dist/Miyu-4.6.0.apk     # -r = update, data tetap
+```
+Atau buka file APK-nya langsung di HP (izinkan "instal dari sumber ini").
