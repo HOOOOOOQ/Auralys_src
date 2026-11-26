@@ -1,0 +1,12 @@
+# hasil build / artefak kerja
+/build/
+*.idsig
+*.dex.bak
+/tmp/
+
+# APK: hanya dist/ yang dilacak (lihat dist/README.md)
+*.apk
+!dist/*.apk
+
+# salinan hasil decompile yang tidak dipakai (duplikat penuh dari root)
+/Auralys_src/

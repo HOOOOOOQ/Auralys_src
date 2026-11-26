@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Miyu: latar adaptif (gradien violet -> pink) -->
 <shape
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid
-        android:color="#fff4f0e8" />
+    <gradient
+        android:startColor="#ff4b1fc9"
+        android:endColor="#ffde81fc"
+        android:angle="45.0"
+        android:type="linear" />
 </shape>
