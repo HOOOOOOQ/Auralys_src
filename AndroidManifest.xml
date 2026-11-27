@@ -302,7 +302,7 @@
             android:icon="@mipmap/ic_launcher"
             android:name="com.metrolist.music.ProfileLauncher"
             android:targetActivity="com.metrolist.music.ui.screens.MiyuProfileActivity"
-            android:enabled="false"
+            android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action

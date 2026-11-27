@@ -832,14 +832,14 @@
     if-eqz v8, :cond_7
 
     .line 130
-    const-wide v13, -0x952e0e00000000L
+    const-wide v13, -24675278605254656L
 
     .line 135
     goto :goto_6
 
     .line 136
     :cond_7
-    const-wide v13, -0xebaf8600000000L
+    const-wide v13, -41331909103452160L
 
     .line 141
     :goto_6
@@ -1339,7 +1339,7 @@
     if-eqz v5, :cond_7
 
     .line 155
-    const-wide v16, -0x952e0e00000000L
+    const-wide v16, -24675278605254656L
 
     .line 160
     :goto_3
@@ -1350,7 +1350,7 @@
 
     .line 163
     :cond_7
-    const-wide v16, -0xebaf8600000000L
+    const-wide v16, -41331909103452160L
 
     .line 168
     goto :goto_3
@@ -3022,738 +3022,502 @@
 .end method
 
 .method public static final drawMiyuMark-RIQooxk(Landroidx/compose/ui/graphics/drawscope/DrawScope;JJFFF)V
-    .locals 46
+    .locals 16
 
-    .line 1
-    move/from16 v0, p6
-
-    .line 3
     invoke-interface/range {p0 .. p0}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getSize-NH-jbRc()J
 
-    .line 6
-    move-result-wide v1
+    move-result-wide v0
 
-    .line 7
-    invoke-static {v1, v2}, Landroidx/compose/ui/geometry/Size;->getMinDimension-impl(J)F
+    invoke-static {v0, v1}, Landroidx/compose/ui/geometry/Size;->getMinDimension-impl(J)F
 
-    .line 10
-    move-result v1
-
-    .line 11
-    const/high16 v2, 0x44000000    # 512.0f
-
-    .line 13
-    div-float/2addr v1, v2
-
-    .line 14
-    invoke-interface/range {p0 .. p0}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getSize-NH-jbRc()J
-
-    .line 17
-    move-result-wide v3
-
-    .line 18
-    const/16 v5, 0x20
-
-    .line 20
-    shr-long/2addr v3, v5
-
-    .line 21
-    long-to-int v3, v3
-
-    .line 22
-    invoke-static {v3}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    .line 25
-    move-result v3
-
-    .line 26
-    mul-float/2addr v2, v1
-
-    .line 27
-    sub-float/2addr v3, v2
-
-    .line 28
-    const/high16 v4, 0x40000000    # 2.0f
-
-    .line 30
-    div-float/2addr v3, v4
-
-    .line 31
-    invoke-interface/range {p0 .. p0}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getSize-NH-jbRc()J
-
-    .line 34
-    move-result-wide v6
-
-    .line 35
-    const-wide v8, 0xffffffffL
-
-    .line 40
-    and-long/2addr v6, v8
-
-    .line 41
-    long-to-int v6, v6
-
-    .line 42
-    invoke-static {v6}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    .line 45
-    move-result v6
-
-    .line 46
-    sub-float/2addr v6, v2
-
-    .line 47
-    div-float/2addr v6, v4
-
-    .line 48
-    invoke-interface/range {p0 .. p0}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getDrawContext()Landroidx/emoji2/text/EmojiProcessor;
-
-    .line 51
-    move-result-object v2
-
-    .line 52
-    invoke-virtual {v2}, Landroidx/emoji2/text/EmojiProcessor;->getSize-NH-jbRc()J
-
-    .line 55
-    move-result-wide v10
-
-    .line 56
-    invoke-virtual {v2}, Landroidx/emoji2/text/EmojiProcessor;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
-
-    .line 59
-    move-result-object v4
-
-    .line 60
-    invoke-interface {v4}, Landroidx/compose/ui/graphics/Canvas;->save()V
-
-    .line 63
-    :try_start_0
-    iget-object v4, v2, Landroidx/emoji2/text/EmojiProcessor;->mSpanFactory:Ljava/lang/Object;
-
-    .line 65
-    check-cast v4, Landroidx/compose/ui/draw/DrawResult;
-
-    .line 67
-    invoke-virtual {v4, v3, v6}, Landroidx/compose/ui/draw/DrawResult;->translate(FF)V
-
-    .line 70
-    const-wide/16 v6, 0x0
-
-    .line 72
-    invoke-virtual {v4, v1, v1, v6, v7}, Landroidx/compose/ui/draw/DrawResult;->scale-0AR0LA0(FFJ)V
-
-    .line 75
-    invoke-interface/range {p0 .. p0}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getDrawContext()Landroidx/emoji2/text/EmojiProcessor;
-
-    .line 78
-    move-result-object v1
-
-    .line 79
-    invoke-virtual {v1}, Landroidx/emoji2/text/EmojiProcessor;->getSize-NH-jbRc()J
-
-    .line 82
-    move-result-wide v3
-
-    .line 83
-    invoke-virtual {v1}, Landroidx/emoji2/text/EmojiProcessor;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
-
-    .line 86
-    move-result-object v6
-
-    .line 87
-    invoke-interface {v6}, Landroidx/compose/ui/graphics/Canvas;->save()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    .line 90
-    :try_start_1
-    iget-object v6, v1, Landroidx/emoji2/text/EmojiProcessor;->mSpanFactory:Ljava/lang/Object;
-
-    .line 92
-    move-object v12, v6
-
-    .line 93
-    check-cast v12, Landroidx/compose/ui/draw/DrawResult;
-
-    .line 95
-    const/4 v13, 0x0
-
-    .line 96
-    const/4 v14, 0x0
-
-    .line 97
-    const/high16 v15, 0x44000000    # 512.0f
-
-    .line 99
-    const/high16 v16, 0x43aa0000    # 340.0f
-
-    .line 101
-    const/16 v17, 0x1
-
-    .line 103
-    invoke-virtual/range {v12 .. v17}, Landroidx/compose/ui/draw/DrawResult;->clipRect-N_I0leg(FFFFI)V
-
-    .line 106
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    .line 108
-    sub-float v7, v6, p5
-
-    .line 110
-    const/high16 v12, 0x43520000    # 210.0f
-
-    .line 112
-    mul-float/2addr v7, v12
-
-    .line 113
-    const/4 v13, 0x0
-
-    .line 114
-    :goto_0
-    sget-object v14, Lcom/metrolist/music/ui/component/MiyuBrandKt;->SunBands:[F
-
-    .line 116
-    const/16 v15, 0x8
-
-    .line 118
-    const/high16 v16, 0x43aa0000    # 340.0f
-
-    .line 120
-    if-ge v13, v15, :cond_0
-
-    .line 122
-    aget v15, v14, v13
-
-    .line 124
-    add-float v19, v15, v7
-
-    .line 126
-    add-int/lit8 v15, v13, 0x1
-
-    .line 128
-    aget v14, v14, v15
-
-    .line 130
-    add-float v21, v14, v7
-
-    .line 132
-    invoke-interface/range {p0 .. p0}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getDrawContext()Landroidx/emoji2/text/EmojiProcessor;
-
-    .line 135
-    move-result-object v14
-
-    .line 136
-    move-wide/from16 v23, v8
-
-    .line 138
-    invoke-virtual {v14}, Landroidx/emoji2/text/EmojiProcessor;->getSize-NH-jbRc()J
-
-    .line 141
-    move-result-wide v8
-
-    .line 142
-    invoke-virtual {v14}, Landroidx/emoji2/text/EmojiProcessor;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
-
-    .line 145
-    move-result-object v15
-
-    .line 146
-    invoke-interface {v15}, Landroidx/compose/ui/graphics/Canvas;->save()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 149
-    :try_start_2
-    iget-object v15, v14, Landroidx/emoji2/text/EmojiProcessor;->mSpanFactory:Ljava/lang/Object;
-
-    .line 151
-    move-object/from16 v17, v15
-
-    .line 153
-    check-cast v17, Landroidx/compose/ui/draw/DrawResult;
-
-    .line 155
-    const/16 v18, 0x0
-
-    .line 157
-    const/high16 v20, 0x44000000    # 512.0f
-
-    .line 159
-    const/16 v22, 0x1
-
-    .line 161
-    invoke-virtual/range {v17 .. v22}, Landroidx/compose/ui/draw/DrawResult;->clipRect-N_I0leg(FFFFI)V
-
-    .line 164
-    add-float v16, v7, v16
-
-    .line 166
-    const/high16 v15, 0x43800000    # 256.0f
-
-    .line 168
-    invoke-static {v15}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    .line 171
-    move-result v15
-
-    .line 172
-    move/from16 v17, v13
-
-    .line 174
-    int-to-long v12, v15
-
-    .line 175
-    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    .line 178
-    move-result v15
-
-    .line 179
-    move/from16 v18, v5
-
-    .line 181
-    int-to-long v5, v15
-
-    .line 182
-    shl-long v12, v12, v18
-
-    .line 184
-    and-long v5, v5, v23
-
-    .line 186
-    or-long v29, v12, v5
-
-    .line 188
-    const/16 v32, 0x0
-
-    .line 190
-    const/16 v33, 0x78
-
-    .line 192
-    const/high16 v28, 0x433e0000    # 190.0f
-
-    .line 194
-    const/16 v31, 0x0
-
-    .line 196
-    move-object/from16 v25, p0
-
-    .line 198
-    move-wide/from16 v26, p1
-
-    .line 200
-    invoke-static/range {v25 .. v33}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawCircle-VaOC9Bg$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;JFJLandroidx/compose/ui/graphics/drawscope/DrawStyle;II)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 203
-    :try_start_3
-    invoke-virtual {v14}, Landroidx/emoji2/text/EmojiProcessor;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
-
-    .line 206
-    move-result-object v5
-
-    .line 207
-    invoke-interface {v5}, Landroidx/compose/ui/graphics/Canvas;->restore()V
-
-    .line 210
-    invoke-virtual {v14, v8, v9}, Landroidx/emoji2/text/EmojiProcessor;->setSize-uvyYCjk(J)V
-
-    .line 213
-    add-int/lit8 v13, v17, 0x2
-
-    .line 215
-    move/from16 v5, v18
-
-    .line 217
-    move-wide/from16 v8, v23
-
-    .line 219
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    .line 221
-    goto :goto_0
-
-    .line 222
-    :catchall_0
-    move-exception v0
-
-    .line 223
-    goto/16 :goto_3
-
-    .line 225
-    :catchall_1
-    move-exception v0
-
-    .line 226
-    invoke-virtual {v14}, Landroidx/emoji2/text/EmojiProcessor;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
-
-    .line 229
-    move-result-object v5
-
-    .line 230
-    invoke-interface {v5}, Landroidx/compose/ui/graphics/Canvas;->restore()V
-
-    .line 233
-    invoke-virtual {v14, v8, v9}, Landroidx/emoji2/text/EmojiProcessor;->setSize-uvyYCjk(J)V
-
-    .line 236
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    .line 237
-    :cond_0
-    move/from16 v18, v5
-
-    .line 239
-    move-wide/from16 v23, v8
-
-    .line 241
-    :try_start_4
-    invoke-virtual {v1}, Landroidx/emoji2/text/EmojiProcessor;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
-
-    .line 244
-    move-result-object v5
-
-    .line 245
-    invoke-interface {v5}, Landroidx/compose/ui/graphics/Canvas;->restore()V
-
-    .line 248
-    invoke-virtual {v1, v3, v4}, Landroidx/emoji2/text/EmojiProcessor;->setSize-uvyYCjk(J)V
-
-    .line 251
-    const/high16 v1, 0x42c00000    # 96.0f
-
-    .line 253
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    .line 256
-    move-result v1
-
-    .line 257
-    int-to-long v3, v1
-
-    .line 258
-    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    .line 261
-    move-result v1
-
-    .line 262
-    int-to-long v5, v1
-
-    .line 263
-    shl-long v3, v3, v18
-
-    .line 265
-    and-long v5, v5, v23
-
-    .line 267
-    or-long v37, v3, v5
-
-    .line 269
-    const/high16 v1, 0x43a00000    # 320.0f
-
-    .line 271
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    .line 274
-    move-result v1
-
-    .line 275
-    int-to-long v3, v1
-
-    .line 276
-    const/high16 v1, 0x41200000    # 10.0f
-
-    .line 278
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    .line 281
-    move-result v1
-
-    .line 282
-    int-to-long v5, v1
-
-    .line 283
-    shl-long v3, v3, v18
-
-    .line 285
-    and-long v5, v5, v23
-
-    .line 287
-    or-long v39, v3, v5
-
-    .line 289
-    const/high16 v1, 0x40a00000    # 5.0f
-
-    .line 291
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    .line 294
-    move-result v3
-
-    .line 295
-    int-to-long v3, v3
-
-    .line 296
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    .line 299
-    move-result v1
-
-    .line 300
-    int-to-long v5, v1
-
-    .line 301
-    shl-long v3, v3, v18
-
-    .line 303
-    and-long v5, v5, v23
-
-    .line 305
-    or-long v41, v3, v5
-
-    .line 307
-    const/16 v44, 0x0
-
-    .line 309
-    const/16 v45, 0xf0
-
-    .line 311
-    const/16 v43, 0x0
-
-    .line 313
-    move-object/from16 v34, p0
-
-    .line 315
-    move-wide/from16 v35, p3
-
-    .line 317
-    invoke-static/range {v34 .. v45}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawRoundRect-u-Aw5IA$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;JJJJLandroidx/compose/ui/graphics/drawscope/DrawStyle;FI)V
-
-    .line 320
-    const v1, 0x3a83126f    # 0.001f
-
-    .line 323
-    cmpl-float v1, v0, v1
-
-    .line 325
-    if-lez v1, :cond_4
-
-    .line 327
-    invoke-static {}, Landroidx/compose/ui/graphics/AndroidPath_androidKt;->Path()Landroidx/compose/ui/graphics/AndroidPath;
-
-    .line 330
-    move-result-object v1
-
-    .line 331
-    const/4 v3, 0x0
-
-    .line 332
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    .line 334
-    invoke-static {v0, v3, v4}, Lkotlin/io/CloseableKt;->coerceIn(FFF)F
-
-    .line 337
     move-result v0
 
-    .line 338
-    const/high16 v3, 0x42700000    # 60.0f
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 340
-    mul-float/2addr v0, v3
+    cmpg-float v1, v0, v1
 
-    .line 341
-    float-to-int v0, v0
+    if-gez v1, :cond_0
 
-    .line 342
-    const/4 v4, 0x1
-
-    .line 343
-    if-ge v0, v4, :cond_1
-
-    .line 345
-    move v0, v4
-
-    .line 346
-    :cond_1
-    if-ltz v0, :cond_3
-
-    .line 348
-    const/4 v12, 0x0
-
-    .line 349
-    :goto_1
-    int-to-float v4, v12
-
-    .line 350
-    div-float/2addr v4, v3
-
-    .line 351
-    const/high16 v5, 0x43200000    # 160.0f
-
-    .line 353
-    mul-float/2addr v5, v4
-
-    .line 354
-    const/high16 v6, 0x43300000    # 176.0f
-
-    .line 356
-    add-float/2addr v5, v6
-
-    .line 357
-    const-wide/high16 v6, 0x4008000000000000L    # 3.0
-
-    .line 359
-    float-to-double v8, v4
-
-    .line 360
-    mul-double/2addr v8, v6
-
-    .line 361
-    move/from16 v4, p7
-
-    .line 363
-    float-to-double v6, v4
-
-    .line 364
-    add-double/2addr v8, v6
-
-    .line 365
-    const-wide v6, 0x401921fb54442d18L    # 6.283185307179586
-
-    .line 370
-    mul-double/2addr v8, v6
-
-    .line 371
-    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
-
-    .line 374
-    move-result-wide v6
-
-    .line 375
-    double-to-float v6, v6
-
-    .line 376
-    const/high16 v7, 0x41400000    # 12.0f
-
-    .line 378
-    mul-float/2addr v6, v7
-
-    .line 379
-    const/high16 v7, 0x43c40000    # 392.0f
-
-    .line 381
-    sub-float/2addr v7, v6
-
-    .line 382
-    if-nez v12, :cond_2
-
-    .line 384
-    invoke-virtual {v1, v5, v7}, Landroidx/compose/ui/graphics/AndroidPath;->moveTo(FF)V
-
-    .line 387
-    goto :goto_2
-
-    .line 388
-    :catchall_2
-    move-exception v0
-
-    .line 389
-    goto :goto_4
-
-    .line 390
-    :cond_2
-    invoke-virtual {v1, v5, v7}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
-
-    .line 393
-    :goto_2
-    if-eq v12, v0, :cond_3
-
-    .line 395
-    add-int/lit8 v12, v12, 0x1
-
-    .line 397
-    goto :goto_1
-
-    .line 398
-    :cond_3
-    new-instance v3, Landroidx/compose/ui/graphics/drawscope/Stroke;
-
-    .line 400
-    const/4 v7, 0x1
-
-    .line 401
-    const/16 v8, 0x12
-
-    .line 403
-    const/high16 v4, 0x41100000    # 9.0f
-
-    .line 405
-    const/4 v5, 0x0
-
-    .line 406
-    const/4 v6, 0x1
-
-    .line 407
-    invoke-direct/range {v3 .. v8}, Landroidx/compose/ui/graphics/drawscope/Stroke;-><init>(FFIII)V
-
-    .line 410
-    const/16 v40, 0x34
-
-    .line 412
-    const/16 v38, 0x0
-
-    .line 414
-    move-object/from16 v34, p0
-
-    .line 416
-    move-wide/from16 v36, p3
-
-    .line 418
-    move-object/from16 v35, v1
-
-    .line 420
-    move-object/from16 v39, v3
-
-    .line 422
-    invoke-static/range {v34 .. v40}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawPath-LG529CI$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;Landroidx/compose/ui/graphics/AndroidPath;JFLandroidx/compose/ui/graphics/drawscope/DrawStyle;I)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    .line 425
-    :cond_4
-    invoke-static {v2, v10, v11}, Landroidx/compose/material3/ChipKt$$ExternalSyntheticOutline0;->m(Landroidx/emoji2/text/EmojiProcessor;J)V
-
-    .line 428
     return-void
 
-    .line 429
-    :goto_3
-    :try_start_5
-    invoke-virtual {v1}, Landroidx/emoji2/text/EmojiProcessor;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
+    :cond_0
+    const/high16 v1, 0x44000000    # 512.0f
 
-    .line 432
-    move-result-object v5
+    div-float v1, v0, v1
 
-    .line 433
-    invoke-interface {v5}, Landroidx/compose/ui/graphics/Canvas;->restore()V
+    invoke-interface/range {p0 .. p0}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getDrawContext()Landroidx/emoji2/text/EmojiProcessor;
 
-    .line 436
-    invoke-virtual {v1, v3, v4}, Landroidx/emoji2/text/EmojiProcessor;->setSize-uvyYCjk(J)V
+    move-result-object v2
 
-    .line 439
-    throw v0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    invoke-virtual {v2}, Landroidx/emoji2/text/EmojiProcessor;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
 
-    .line 440
-    :goto_4
-    invoke-static {v2, v10, v11}, Landroidx/compose/material3/ChipKt$$ExternalSyntheticOutline0;->m(Landroidx/emoji2/text/EmojiProcessor;J)V
+    move-result-object v2
 
-    .line 443
-    throw v0
+    invoke-interface {v2}, Landroidx/compose/ui/graphics/Canvas;->save()V
+
+    const/high16 v3, 0x43600000    # 224.0f
+
+    invoke-interface {v2, v3, v3}, Landroidx/compose/ui/graphics/Canvas;->translate(FF)V
+
+    invoke-interface {v2, v1, v1}, Landroidx/compose/ui/graphics/Canvas;->scale(FF)V
+
+    const/high16 v3, -0x41800000    # -32.0f
+
+    invoke-interface {v2, v3, v3}, Landroidx/compose/ui/graphics/Canvas;->translate(FF)V
+
+    invoke-static {}, Landroidx/compose/ui/graphics/AndroidPath_androidKt;->Path()Landroidx/compose/ui/graphics/AndroidPath;
+
+    move-result-object v3
+    const v4, 0x433e2577    # 190.15f
+
+    const v5, 0x43857f52    # 266.99f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->moveTo(FF)V
+
+    const v4, 0x434a880f    # 202.53f
+
+    const v5, 0x4394b277    # 297.39f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4353a76b    # 211.65f
+
+    const v5, 0x439c0325    # 312.02f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43616138    # 225.38f
+
+    const v5, 0x43a19e64    # 323.24f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x436989de    # 233.54f
+
+    const v5, 0x43a3972e    # 327.18f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x437b634b    # 251.39f
+
+    const v5, 0x43a59d83    # 331.23f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43824e5b    # 260.61f
+
+    const v5, 0x43a59d83    # 331.23f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x438b3b11    # 278.46f
+
+    const v5, 0x43a3972e    # 327.18f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4392fd56    # 293.98f
+
+    const v5, 0x439f1208    # 318.14f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4398c6fa    # 305.55f
+
+    const v5, 0x4398862e    # 305.05f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43a0ed45    # 321.85f
+
+    const v5, 0x43857f52    # 266.99f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43a0ed45    # 321.85f
+
+    const v5, 0x43bfd9b4    # 383.70f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43a252d1    # 324.65f
+
+    const v5, 0x43c7ee5b    # 399.86f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43a66078    # 332.75f
+
+    const v5, 0x43cf3883    # 414.44f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43acb0a6    # 345.38f
+
+    const v5, 0x43d50181    # 426.01f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43b4a527    # 361.29f
+
+    const v5, 0x43d8b85c    # 433.44f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43b8ffd3    # 370.00f
+
+    const v5, 0x43d9ad95    # 435.36f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43c1ed72    # 387.86f
+
+    const v5, 0x43d9ad95    # 435.36f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43c6481e    # 396.56f
+
+    const v5, 0x43d8b85c    # 433.44f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43ce3c9f    # 412.47f
+
+    const v5, 0x43d50181    # 426.01f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43d48ccd    # 425.10f
+
+    const v5, 0x43cf3883    # 414.44f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43d6e3c3    # 429.78f
+
+    const v5, 0x43cbb8da    # 407.44f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43d89a73    # 433.21f
+
+    const v5, 0x43c7ee5b    # 399.86f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43da0000    # 436.00f
+
+    const v5, 0x43bfd9b4    # 383.70f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43da0000    # 436.00f
+
+    const v5, 0x433e9897    # 190.60f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43d8c6e3    # 433.55f
+
+    const v5, 0x432f72e2    # 175.45f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43d745d2    # 430.55f
+
+    const v5, 0x432848b2    # 168.28f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43d2a3f7    # 421.28f
+
+    const v5, 0x431b8a66    # 155.54f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43b3e8a6    # 359.82f
+
+    const v5, 0x42ba5e25    # 93.18f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43aceeb1    # 345.86f
+
+    const v5, 0x42a5c04a    # 82.88f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43a48e3a    # 329.11f
+
+    const v5, 0x429a14e9    # 77.04f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x439b9abc    # 311.21f
+
+    const v5, 0x4298829e    # 76.26f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43973084    # 302.38f
+
+    const v5, 0x429b9984    # 77.80f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x438f069f    # 286.05f
+
+    const v5, 0x42a925cb    # 84.57f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4388693c    # 272.82f
+
+    const v5, 0x42bf4ecd    # 95.65f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4385e56e    # 267.79f
+
+    const v5, 0x42ccf65d    # 102.48f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43800000    # 256.00f
+
+    const v5, 0x43019232    # 129.57f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43743525    # 244.21f
+
+    const v5, 0x42ccf65d    # 102.48f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x436f2d88    # 239.18f
+
+    const v5, 0x42bf4ecd    # 95.65f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4361f2c1    # 225.95f
+
+    const v5, 0x42a925cb    # 84.57f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x435a139c    # 218.08f
+
+    const v5, 0x42a13114    # 80.60f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4348ca87    # 200.79f
+
+    const v5, 0x4298829e    # 76.26f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x433fce5e    # 191.81f
+
+    const v5, 0x42980000    # 76.00f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x432e42b2    # 174.26f
+
+    const v5, 0x429eb41f    # 79.35f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4326229e    # 166.14f
+
+    const v5, 0x42a5c04a    # 82.88f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43182eb4    # 152.18f
+
+    const v5, 0x42ba5e25    # 93.18f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x42ab2670    # 85.58f
+
+    const v5, 0x43219994    # 161.60f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x429ce473    # 78.45f
+
+    const v5, 0x432f72e2    # 175.45f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x42980000    # 76.00f
+
+    const v5, 0x433e9897    # 190.60f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x42980000    # 76.00f
+
+    const v5, 0x43bfd9b4    # 383.70f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x429d9633    # 78.79f
+
+    const v5, 0x43c7ee5b    # 399.86f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x42adccce    # 86.90f
+
+    const v5, 0x43cf3883    # 414.44f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x42c70d85    # 99.53f
+
+    const v5, 0x43d50181    # 426.01f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x42d65332    # 107.16f
+
+    const v5, 0x43d7265d    # 430.30f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x42f84a38    # 124.14f
+
+    const v5, 0x43d9ad95    # 435.36f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x430e005b    # 142.00f
+
+    const v5, 0x43d9ad95    # 435.36f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4316b5b2    # 150.71f
+
+    const v5, 0x43d8b85c    # 433.44f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x43269eb4    # 166.62f
+
+    const v5, 0x43d50181    # 426.01f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x432d6e14    # 173.43f
+
+    const v5, 0x43d25749    # 420.68f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x4337ecfd    # 183.93f
+
+    const v5, 0x43cbb8da    # 407.44f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x433d7195    # 189.44f
+
+    const v5, 0x43c3f0ec    # 391.88f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v4, 0x433e2577    # 190.15f
+
+    const v5, 0x43bfd9b4    # 383.70f
+
+    invoke-virtual {v3, v4, v5}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    invoke-virtual {v3}, Landroidx/compose/ui/graphics/AndroidPath;->close()V
+
+    move-object/from16 v4, p0
+
+    move-object v5, v3
+
+    move-wide/from16 v6, p1
+
+    const/high16 v8, 0x3f800000    # 1.0f
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x34
+
+    invoke-static/range {v4 .. v10}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawPath-LG529CI$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;Landroidx/compose/ui/graphics/AndroidPath;JFLandroidx/compose/ui/graphics/drawscope/DrawStyle;I)V
+
+    const/4 v3, 0x0
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    move/from16 v1, p5
+
+    invoke-static {v1, v3, v4}, Lkotlin/io/CloseableKt;->coerceIn(FFF)F
+
+    move-result v3
+
+    const/high16 v4, 0x42b40000    # 90.0f
+
+    cmpl-float v3, v3, v4
+
+    if-lez v3, :cond_1
+
+    const-wide v5, 0xffffff00000000L
+
+    goto :goto_0
+
+    :cond_1
+    move-wide/from16 v5, p3
+
+    :goto_0
+    invoke-static {}, Landroidx/compose/ui/graphics/AndroidPath_androidKt;->Path()Landroidx/compose/ui/graphics/AndroidPath;
+
+    move-result-object v7
+    const v8, 0x4392a896    # 293.32f
+
+    const v9, 0x43206c67    # 160.42f
+
+    invoke-virtual {v7, v8, v9}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v8, 0x43c87064    # 400.88f
+
+    const v9, 0x43878737    # 271.06f
+
+    invoke-virtual {v7, v8, v9}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    const v8, 0x4392a896    # 293.32f
+
+    const v9, 0x43a5b368    # 331.40f
+
+    invoke-virtual {v7, v8, v9}, Landroidx/compose/ui/graphics/AndroidPath;->lineTo(FF)V
+
+    invoke-virtual {v7}, Landroidx/compose/ui/graphics/AndroidPath;->close()V
+
+    move-object/from16 v8, p0
+
+    move-object v9, v7
+
+    move-wide v10, v5
+
+    const/high16 v12, 0x3f800000    # 1.0f
+
+    const/4 v13, 0x0
+
+    const/16 v14, 0x34
+
+    invoke-static/range {v8 .. v14}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawPath-LG529CI$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;Landroidx/compose/ui/graphics/AndroidPath;JFLandroidx/compose/ui/graphics/drawscope/DrawStyle;I)V
+
+    invoke-interface {v2}, Landroidx/compose/ui/graphics/Canvas;->restore()V
+
+    return-void
 .end method

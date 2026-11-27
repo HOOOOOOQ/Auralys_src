@@ -1,48 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Miyu: logogram M + tombol play (mark resmi Miyu, varian matcha) -->
 <vector
     android:height="108.0dip"
     android:width="108.0dip"
-    android:viewportWidth="108.0"
-    android:viewportHeight="108.0"
+    android:viewportWidth="512.0"
+    android:viewportHeight="512.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <path
-        android:fillColor="#00000000"
-        android:pathData="M20,54 A34,34 0 1 0 88,54 A34,34 0 1 0 20,54 Z"
-        android:strokeColor="#b28fb36a"
-        android:strokeWidth="1.4"
-        android:strokeLineCap="round" />
-    <path
-        android:fillColor="#00000000"
-        android:pathData="M16.5,54 A37.5,37.5 0 1 0 91.5,54 A37.5,37.5 0 1 0 16.5,54 Z"
-        android:strokeColor="#b28fb36a"
-        android:strokeWidth="1.4"
-        android:strokeLineCap="round" />
     <group
-        android:scaleX="0.15"
-        android:scaleY="0.15"
-        android:translateX="15.6"
-        android:translateY="17.056">
+        android:translateX="-196.0"
+        android:translateY="-196.0"
+        android:scaleX="0.1875"
+        android:scaleY="0.1875">
         <path
             android:fillColor="#ff3f5e2a"
-            android:pathData="M88.67,250 A190,190 0 0 1 423.33,250 Z" />
+            android:pathData="M190.15,266.99 L202.53,297.39 L211.65,312.02 L225.38,323.24 L233.54,327.18 L251.39,331.23 L260.61,331.23 L278.46,327.18 L293.98,318.14 L305.55,305.05 L321.85,266.99 L321.85,383.70 L324.65,399.86 L332.75,414.44 L345.38,426.01 L361.29,433.44 L370.00,435.36 L387.86,435.36 L396.56,433.44 L412.47,426.01 L425.10,414.44 L429.78,407.44 L433.21,399.86 L436.00,383.70 L436.00,190.60 L433.55,175.45 L430.55,168.28 L421.28,155.54 L359.82,93.18 L345.86,82.88 L329.11,77.04 L311.21,76.26 L302.38,77.80 L286.05,84.57 L272.82,95.65 L267.79,102.48 L256.00,129.57 L244.21,102.48 L239.18,95.65 L225.95,84.57 L218.08,80.60 L200.79,76.26 L191.81,76.00 L174.26,79.35 L166.14,82.88 L152.18,93.18 L85.58,161.60 L78.45,175.45 L76.00,190.60 L76.00,383.70 L78.79,399.86 L86.90,414.44 L99.53,426.01 L107.16,430.30 L124.14,435.36 L142.00,435.36 L150.71,433.44 L166.62,426.01 L173.43,420.68 L183.93,407.44 L189.44,391.88 L190.15,383.70 Z" />
         <path
-            android:fillColor="#ff3f5e2a"
-            android:pathData="M84.61,258 L427.39,258 A190,190 0 0 1 435.6,278 L76.4,278 A190,190 0 0 1 84.61,258 Z" />
-        <path
-            android:fillColor="#ff3f5e2a"
-            android:pathData="M72.7,290 L439.3,290 A190,190 0 0 1 442.56,304 L69.44,304 A190,190 0 0 1 72.7,290 Z" />
-        <path
-            android:fillColor="#ff3f5e2a"
-            android:pathData="M67.06,320 L444.94,320 A190,190 0 0 1 445.48,326 L66.52,326 A190,190 0 0 1 67.06,320 Z" />
-        <path
-            android:fillColor="#ff27401a"
-            android:pathData="M101,340 L411,340 A5,5 0 0 1 411,350 L101,350 A5,5 0 0 1 101,340 Z" />
-        <path
-            android:fillColor="#00000000"
-            android:pathData="M176,392 L178.67,388.29 L181.33,384.95 L184,382.29 L186.67,380.59 L189.33,380 L192,380.59 L194.67,382.29 L197.33,384.95 L200,388.29 L202.67,392 L205.33,395.71 L208,399.05 L210.67,401.71 L213.33,403.41 L216,404 L218.67,403.41 L221.33,401.71 L224,399.05 L226.67,395.71 L229.33,392 L232,388.29 L234.67,384.95 L237.33,382.29 L240,380.59 L242.67,380 L245.33,380.59 L248,382.29 L250.67,384.95 L253.33,388.29 L256,392 L258.67,395.71 L261.33,399.05 L264,401.71 L266.67,403.41 L269.33,404 L272,403.41 L274.67,401.71 L277.33,399.05 L280,395.71 L282.67,392 L285.33,388.29 L288,384.95 L290.67,382.29 L293.33,380.59 L296,380 L298.67,380.59 L301.33,382.29 L304,384.95 L306.67,388.29 L309.33,392 L312,395.71 L314.67,399.05 L317.33,401.71 L320,403.41 L322.67,404 L325.33,403.41 L328,401.71 L330.67,399.05 L333.33,395.71 L336,392"
-            android:strokeColor="#ff27401a"
-            android:strokeWidth="9.0"
-            android:strokeLineCap="round"
-            android:strokeLineJoin="round" />
+            android:fillColor="#fff6f2e6"
+            android:pathData="M293.32,160.42 L400.88,271.06 L293.32,331.40 Z" />
     </group>
 </vector>
