@@ -921,7 +921,7 @@
     iget-object v0, v0, Lcom/metrolist/music/sync/SyncSession;->deviceName:Ljava/lang/String;
 
     .line 587
-    const-string v3, "4.6.0"
+    const-string v3, "4.8.0"
 
     .line 589
     const-string v4, "android"
