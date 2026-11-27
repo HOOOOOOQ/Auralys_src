@@ -2510,7 +2510,7 @@
     if-eqz v1, :cond_29
 
     .line 1541
-    const-string v1, "4.6.0"
+    const-string v1, "4.8.0"
 
     .line 1543
     filled-new-array {v1}, [Ljava/lang/Object;

@@ -1460,7 +1460,7 @@
     move-object/from16 v9, v21
 
     .line 387
-    const-string v1, "4.6.0"
+    const-string v1, "4.8.0"
 
     .line 389
     const-string/jumbo v2, "universal"
@@ -2056,7 +2056,7 @@
     move-result-object v3
 
     .line 313
-    const-string v18, "4.6.0"
+    const-string v18, "4.8.0"
 
     .line 315
     filled-new-array/range {v18 .. v18}, [Ljava/lang/Object;

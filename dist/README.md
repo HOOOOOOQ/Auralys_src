@@ -1,31 +1,50 @@
-# Miyu — build 4.6.0 (470)
+# Miyu — build 4.8.0 (473)
 
 Hasil rebrand + penambahan fitur dari APK `Auralys_src.apk` (decompile apktool).
 
+> **RILIS AKTIF: 4.8.0 (build 473).** Versi tidak lagi ditetapkan di 4.6.0.
+> `versionName` **4.8.0**, `versionCode` **473**, nama file `Miyu-4.8.0.apk`.
+> 15 teks versi di dalam aplikasi ikut disamakan, termasuk User-Agent `Miyu/4.8.0` dan
+> header laporan crash yang sebelumnya masih menulis build basi `(467)` — sekarang `(473)`.
+> Logika aplikasi tidak berubah. Detail: `RELEASE-4.8.0.md`.
+>
+> **Riwayat perbaikan:** build 470 cacat (`Paint.setTypeface` ditulis `)V` di `drawAvatar`) —
+> diperbaiki di 471. Build 472 = audit menyeluruh 45 pemanggilan `setTypeface` (0 signature salah)
+> + 4 gerbang audit otomatis. Build 473 = naik versi ke 4.8.0 + gerbang versi (total 5 gerbang).
+
+
+
+
 | | |
 |---|---|
-| File | `Miyu-4.6.0.apk` — 38.833.962 byte (37,0 MB) |
-| SHA-256 | `d14ff5bc8332f2ef0b6f6e8494a2b2b2992cd63a69b8778303d7f63b140fbf6c` |
+| File | `Miyu-4.8.0.apk` — 38.833.956 byte (37,0 MB), build **473** |
+| SHA-256 | `386a9f3db1af7ab1df31c95b8703f3dc5999fd14f0e1b4918e886bd7edce5676` |
 | Package | `app.miyu.my.id` (tidak berubah) |
-| Versi | 4.6.0 (470) |
+| Versi | **4.8.0 (473)** |
 | Sertifikat | **identitas asli Miyu** (AOSP testkey) — SHA-256 `a40da80a…bf5dc` |
 | Skema signing | v1 + v2 + v3 |
 | minSdk / targetSdk | 26 / 36 |
 | Entri APK | 1428 (seluruh berkas asli utuh + tambahan Miyu) |
 
-## ⚠️ Wajib uninstall sekali
+## Cara memasang — JANGAN uninstall
 
-Build ini memakai **keystore baru** (bukan testkey lagi). Android hanya mau
-meng-update aplikasi yang sertifikatnya sama, jadi:
+Rilis ini ditandatangani **identitas asli** (AOSP testkey, cert SHA-256
+`a40da80a…bf5dc`) — sama dengan build 4.6.0 sebelumnya. Karena itu bisa dipasang
+sebagai **update biasa**:
 
 ```bash
-adb uninstall app.miyu.my.id      # atau hapus manual di pengaturan
-adb install Miyu-4.6.0.apk
+adb install -r Miyu-4.8.0.apk
 ```
 
-Data (playlist, login, setelan) **hilang** saat uninstall. Ini terjadi **sekali**
-saja — rilis-rilis berikutnya bisa `adb install -r` / update biasa karena
-kuncinya sekarang milik sendiri dan dijaga.
+Atau salin APK ke HP lalu ketuk untuk memasang. Data (playlist, login, setelan)
+**tetap utuh**.
+
+**Hanya jika** pemasangan gagal dengan `INSTALL_FAILED_UPDATE_INCOMPATIBLE`, artinya
+versi yang terpasang di HP ditandatangani kunci berbeda — bukan build ini. Jangan langsung
+uninstall: laporkan dulu, karena uninstall menghapus seluruh data pengguna.
+
+`INSTALL_FAILED_VERSION_DOWNGRADE` tidak akan terjadi: versionCode **473** lebih tinggi
+dari semua build sebelumnya (467–472).
 
 
 
@@ -327,10 +346,10 @@ sendiri sehingga wajib uninstall — itu kesalahan besar yang sekarang beres.)
 | `apksigner verify` | v2 ✅ v3 ✅ |
 | Cert SHA-256 vs APK lama | **identik** |
 | package name | `app.miyu.my.id` (sama) |
-| versionCode | 459 → **470** (naik) |
+| versionCode | 459 → **473** (naik) |
 | Simulasi upgrade | **bisa menimpa tanpa uninstall** |
 | aapt2 dump badging / optimize | lolos (exit 0) |
-| Diagnosis biner mandiri | 67 pemeriksaan, 0 gagal |
+| Diagnosis biner mandiri | 68 pemeriksaan, 0 gagal |
 
 ## 5. Keterbatasan yang harus saya akui
 
@@ -370,7 +389,7 @@ memproses berurutan, jadi target dianggap tidak ada.
 Perbaikan: blok `<activity>` dipindah ke atas alias. Atribut tidak diubah,
 fitur Profil Miyu tetap utuh. Detail: [`FIX-MANIFEST-MALFORMED.md`](FIX-MANIFEST-MALFORMED.md).
 
-## Build 470 — perbaikan crash & ikon ganda
+## Build 470 — perbaikan crash & ikon ganda (DIGANTI 471, lihat atas)
 
 - **Crash Miyu Profile**: `TextView.setTypeface(I)V` (tidak ada di Android)
   diganti `setTypeface(Landroid/graphics/Typeface;I)V` dengan

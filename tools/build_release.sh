@@ -56,6 +56,18 @@ open('apktool.yml','w').write('\n'.join(L) + '\n')
 print(f"   unknownFiles={len(unk)} doNotCompress={len(dnc)}")
 PY
 
+echo "== 3b/6 gerbang: signature framework di file tulisan tangan =="
+# Mencegah terulangnya bug 470: Paint.setTypeface ditulis )V padahal mengembalikan
+# Typeface, dan TextView.setTypeface(I)V yang tidak ada. Gagal = build berhenti.
+python3 "$ROOT/tools/check_framework_calls.py" "$ROOT/smali_classes3/com/metrolist/music/ui/screens/MiyuProfileActivity.smali"
+( cd "$ROOT" && python3 tools/check_calls_vs_tree.py \
+    smali_classes3/com/metrolist/music/ui/screens/MiyuProfileActivity.smali )
+# Jalur runtime Profile: semua method yang dieksekusi saat layar dibuka,
+# termasuk drawAvatar(), diperiksa signature + move-result + register.
+( cd "$ROOT" && python3 tools/check_profile_reachable.py )
+# Linkage: setiap invoke ke kelas aplikasi harus punya definisi descriptor cocok.
+( cd "$ROOT" && python3 tools/check_linkage.py )
+
 echo "== 4/6 apktool build =="
 rm -f classes*.dex
 java -Xmx2g -jar "$APKTOOL" b "$TREE" -o "$OUT/raw.apk"
