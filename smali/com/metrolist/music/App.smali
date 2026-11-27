@@ -1514,6 +1514,18 @@
 .method public final onCreate()V
     .locals 6
 
+    sget-object v0, Lcom/metrolist/music/utils/InnerTubeXPlayer;->applicationContext:Landroid/content/Context;
+
+    if-nez v0, :cond_miyu_app
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/metrolist/music/utils/InnerTubeXPlayer;->applicationContext:Landroid/content/Context;
+
+    :cond_miyu_app
+
     .line 1
     invoke-super {p0}, Lcom/metrolist/music/Hilt_App;->onCreate()V
 

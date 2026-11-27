@@ -1916,4 +1916,6 @@ Long-press the drag handle to reorder. The first section will be shown by defaul
     <string name="miyu_profile_back">Kembali ke Miyu</string>
     <string name="miyu_profile_stats">%1$d jam %2$d menit didengarkan · %3$d lagu disukai</string>
     <string name="miyu_profile_next_level">%1$d menit lagi ke level berikutnya</string>
+    <string name="miyu_profile_menu_caption">Level, total waktu dengar, centang biru</string>
+    <string name="miyu_profile_menu">Profil &#38; level Miyu</string>
 </resources>

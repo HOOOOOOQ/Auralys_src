@@ -85,16 +85,45 @@
     .line 28
     check-cast v4, Lcom/metrolist/music/ui/screens/settings/SettingsTile;
 
-    .line 30
-    sget-object v0, Lcom/metrolist/music/ui/screens/settings/SettingsHubKt;->combiningMarks:Lkotlin/text/Regex;
-
     .line 32
     iget-object v0, v4, Lcom/metrolist/music/ui/screens/settings/SettingsTile;->route:Ljava/lang/String;
+
+    const-string/jumbo v1, "settings/miyu_profile"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_miyu_route
 
     .line 34
     invoke-interface {p0, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 37
+    return-object v3
+
+    :cond_miyu_route
+    sget-object v0, Lcom/metrolist/music/utils/InnerTubeXPlayer;->applicationContext:Landroid/content/Context;
+
+    if-eqz v0, :cond_miyu_done
+
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+
+    const-string/jumbo v2, "app.miyu.my.id"
+
+    const-string/jumbo v4, "com.metrolist.music.ui.screens.MiyuProfileActivity"
+
+    invoke-virtual {v1, v2, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const/high16 v2, 0x10000000
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    :cond_miyu_done
     return-object v3
 
     .line 38

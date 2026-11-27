@@ -3490,6 +3490,8 @@
     <public type="string" name="zxing_button_ok" id="0x7f1108de" />
     <public type="string" name="zxing_msg_camera_framework_bug" id="0x7f1108df" />
     <public type="string" name="zxing_msg_default_status" id="0x7f1108e0" />
+    <public type="string" name="miyu_profile_menu" id="0x7f1108e1" />
+    <public type="string" name="miyu_profile_menu_caption" id="0x7f1108e2" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f120000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f120001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f120002" />

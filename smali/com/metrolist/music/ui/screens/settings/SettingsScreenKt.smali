@@ -347,6 +347,24 @@
     .line 195
     invoke-virtual {v3, v7}, Lkotlin/collections/builders/ListBuilder;->add(Ljava/lang/Object;)Z
 
+    new-instance v16, Lcom/metrolist/music/ui/screens/settings/SettingsTile;
+
+    const-string/jumbo v20, "settings/miyu_profile"
+
+    const/16 v21, 0x0
+
+    const v17, 0x7f1108e1
+
+    const v18, 0x7f1108e2
+
+    const v19, 0x7f07021f
+
+    invoke-direct/range {v16 .. v21}, Lcom/metrolist/music/ui/screens/settings/SettingsTile;-><init>(IIILjava/lang/String;I)V
+
+    move-object/from16 v7, v16
+
+    invoke-virtual {v3, v7}, Lkotlin/collections/builders/ListBuilder;->add(Ljava/lang/Object;)Z
+
     .line 198
     new-instance v16, Lcom/metrolist/music/ui/screens/settings/SettingsTile;
 
