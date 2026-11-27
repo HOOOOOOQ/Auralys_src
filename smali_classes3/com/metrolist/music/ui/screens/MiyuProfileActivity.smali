@@ -36,6 +36,20 @@
 
 .field private n:Ljava/lang/String;
 
+# field tambahan: status loading/error data & label persen progress
+.field private o:Landroid/widget/TextView;
+
+.field private p:Landroid/widget/TextView;
+
+.field private q:Z
+
+.field private r:Z
+
+# bio yang ditampilkan (sebelumnya hanya disimpan, tidak pernah tampil)
+.field private s:Landroid/widget/TextView;
+
+.field private t:Ljava/lang/String;
+
 # direct methods
 .method public constructor <init>()V
     .locals 2
@@ -60,19 +74,69 @@
 
     iput-object v1, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->n:Ljava/lang/String;
 
+    iput-object v1, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->t:Ljava/lang/String;
+
     return-void
 .end method
 
 # virtual methods
 .method public final onCreate(Landroid/os/Bundle;)V
-    .locals 0
+    .locals 2
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    # Data ringan (prefs) dibaca di main thread: cepat dan tidak menyentuh disk.
     invoke-direct {p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->readState()V
 
     invoke-direct {p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->buildUi()V
 
+    # Tampilkan dulu: loading state + data prefs. UI tidak menunggu database.
+    invoke-direct {p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->refresh()V
+
+    # Baca song.db di background supaya layar tidak membeku (ANR) saat dibuka.
+    new-instance v1, Lcom/metrolist/music/ui/screens/MiyuProfileActivity$$ExternalSyntheticLambda4;
+
+    invoke-direct {v1, p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity$$ExternalSyntheticLambda4;-><init>(Lcom/metrolist/music/ui/screens/MiyuProfileActivity;)V
+
+    invoke-static {v1}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->runBackground(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method private static final runBackground(Ljava/lang/Runnable;)V
+    .locals 2
+
+    # Jalankan di thread terpisah tanpa Executor: satu thread per pemuatan layar.
+    new-instance v0, Ljava/lang/Thread;
+
+    const-string v1, "miyu-profile-stats"
+
+    invoke-direct {v0, p0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    return-void
+.end method
+
+.method private final refreshStats()V
+    .locals 2
+
+    # Dipanggil dari background thread: baca database lalu kembalikan ke main thread.
+    invoke-direct {p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->readStats()V
+
+    new-instance v0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity$$ExternalSyntheticLambda5;
+
+    invoke-direct {v0, p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity$$ExternalSyntheticLambda5;-><init>(Lcom/metrolist/music/ui/screens/MiyuProfileActivity;)V
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final bridge$refreshAfterStats()V
+    .locals 0
+
+    # Dipanggil dari main thread setelah readStats selesai.
     invoke-direct {p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->refresh()V
 
     return-void
@@ -155,6 +219,16 @@
 
     iput-object v1, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->n:Ljava/lang/String;
 
+    const-string v1, "bio"
+
+    iget-object v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->t:Ljava/lang/String;
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->t:Ljava/lang/String;
+
     const-string v1, "verified"
 
     const/4 v2, 0x0
@@ -197,6 +271,15 @@
 
     const/4 v1, 0x0
 
+    # tandai sedang memuat, hapus status error sebelumnya
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->q:Z
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->r:Z
+
     :try_start_0
     new-instance v2, Ljava/io/File;
 
@@ -234,6 +317,14 @@
 
     if-nez v3, :cond_0
 
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->q:Z
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->r:Z
+
     return-void
 
     :cond_0
@@ -243,7 +334,9 @@
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x1
+    # flag 8 = ENABLE_WRITE_AHEAD_LOGGING. Room memakai WAL, jadi tanpa flag ini
+    # tulisan terbaru masih tertahan di song.db-wal dan tidak ikut terbaca.
+    const/16 v4, 0x8
 
     invoke-static {v2, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->openDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
 
@@ -289,6 +382,13 @@
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
+
+    # selesai: loading berhenti, tidak ada error
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->q:Z
+
+    iput-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->r:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -298,6 +398,14 @@
     move-exception v2
 
     invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->q:Z
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->r:Z
 
     return-void
 .end method
@@ -508,6 +616,9 @@
 
     move-result-object v1
 
+    # simpan ke field supaya refresh() bisa langsung menampilkannya
+    iput-object v1, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->t:Ljava/lang/String;
+
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     :cond_0
@@ -618,6 +729,37 @@
     return-object v0
 .end method
 
+.method private static final blankOr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    # Kembalikan fallback kalau string null atau kosong setelah trim.
+    if-nez p0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    return-object p1
+
+    :cond_1
+    return-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    return-object p1
+.end method
+
 .method private final buildUi()V
     .locals 13
 
@@ -717,8 +859,16 @@
 
     invoke-virtual {v5, v7, v9}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    # nama
-    const-string v7, "Miyu Listener"
+    # nama: ambil dari prefs/nama yang diketik, jangan hardcode
+    invoke-direct {p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->currentName()Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "Miyu Listener"
+
+    invoke-static {v7, v8}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->blankOr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
 
     const/high16 v8, 0x41c00000    # 24.0f
 
@@ -756,9 +906,9 @@
 
     move-result v7
 
-    const-string v8, "Level 0"
+    const-string v8, "Level 1 \u00b7 Pemula"
 
-    const/high16 v9, 0x41800000    # 16.0f
+    const/high16 v9, 0x41900000    # 18.0f
 
     invoke-direct {p0, v7, v8, v9, v6}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->tv(ILjava/lang/String;FZ)Landroid/widget/TextView;
 
@@ -768,12 +918,27 @@
 
     invoke-direct {p0, v5, v7}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->add(Landroid/widget/LinearLayout;Landroid/view/View;)V
 
-    # progress
+    # progress bar HORIZONTAL.
+    # Konstanta 0x1010072 (progressBarStyleHorizontal) adalah id tersembunyi dan
+    # tidak bisa dipakai sebagai atribut resmi sejak Android 9. Sebagai gantinya
+    # style di-resolve saat runtime lewat getIdentifier -> aman di semua versi.
     new-instance v7, Landroid/widget/ProgressBar;
 
     const/4 v8, 0x0
 
-    const v9, 0x1010072
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v9
+
+    const-string v10, "progressBarStyleHorizontal"
+
+    const-string v11, "attr"
+
+    const-string v12, "android"
+
+    invoke-virtual {v9, v10, v11, v12}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v9
 
     invoke-direct {v7, p0, v8, v9}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -782,6 +947,44 @@
     invoke-virtual {v7, v8}, Landroid/widget/ProgressBar;->setMax(I)V
 
     iput-object v7, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->e:Landroid/widget/ProgressBar;
+
+    invoke-direct {p0, v5, v7}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->add(Landroid/widget/LinearLayout;Landroid/view/View;)V
+
+    # persen progress
+    const-string v7, "#B9B9C6"
+
+    invoke-static {v7}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v7
+
+    const-string v8, ""
+
+    const/high16 v9, 0x41400000    # 12.0f
+
+    invoke-direct {p0, v7, v8, v9, v4}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->tv(ILjava/lang/String;FZ)Landroid/widget/TextView;
+
+    move-result-object v7
+
+    iput-object v7, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->o:Landroid/widget/TextView;
+
+    invoke-direct {p0, v5, v7}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->add(Landroid/widget/LinearLayout;Landroid/view/View;)V
+
+    # status loading / error statistik
+    const-string v7, "#9E58EA"
+
+    invoke-static {v7}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v7
+
+    const-string v8, ""
+
+    const/high16 v9, 0x41400000    # 12.0f
+
+    invoke-direct {p0, v7, v8, v9, v4}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->tv(ILjava/lang/String;FZ)Landroid/widget/TextView;
+
+    move-result-object v7
+
+    iput-object v7, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->p:Landroid/widget/TextView;
 
     invoke-direct {p0, v5, v7}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->add(Landroid/widget/LinearLayout;Landroid/view/View;)V
 
@@ -795,6 +998,25 @@
     move-result-object v7
 
     iput-object v7, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->d:Landroid/widget/TextView;
+
+    invoke-direct {p0, v5, v7}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->add(Landroid/widget/LinearLayout;Landroid/view/View;)V
+
+    # bio: sebelumnya hanya disimpan ke prefs tapi TIDAK pernah ditampilkan.
+    const-string v7, "#B9B9C6"
+
+    invoke-static {v7}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v7
+
+    const-string v8, ""
+
+    const/high16 v9, 0x41600000    # 14.0f
+
+    invoke-direct {p0, v7, v8, v9, v4}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->tv(ILjava/lang/String;FZ)Landroid/widget/TextView;
+
+    move-result-object v7
+
+    iput-object v7, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->s:Landroid/widget/TextView;
 
     invoke-direct {p0, v5, v7}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->add(Landroid/widget/LinearLayout;Landroid/view/View;)V
 
@@ -823,6 +1045,10 @@
     const-string v8, "Bio (maks 140 karakter)"
 
     invoke-virtual {v7, v8}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+
+    iget-object v8, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->t:Ljava/lang/String;
+
+    invoke-virtual {v7, v8}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     invoke-virtual {v7, v1}, Landroid/widget/EditText;->setTextColor(I)V
 
@@ -889,11 +1115,18 @@
 .method private final refresh()V
     .locals 6
 
+    # nama: jangan pernah tampil kosong walau prefs menyimpan string kosong
+    invoke-direct {p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->currentName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->blankOr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     iget-object v0, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->a:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->i:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -966,6 +1199,22 @@
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_5
+    # bio
+    iget-object v1, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->s:Landroid/widget/TextView;
+
+    if-eqz v1, :cond_bio
+
+    iget-object v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->t:Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-static {v2, v3}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->blankOr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_bio
     # level + gelar
     invoke-direct {p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->level()I
 
@@ -1010,7 +1259,31 @@
 
     move-result v3
 
-    invoke-virtual {v1, v3}, Landroid/widget/ProgressBar;->setProgress(I)V
+    # animasi halus (Progressive 4.0+, ada di semua device minSdk 26)
+    const/4 v4, 0x1
+
+    invoke-virtual {v1, v3, v4}, Landroid/widget/ProgressBar;->setProgress(IZ)V
+
+    # label persen di samping progress bar
+    iget-object v1, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->o:Landroid/widget/TextView;
+
+    if-eqz v1, :cond_7
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, "% menuju level berikutnya"
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_7
     # statistik
@@ -1063,6 +1336,35 @@
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_8
+    # status: loading / error / siap. Tanpa angka nol yang menyesatkan.
+    iget-object v1, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->p:Landroid/widget/TextView;
+
+    if-eqz v1, :cond_9a
+
+    iget-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->q:Z
+
+    if-eqz v2, :cond_8a
+
+    const-string v2, "Memuat data mendengarkan..."
+
+    goto :goto_8c
+
+    :cond_8a
+    iget-boolean v2, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->r:Z
+
+    if-eqz v2, :cond_8b
+
+    const-string v2, "Database belum bisa dibaca \u00b7 statistik tidak tersedia"
+
+    goto :goto_8c
+
+    :cond_8b
+    const-string v2, ""
+
+    :goto_8c
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_9a
     iget-object v0, p0, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->d:Landroid/widget/TextView;
 
     if-eqz v0, :cond_9
@@ -1468,6 +1770,15 @@
 .end method
 
 # jembatan untuk lambda listener
+.method public static final bridge$refreshStats(Lcom/metrolist/music/ui/screens/MiyuProfileActivity;)V
+    .locals 0
+
+    # dipanggil kelas lambda dari background thread
+    invoke-direct {p0}, Lcom/metrolist/music/ui/screens/MiyuProfileActivity;->refreshStats()V
+
+    return-void
+.end method
+
 .method public final bridge$onSave()V
     .locals 0
 

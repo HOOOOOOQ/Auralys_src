@@ -79,8 +79,7 @@ def main():
 
     # --- 1. BFS dari onCreate ---
     # akar: onCreate (layar dibuka) + 4 handler tombol yang dipanggil kelas lambda
-    roots = [k for k in methods if k[0] in ('onCreate', 'bridge$onSave',
-             'bridge$onAdminCode', 'bridge$back', 'bridge$grantAdmin')]
+    roots = [k for k in methods if k[0].startswith('bridge$') or k[0] == 'onCreate']
     reach, queue = set(roots), list(roots)
     while queue:
         cur = queue.pop()
